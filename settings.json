@@ -344,8 +344,6 @@
       "k": "clipboardHistory.focus",
       "i": "editor.action.deleteLines",
       "m": "extension.dired.open",
-      // "c": "cursorPageUp",
-      // "t": "cursorPageDown",
       " ": "editor.action.showHover",
       "}": "workbench.action.splitEditorRight",
       "{": "workbench.action.closePanel",
@@ -528,8 +526,8 @@
   "bookmarks.label.suggestion": "suggestWhenSelectedOrLineWhenNoSelected",
   "bookmarks.navigateThroughAllFiles": true,
   "bookmarks.saveBookmarksInProject": true,
-  "dired.fixed_window": false,
-  "dired.ask_directory": false,
+  // "dired.fixed_window": false,
+  // "dired.ask_directory": false,
   /*
   "beautify.language": {
 
