@@ -1,0 +1,1137 @@
+{
+  "version": 2,
+  "clips": [
+    {
+      "value": "workbench.action.closeActiveEditor",
+      "createdAt": 1599538435326,
+      "copyCount": 1,
+      "useCount": 0
+    },
+    {
+      "value": "e:\\Full Sail Work\\Month 15 Computer Graphics\\Week 1\\Lab 1\\Turn_In\\Turn_In:\r\n",
+      "createdAt": 1599537737872,
+      "copyCount": 1,
+      "useCount": 1,
+      "language": "plaintext",
+      "createdLocation": {
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 0
+          },
+          "end": {
+            "line": 0,
+            "character": 0
+          }
+        },
+        "uri": "dired://e:\\full sail work\\month 15 computer graphics\\week 1\\lab 1\\turn_in\\turn_in"
+      }
+    },
+    {
+      "value": "extension.dired.open",
+      "createdAt": 1599537689318,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "      \"m\": \"workbench.explorer.fileView.focus\",\r\n",
+      "createdAt": 1599537614130,
+      "copyCount": 1,
+      "useCount": 1,
+      "language": "jsonc",
+      "createdLocation": {
+        "range": {
+          "start": {
+            "line": 345,
+            "character": 31
+          },
+          "end": {
+            "line": 345,
+            "character": 31
+          }
+        },
+        "uri": "file:///c%3A/Users/wgooc/AppData/Roaming/Code/User/settings.json"
+      }
+    },
+    {
+      "value": "      // \"c\": \"cursorPageUp\",\r\n",
+      "createdAt": 1599537590839,
+      "copyCount": 1,
+      "useCount": 1,
+      "language": "jsonc",
+      "createdLocation": {
+        "range": {
+          "start": {
+            "line": 346,
+            "character": 29
+          },
+          "end": {
+            "line": 346,
+            "character": 29
+          }
+        },
+        "uri": "file:///c%3A/Users/wgooc/AppData/Roaming/Code/User/settings.json"
+      }
+    },
+    {
+      "value": "      \"i\": \"editor.action.deleteLines\",\r\n",
+      "createdAt": 1599537450446,
+      "copyCount": 1,
+      "useCount": 1,
+      "language": "jsonc",
+      "createdLocation": {
+        "range": {
+          "start": {
+            "line": 344,
+            "character": 39
+          },
+          "end": {
+            "line": 344,
+            "character": 39
+          }
+        },
+        "uri": "file:///c%3A/Users/wgooc/AppData/Roaming/Code/User/settings.json"
+      }
+    },
+    {
+      "value": "editor.action.toggleTabFocusMode",
+      "createdAt": 1599537431659,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "workbench.explorer.fileView.focus",
+      "createdAt": 1599537364367,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "dired\r\n",
+      "createdAt": 1599537258517,
+      "copyCount": 1,
+      "useCount": 1,
+      "language": "jsonc",
+      "createdLocation": {
+        "range": {
+          "start": {
+            "line": 377,
+            "character": 43
+          },
+          "end": {
+            "line": 377,
+            "character": 43
+          }
+        },
+        "uri": "file:///c%3A/Users/wgooc/AppData/Roaming/Code/User/settings.json"
+      }
+    },
+    {
+      "value": "workbench.action.files.saveAs",
+      "createdAt": 1599537242435,
+      "copyCount": 1,
+      "useCount": 1,
+      "language": "jsonc",
+      "createdLocation": {
+        "range": {
+          "start": {
+            "line": 377,
+            "character": 8
+          },
+          "end": {
+            "line": 377,
+            "character": 8
+          }
+        },
+        "uri": "file:///c%3A/Users/wgooc/AppData/Roaming/Code/User/settings.json"
+      }
+    },
+    {
+      "value": "workbench.action.files.openFolder",
+      "createdAt": 1599537104557,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "104956",
+      "createdAt": 1599536751151,
+      "copyCount": 1,
+      "useCount": 1,
+      "language": "jsonc",
+      "createdLocation": {
+        "range": {
+          "start": {
+            "line": 46,
+            "character": 42
+          },
+          "end": {
+            "line": 46,
+            "character": 42
+          }
+        },
+        "uri": "file:///c%3A/Users/wgooc/AppData/Roaming/Code/User/settings.json"
+      }
+    },
+    {
+      "value": "635937",
+      "createdAt": 1599536693977,
+      "copyCount": 1,
+      "useCount": 1,
+      "language": "jsonc",
+      "createdLocation": {
+        "range": {
+          "start": {
+            "line": 53,
+            "character": 37
+          },
+          "end": {
+            "line": 53,
+            "character": 37
+          }
+        },
+        "uri": "file:///c%3A/Users/wgooc/AppData/Roaming/Code/User/settings.json"
+      }
+    },
+    {
+      "value": "\r\n    \"list.dropBackground\": \"#1d1e26\",\r\n    \"list.focusBackground\": \"#1d1e26\",\r\n    \"list.highlightForeground\": \"#ffff80\",\r\n    \"list.hoverBackground\": \"#1d1e26\",\r\n    \"list.inactiveSelectionBackground\": \"#1d1e26\",",
+      "createdAt": 1599536678774,
+      "copyCount": 1,
+      "useCount": 1,
+      "language": "json",
+      "createdLocation": {
+        "range": {
+          "start": {
+            "line": 101,
+            "character": 50
+          },
+          "end": {
+            "line": 101,
+            "character": 50
+          }
+        },
+        "uri": "file:///c%3A/Users/wgooc/.vscode/extensions/dracula-theme.theme-dracula-2.22.1/theme/dracula.json"
+      }
+    },
+    {
+      "value": "\"#635937\"",
+      "createdAt": 1599536486415,
+      "copyCount": 2,
+      "useCount": 2,
+      "language": "jsonc",
+      "createdLocation": {
+        "range": {
+          "start": {
+            "line": 43,
+            "character": 52
+          },
+          "end": {
+            "line": 43,
+            "character": 52
+          }
+        },
+        "uri": "vscode-userdata:/c%3A/Users/wgooc/AppData/Roaming/Code/User/settings.json"
+      }
+    },
+    {
+      "value": "\r\n    \"list.activeSelectionBackground\": \"#1d1e26\",\r\n    \"list.activeSelectionForeground\": \"#f2f2f2\",",
+      "createdAt": 1599536580023,
+      "copyCount": 1,
+      "useCount": 1,
+      "language": "json",
+      "createdLocation": {
+        "range": {
+          "start": {
+            "line": 94,
+            "character": 40
+          },
+          "end": {
+            "line": 96,
+            "character": 48
+          }
+        },
+        "uri": "file:///c%3A/Users/wgooc/.vscode/extensions/dracula-theme.theme-dracula-2.22.1/theme/dracula.json"
+      }
+    },
+    {
+      "value": "\r\n        \"red\": 0,\r\n        \"green\": 100,\r\n        \"blue\": 150,\r\n        \"alpha\": 0.1",
+      "createdAt": 1599535430179,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "22212c",
+      "createdAt": 1599535343986,
+      "copyCount": 1,
+      "useCount": 1,
+      "language": "json",
+      "createdLocation": {
+        "range": {
+          "start": {
+            "line": 56,
+            "character": 35
+          },
+          "end": {
+            "line": 56,
+            "character": 35
+          }
+        },
+        "uri": "file:///c%3A/Users/wgooc/.vscode/extensions/dracula-theme.theme-dracula-2.22.1/theme/dracula.json"
+      }
+    },
+    {
+      "value": "282A36",
+      "createdAt": 1599535117085,
+      "copyCount": 1,
+      "useCount": 1,
+      "language": "jsonc",
+      "createdLocation": {
+        "range": {
+          "start": {
+            "line": 42,
+            "character": 53
+          },
+          "end": {
+            "line": 42,
+            "character": 53
+          }
+        },
+        "uri": "vscode-userdata:/c%3A/Users/wgooc/AppData/Roaming/Code/User/settings.json"
+      }
+    },
+    {
+      "value": "    \"editor.selectionBackground\": \"#104956\",",
+      "createdAt": 1599535106993,
+      "copyCount": 1,
+      "useCount": 1,
+      "language": "jsonc",
+      "createdLocation": {
+        "range": {
+          "start": {
+            "line": 42,
+            "character": 0
+          },
+          "end": {
+            "line": 42,
+            "character": 0
+          }
+        },
+        "uri": "vscode-userdata:/c%3A/Users/wgooc/AppData/Roaming/Code/User/settings.json"
+      }
+    },
+    {
+      "value": "\"#282A36\"",
+      "createdAt": 1599535002095,
+      "copyCount": 1,
+      "useCount": 1,
+      "language": "jsonc",
+      "createdLocation": {
+        "range": {
+          "start": {
+            "line": 52,
+            "character": 4
+          },
+          "end": {
+            "line": 53,
+            "character": 33
+          }
+        },
+        "uri": "vscode-userdata:/c%3A/Users/wgooc/AppData/Roaming/Code/User/settings.json"
+      }
+    },
+    {
+      "value": "\r\n    \"editor.findMatchHighlightBackground\": \"#433F47\",",
+      "createdAt": 1599534996727,
+      "copyCount": 1,
+      "useCount": 1,
+      "language": "jsonc",
+      "createdLocation": {
+        "range": {
+          "start": {
+            "line": 48,
+            "character": 45
+          },
+          "end": {
+            "line": 48,
+            "character": 45
+          }
+        },
+        "uri": "vscode-userdata:/c%3A/Users/wgooc/AppData/Roaming/Code/User/settings.json"
+      }
+    },
+    {
+      "value": "blockscope-highlighter.rgba",
+      "createdAt": 1599534891576,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "extension.moveIntoRegion",
+      "createdAt": 1599533697566,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "\"deletehere.delete\"",
+      "createdAt": 1599533450571,
+      "copyCount": 1,
+      "useCount": 1,
+      "language": "jsonc",
+      "createdLocation": {
+        "range": {
+          "start": {
+            "line": 236,
+            "character": 9
+          },
+          "end": {
+            "line": 236,
+            "character": 28
+          }
+        },
+        "uri": "vscode-userdata:/c%3A/Users/wgooc/AppData/Roaming/Code/User/settings.json"
+      }
+    },
+    {
+      "value": "deletehere.delete",
+      "createdAt": 1599527995932,
+      "copyCount": 2,
+      "useCount": 2
+    },
+    {
+      "value": "\tunsigned int magenta = 0xFFFF00FF;\r\n",
+      "createdAt": 1599532731978,
+      "copyCount": 1,
+      "useCount": 1,
+      "language": "cpp",
+      "createdLocation": {
+        "range": {
+          "start": {
+            "line": 230,
+            "character": 6
+          },
+          "end": {
+            "line": 230,
+            "character": 6
+          }
+        },
+        "uri": "file:///e%3A/Full%20Sail%20Work/Month%2015%20Computer%20Graphics/Week%201/Lab%202/ConsoleApplication1/main.cpp"
+      }
+    },
+    {
+      "value": "\"copy-word.cut\"",
+      "createdAt": 1599532642243,
+      "copyCount": 1,
+      "useCount": 1,
+      "language": "jsonc",
+      "createdLocation": {
+        "range": {
+          "start": {
+            "line": 294,
+            "character": 6
+          },
+          "end": {
+            "line": 294,
+            "character": 6
+          }
+        },
+        "uri": "vscode-userdata:/c%3A/Users/wgooc/AppData/Roaming/Code/User/settings.json"
+      }
+    },
+    {
+      "value": "unsigned int magenta = 0xFFFF00FF;",
+      "createdAt": 1599532550642,
+      "copyCount": 1,
+      "useCount": 1,
+      "language": "cpp",
+      "createdLocation": {
+        "range": {
+          "start": {
+            "line": 228,
+            "character": 0
+          },
+          "end": {
+            "line": 228,
+            "character": 0
+          }
+        },
+        "uri": "file:///e%3A/Full%20Sail%20Work/Month%2015%20Computer%20Graphics/Week%201/Lab%202/ConsoleApplication1/main.cpp"
+      }
+    },
+    {
+      "value": "\t\tif (x1 >= 0 && y1 >= 0 && x1 < rasterWidth && y1 < rasterHeight)\r\n",
+      "createdAt": 1599532227028,
+      "copyCount": 1,
+      "useCount": 1,
+      "language": "cpp",
+      "createdLocation": {
+        "range": {
+          "start": {
+            "line": 104,
+            "character": 34
+          },
+          "end": {
+            "line": 104,
+            "character": 34
+          }
+        },
+        "uri": "file:///e%3A/Full%20Sail%20Work/Month%2015%20Computer%20Graphics/Week%201/Lab%202/ConsoleApplication1/main.cpp"
+      }
+    },
+    {
+      "value": "references-view.showCallHierarchy",
+      "createdAt": 1599529382700,
+      "copyCount": 3,
+      "useCount": 3
+    },
+    {
+      "value": "\r\nreferences-view.find",
+      "createdAt": 1599532149814,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "\r\n",
+      "createdAt": 1599531682700,
+      "copyCount": 1,
+      "useCount": 1,
+      "language": "cpp",
+      "createdLocation": {
+        "range": {
+          "start": {
+            "line": 87,
+            "character": 0
+          },
+          "end": {
+            "line": 87,
+            "character": 0
+          }
+        },
+        "uri": "file:///e%3A/Full%20Sail%20Work/Month%2015%20Computer%20Graphics/Week%201/Lab%202/ConsoleApplication1/main.cpp"
+      }
+    },
+    {
+      "value": "\t{\r\n",
+      "createdAt": 1599531679661,
+      "copyCount": 1,
+      "useCount": 1,
+      "language": "cpp",
+      "createdLocation": {
+        "range": {
+          "start": {
+            "line": 84,
+            "character": 2
+          },
+          "end": {
+            "line": 84,
+            "character": 2
+          }
+        },
+        "uri": "file:///e%3A/Full%20Sail%20Work/Month%2015%20Computer%20Graphics/Week%201/Lab%202/ConsoleApplication1/main.cpp"
+      }
+    },
+    {
+      "value": "upward",
+      "createdAt": 1599531675602,
+      "copyCount": 1,
+      "useCount": 1,
+      "language": "cpp",
+      "createdLocation": {
+        "range": {
+          "start": {
+            "line": 99,
+            "character": 2
+          },
+          "end": {
+            "line": 99,
+            "character": 8
+          }
+        },
+        "uri": "file:///e%3A/Full%20Sail%20Work/Month%2015%20Computer%20Graphics/Week%201/Lab%202/ConsoleApplication1/main.cpp"
+      }
+    },
+    {
+      "value": "references-view.next",
+      "createdAt": 1599528945834,
+      "copyCount": 2,
+      "useCount": 2
+    },
+    {
+      "value": "references-view",
+      "createdAt": 1599531539409,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "references-view.find",
+      "createdAt": 1599529748862,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "        \"f\": \"references-view.showCallHierarchy\",",
+      "createdAt": 1599529446625,
+      "copyCount": 1,
+      "useCount": 1,
+      "language": "jsonc",
+      "createdLocation": {
+        "range": {
+          "start": {
+            "line": 361,
+            "character": 0
+          },
+          "end": {
+            "line": 361,
+            "character": 0
+          }
+        },
+        "uri": "vscode-userdata:/c%3A/Users/wgooc/AppData/Roaming/Code/User/settings.json"
+      }
+    },
+    {
+      "value": "\r\n        \"f\": \"references-view.showCallHierarchy\",",
+      "createdAt": 1599529438013,
+      "copyCount": 1,
+      "useCount": 1,
+      "language": "jsonc",
+      "createdLocation": {
+        "range": {
+          "start": {
+            "line": 360,
+            "character": 0
+          },
+          "end": {
+            "line": 360,
+            "character": 0
+          }
+        },
+        "uri": "vscode-userdata:/c%3A/Users/wgooc/AppData/Roaming/Code/User/settings.json"
+      }
+    },
+    {
+      "value": "\r\n        \"f\": \"workbench.action.openRecent\",",
+      "createdAt": 1599529412143,
+      "copyCount": 1,
+      "useCount": 1,
+      "language": "jsonc",
+      "createdLocation": {
+        "range": {
+          "start": {
+            "line": 360,
+            "character": 30
+          },
+          "end": {
+            "line": 360,
+            "character": 30
+          }
+        },
+        "uri": "vscode-userdata:/c%3A/Users/wgooc/AppData/Roaming/Code/User/settings.json"
+      }
+    },
+    {
+      "value": "editor.action.goToReferences",
+      "createdAt": 1599529062164,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "\r\n    \"b\": \"references-view.next\",",
+      "createdAt": 1599529009325,
+      "copyCount": 1,
+      "useCount": 1,
+      "language": "jsonc",
+      "createdLocation": {
+        "range": {
+          "start": {
+            "line": 289,
+            "character": 16
+          },
+          "end": {
+            "line": 289,
+            "character": 16
+          }
+        },
+        "uri": "vscode-userdata:/c%3A/Users/wgooc/AppData/Roaming/Code/User/settings.json"
+      }
+    },
+    {
+      "value": ",\r\n    \"when\": \"editorTextFocus\"",
+      "createdAt": 1599528882337,
+      "copyCount": 1,
+      "useCount": 1,
+      "language": "jsonc",
+      "createdLocation": {
+        "range": {
+          "start": {
+            "line": 5,
+            "character": 29
+          },
+          "end": {
+            "line": 5,
+            "character": 29
+          }
+        },
+        "uri": "file:///c%3A/Users/wgooc/AppData/Roaming/Code/User/keybindings.json"
+      }
+    },
+    {
+      "value": "    \"when\": \"editorTextFocus && editorHasSelection\"",
+      "createdAt": 1599528859511,
+      "copyCount": 1,
+      "useCount": 1,
+      "language": "jsonc",
+      "createdLocation": {
+        "range": {
+          "start": {
+            "line": 18,
+            "character": 0
+          },
+          "end": {
+            "line": 18,
+            "character": 0
+          }
+        },
+        "uri": "file:///c%3A/Users/wgooc/AppData/Roaming/Code/User/keybindings.json"
+      }
+    },
+    {
+      "value": "workbench.action.focusPreviousGroup",
+      "createdAt": 1599528670615,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "\tworkbench.action.focusNextGroup",
+      "createdAt": 1599528596423,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "{\r\n    \"key\": \"alt+a\",\r\n    \"command\": \"modaledit.enterNormal\"\r\n  },",
+      "createdAt": 1599528364294,
+      "copyCount": 1,
+      "useCount": 1,
+      "language": "jsonc",
+      "createdLocation": {
+        "range": {
+          "start": {
+            "line": 2,
+            "character": 2
+          },
+          "end": {
+            "line": 2,
+            "character": 2
+          }
+        },
+        "uri": "file:///c%3A/Users/wgooc/AppData/Roaming/Code/User/keybindings.json"
+      }
+    },
+    {
+      "value": "extension.smartBackspace",
+      "createdAt": 1599528212108,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "bracket-pair-colorizer-2.expandBracketSelection",
+      "createdAt": 1599527749622,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "editor.action.smartSelect.expand",
+      "createdAt": 1599527681803,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "extension.selectPerfectLine",
+      "createdAt": 1599526580001,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "  // Blank Lines formatting.\r\n",
+      "createdAt": 1599525990392,
+      "copyCount": 1,
+      "useCount": 1,
+      "language": "jsonc",
+      "createdLocation": {
+        "range": {
+          "start": {
+            "line": 493,
+            "character": 0
+          },
+          "end": {
+            "line": 493,
+            "character": 0
+          }
+        },
+        "uri": "vscode-userdata:/c%3A/Users/wgooc/AppData/Roaming/Code/User/settings.json"
+      }
+    },
+    {
+      "value": "smartBeginningOfLine",
+      "createdAt": 1599524859321,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "    \"=\":\"select-paragraph.selectParagraph\",\r\n",
+      "createdAt": 1599524650100,
+      "copyCount": 1,
+      "useCount": 1,
+      "language": "jsonc",
+      "createdLocation": {
+        "range": {
+          "start": {
+            "line": 251,
+            "character": 0
+          },
+          "end": {
+            "line": 251,
+            "character": 0
+          }
+        },
+        "uri": "vscode-userdata:/c%3A/Users/wgooc/AppData/Roaming/Code/User/settings.json"
+      }
+    },
+    {
+      "value": "select-paragraph.selectParagraph",
+      "createdAt": 1599524628777,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "magit.status",
+      "createdAt": 1599524169730,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "extension.enableRunOnSave",
+      "createdAt": 1599523990833,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": " \"runOnSave.statusMessageTimeout\": 3000,\r\n    \"runOnSave.commands\": [\r\n        {\r\n            \"match\": \".*\\\\.scss$\",\r\n            \"notMatch\": \"[\\\\\\\\\\\\/]_[^\\\\\\\\\\\\/]*\\\\.scss$\",\r\n            \"command\": \"node-sass ${file} ${fileDirname}/${fileBasenameNoExtension}.css\",\r\n            \"runIn\": \"backend\",\r\n            \"runningStatusMessage\": \"Compiling ${fileBasename}\",\r\n            \"finishStatusMessage\": \"${fileBasename} compiled\"\r\n        },\r\n        {\r\n            \"match\": \".*\\\\.less$\",\r\n            \"notMatch\": \"[\\\\\\\\\\\\/]_[^\\\\\\\\\\\\/]*\\\\.less$\",\r\n            \"command\": \"node-sass ${file} ${fileDirname}/${fileBasenameNoExtension}.css\",\r\n            \"runIn\": \"terminal\"\r\n        },\r\n        {\r\n            \"match\": \".*\\\\.py$\",\r\n            \"command\": \"python.runLinting\",\r\n            \"runIn\": \"vscode\"\r\n        }\r\n    ]",
+      "createdAt": 1599523608739,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "            \"match\": \".*\\\\.py$\",\r\n            \"command\": \"python.runLinting\",\r\n            \"runIn\": \"vscode\"",
+      "createdAt": 1599523574235,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "      \"cmd\": \"extension.awarestAlignFirst\",\r\n      \"args\": \"//\",",
+      "createdAt": 1599523331604,
+      "copyCount": 1,
+      "useCount": 1,
+      "language": "jsonc",
+      "createdLocation": {
+        "range": {
+          "start": {
+            "line": 542,
+            "character": 0
+          },
+          "end": {
+            "line": 542,
+            "character": 0
+          }
+        },
+        "uri": "vscode-userdata:/c%3A/Users/wgooc/AppData/Roaming/Code/User/settings.json"
+      }
+    },
+    {
+      "value": "extension.awarestAlignFirst",
+      "createdAt": 1599523114274,
+      "copyCount": 1,
+      "useCount": 1,
+      "language": "jsonc",
+      "createdLocation": {
+        "range": {
+          "start": {
+            "line": 544,
+            "character": 41
+          },
+          "end": {
+            "line": 544,
+            "character": 41
+          }
+        },
+        "uri": "vscode-userdata:/c%3A/Users/wgooc/AppData/Roaming/Code/User/settings.json"
+      }
+    },
+    {
+      "value": "\"kirankotari.RunCommandOnSave\": [\r\n    {\r\n        \"cmd\": \"<anyCommandYouLike>\"\r\n    }\r\n]",
+      "createdAt": 1599523075731,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "\"command\": \"extension.awarestAlignFirst\", \"args\": \"//\" ",
+      "createdAt": 1599523028541,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "\"jerrychoux.commandOnSave\": [\r\n  {\r\n    \"ext\": \"py\",\r\n    \"cmd\": \"autopep8 --in-place --aggressive --aggressive ${file}\"\r\n  }\r\n]",
+      "createdAt": 1599522999114,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "  { \"key\": \"meta+/\",          \"command\": \"extension.awarestAlignFirst\", \"args\": \"//\" },\r\n  { \"key\": \"meta+;\",          \"command\": \"extension.awarestAlignFirst\", \"args\": \": \" },\r\n  { \"key\": \"meta+space\",      \"command\": \"extension.awarestAlignEach\",  \"args\": \" \"  },\r\n  { \"key\": \"meta+,\",          \"command\": \"extension.awarestAlignList\",  \"args\": \",\"  },\r\n  { \"key\": \"meta+.\",          \"command\": \"extension.awarestAlignHtml\",  \"args\": \" \"  },\r\n  { \"key\": \"meta+enter\",      \"command\": \"extension.awarestAlignLines\", \"args\": \" \"  },\r\n  { \"key\": \"meta+ctrl+space\", \"command\": \"extension.awarestAlignFirst\", \"args\": \" \"  },",
+      "createdAt": 1599522822009,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "  \"awarestAlign.eol\": \"\\n\",   // default\r\n  \"awarestAlign.eol\": \"\\r\\n\", // windows eol\r\n\r\n  \"awarestAlign.tab\": \"  \",   // default\r\n  \"awarestAlign.tab\": \"\\t\",   // tab character\r\n  \"awarestAlign.tab\": \"    \", // four space tabs",
+      "createdAt": 1599522774806,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "seito-openfile.openFileFromText",
+      "createdAt": 1599522678443,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "workbench.action.reopenClosedEditor",
+      "createdAt": 1599522602159,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "workbench.action.openRecent",
+      "createdAt": 1599522550834,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "bookmarks.list",
+      "createdAt": 1599522483313,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "bookmarks.toggle",
+      "createdAt": 1599522420384,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "modaledit.showBookmarks",
+      "createdAt": 1599522355389,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "modaledit.defineBookmark",
+      "createdAt": 1599522075795,
+      "copyCount": 2,
+      "useCount": 2
+    },
+    {
+      "value": "revealFileInOS",
+      "createdAt": 1599522274718,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "extension.open",
+      "createdAt": 1599522236152,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "copyFilePath",
+      "createdAt": 1599522146792,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "editor.toggleFold",
+      "createdAt": 1599522020407,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "editor.unfoldAllMarkerRegions",
+      "createdAt": 1599521980852,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "editor.foldAllMarkerRegions",
+      "createdAt": 1599521961573,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "surround.with.region",
+      "createdAt": 1599521345106,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "extension.embraceSingleQuotes",
+      "createdAt": 1599521326851,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "extension.embraceDoubleQuotes",
+      "createdAt": 1599519525316,
+      "copyCount": 2,
+      "useCount": 2
+    },
+    {
+      "value": "extension.embraceParenthesis",
+      "createdAt": 1599521102009,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "\r\n      \"d\": \"geeebe.duplicateText\",",
+      "createdAt": 1599521038539,
+      "copyCount": 1,
+      "useCount": 1,
+      "language": "jsonc",
+      "createdLocation": {
+        "range": {
+          "start": {
+            "line": 319,
+            "character": 37
+          },
+          "end": {
+            "line": 319,
+            "character": 37
+          }
+        },
+        "uri": "vscode-userdata:/c%3A/Users/wgooc/AppData/Roaming/Code/User/settings.json"
+      }
+    },
+    {
+      "value": "workbench.action.closeWindow",
+      "createdAt": 1599520924807,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "workbench.action.closePanel",
+      "createdAt": 1599520601115,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "workbench.action.previousPanelView",
+      "createdAt": 1599520527064,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "workbench.action.nextPanelView",
+      "createdAt": 1599520468184,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "workbench.action.splitEditorRight",
+      "createdAt": 1599520363470,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "workbench.action.joinAllGroups",
+      "createdAt": 1599520271065,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "workbench.action.splitEditorDown",
+      "createdAt": 1599520199529,
+      "copyCount": 1,
+      "useCount": 1,
+      "language": "jsonc",
+      "createdLocation": {
+        "range": {
+          "start": {
+            "line": 302,
+            "character": 18
+          },
+          "end": {
+            "line": 302,
+            "character": 18
+          }
+        },
+        "uri": "vscode-userdata:/c%3A/Users/wgooc/AppData/Roaming/Code/User/settings.json"
+      }
+    },
+    {
+      "value": "extension.selectWord",
+      "createdAt": 1599519974110,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "editor:select-word",
+      "createdAt": 1599519960392,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "vscode-select-by-indent.select",
+      "createdAt": 1599519903031,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "editor.togglequotes",
+      "createdAt": 1599518887407,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "editor.action.commentLine",
+      "createdAt": 1599518769004,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "short-commands.activatePalette",
+      "createdAt": 1599517744045,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "{\n  \"key\": \"ctrl+shift+left\",\n  \"command\": \"alm.blockSelectLeft\",\n  \"when\": \"editorTextFocus\"\n}",
+      "createdAt": 1599517400815,
+      "copyCount": 1,
+      "useCount": 1
+    },
+    {
+      "value": "\t\tinitX == x2;\r\n",
+      "createdAt": 1599440507858,
+      "copyCount": 1,
+      "useCount": 1,
+      "language": "cpp",
+      "createdLocation": {
+        "range": {
+          "start": {
+            "line": 175,
+            "character": 2
+          },
+          "end": {
+            "line": 175,
+            "character": 2
+          }
+        },
+        "uri": "file:///e%3A/Full%20Sail%20Work/Month%2015%20Computer%20Graphics/Week%201/Lab%202/ConsoleApplication1/main.cpp"
+      }
+    }
+  ]
+}

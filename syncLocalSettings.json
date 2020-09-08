@@ -1,0 +1,36 @@
+{
+    "ignoreUploadFiles": [
+        "state.*",
+        "syncLocalSettings.json",
+        ".DS_Store",
+        "sync.lock",
+        "projects.json",
+        "projects_cache_vscode.json",
+        "projects_cache_git.json",
+        "projects_cache_svn.json",
+        "gpm_projects.json",
+        "gpm-recentItems.json"
+    ],
+    "ignoreUploadFolders": [
+        "workspaceStorage"
+    ],
+    "ignoreExtensions": [],
+    "gistDescription": "Visual Studio Code Settings Sync Gist",
+    "version": 343,
+    "token": "9ab9b769cca5b0f561b093e5197aaba98d4c5fe6",
+    "downloadPublicGist": false,
+    "supportedFileExtensions": [
+        "json",
+        "code-snippets"
+    ],
+    "openTokenLink": true,
+    "disableUpdateMessage": false,
+    "lastUpload": "2020-09-02T11:25:56.305Z",
+    "lastDownload": "2020-09-02T11:25:56.305Z",
+    "githubEnterpriseUrl": null,
+    "askGistDescription": false,
+    "customFiles": {},
+    "hostName": null,
+    "universalKeybindings": false,
+    "autoUploadDelay": 20
+}

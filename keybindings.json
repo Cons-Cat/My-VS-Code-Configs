@@ -1,0 +1,287 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+  {
+    "key": "alt+a",
+    "command": "modaledit.enterNormal",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "backspace",
+    "command": "modaledit.enterNormal",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+c",
+    "command": "references-view.next",
+    "when": "references-view"
+  },
+  {
+    "key": "ctrl+t",
+    "command": "references-view.prev",
+    "when": "references-view"
+  },
+  {
+    "key": "ctrl+t",
+    "command": "-workbench.action.showAllSymbols"
+  },
+  {
+    "key": "alt+t",
+    "command": "editor.action.moveLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+c",
+    "command": "editor.action.moveLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+down",
+    "command": "-editor.action.moveLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+up",
+    "command": "-editor.action.moveLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+c",
+    "command": "list.focusUp",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "up",
+    "command": "-list.focusUp",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "ctrl+c",
+    "command": "selectPrevSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "key": "up",
+    "command": "-selectPrevSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "key": "ctrl+c",
+    "command": "showPrevParameterHint",
+    "when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
+  },
+  {
+    "key": "up",
+    "command": "-showPrevParameterHint",
+    "when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
+  },
+  {
+    "key": "ctrl+c",
+    "command": "workbench.statusBar.focusPrevious",
+    "when": "statusBarFocused"
+  },
+  {
+    "key": "up",
+    "command": "-workbench.statusBar.focusPrevious",
+    "when": "statusBarFocused"
+  },
+  {
+    "key": "ctrl+c",
+    "command": "workbench.action.interactivePlayground.arrowUp",
+    "when": "interactivePlaygroundFocus && !editorTextFocus"
+  },
+  {
+    "key": "up",
+    "command": "-workbench.action.interactivePlayground.arrowUp",
+    "when": "interactivePlaygroundFocus && !editorTextFocus"
+  },
+  {
+    "key": "ctrl+t",
+    "command": "selectNextSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "key": "down",
+    "command": "-selectNextSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "key": "ctrl+t",
+    "command": "workbench.statusBar.focusNext",
+    "when": "statusBarFocused"
+  },
+  {
+    "key": "down",
+    "command": "-workbench.statusBar.focusNext",
+    "when": "statusBarFocused"
+  },
+  {
+    "key": "ctrl+t",
+    "command": "showNextParameterHint",
+    "when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
+  },
+  {
+    "key": "down",
+    "command": "-showNextParameterHint",
+    "when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
+  },
+  {
+    "key": "ctrl+t",
+    "command": "list.focusDown",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "down",
+    "command": "-list.focusDown",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "ctrl+t",
+    "command": "history.showNext",
+    "when": "historyNavigationEnabled && historyNavigationWidget"
+  },
+  {
+    "key": "down",
+    "command": "-history.showNext",
+    "when": "historyNavigationEnabled && historyNavigationWidget"
+  },
+  {
+    "key": "ctrl+t",
+    "command": "workbench.action.interactivePlayground.arrowDown",
+    "when": "interactivePlaygroundFocus && !editorTextFocus"
+  },
+  {
+    "key": "down",
+    "command": "-workbench.action.interactivePlayground.arrowDown",
+    "when": "interactivePlaygroundFocus && !editorTextFocus"
+  },
+  {
+    "key": "ctrl+t",
+    "command": "settings.action.focusSettingsFile",
+    "when": "inSettingsSearch && !suggestWidgetVisible"
+  },
+  {
+    "key": "down",
+    "command": "-settings.action.focusSettingsFile",
+    "when": "inSettingsSearch && !suggestWidgetVisible"
+  },
+  {
+    "key": "ctrl+t",
+    "command": "settings.action.focusSettingsFromSearch",
+    "when": "inSettingsSearch && !suggestWidgetVisible"
+  },
+  {
+    "key": "down",
+    "command": "-settings.action.focusSettingsFromSearch",
+    "when": "inSettingsSearch && !suggestWidgetVisible"
+  },
+  {
+    "key": "ctrl+t",
+    "command": "notifications.focusNextToast",
+    "when": "notificationFocus && notificationToastsVisible"
+  },
+  {
+    "key": "down",
+    "command": "-notifications.focusNextToast",
+    "when": "notificationFocus && notificationToastsVisible"
+  },
+  {
+    "key": "ctrl+t",
+    "command": "keybindings.editor.focusKeybindings",
+    "when": "inKeybindings && inKeybindingsSearch"
+  },
+  {
+    "key": "down",
+    "command": "-keybindings.editor.focusKeybindings",
+    "when": "inKeybindings && inKeybindingsSearch"
+  },
+  {
+    "key": "ctrl+c",
+    "command": "history.showPrevious",
+    "when": "historyNavigationEnabled && historyNavigationWidget"
+  },
+  {
+    "key": "up",
+    "command": "-history.showPrevious",
+    "when": "historyNavigationEnabled && historyNavigationWidget"
+  },
+  {
+    "key": "ctrl+c",
+    "command": "notifications.focusPreviousToast",
+    "when": "notificationFocus && notificationToastsVisible"
+  },
+  {
+    "key": "up",
+    "command": "-notifications.focusPreviousToast",
+    "when": "notificationFocus && notificationToastsVisible"
+  },
+  {
+    "key": "ctrl+c",
+    "command": "notebook.focusPreviousEditor",
+    "when": "editorTextFocus && inputFocus && notebookEditorFocused && notebookEditorCursorAtBoundary != 'bottom' && notebookEditorCursorAtBoundary != 'none'"
+  },
+  {
+    "key": "up",
+    "command": "-notebook.focusPreviousEditor",
+    "when": "editorTextFocus && inputFocus && notebookEditorFocused && notebookEditorCursorAtBoundary != 'bottom' && notebookEditorCursorAtBoundary != 'none'"
+  },
+  {
+    "key": "oem_period",
+    "command": "extension.dired.goUpDir",
+    "when": "dired.open && !findWidgetVisible && !inQuickOpen"
+  },
+  {
+    "key": "shift+b",
+    "command": "-extension.dired.goUpDir",
+    "when": "dired.open && !findWidgetVisible && !inQuickOpen"
+  },
+  {
+    "key": "p",
+    "command": "extension.dired.enter",
+    "when": "dired.open && !findWidgetVisible && !inQuickOpen"
+  },
+  {
+    "key": "enter",
+    "command": "-extension.dired.enter",
+    "when": "dired.open && !findWidgetVisible && !inQuickOpen"
+  },
+  {
+    "key": "ctrl+t",
+    "command": "notebook.focusNextEditor",
+    "when": "editorTextFocus && inputFocus && notebookEditorFocused && notebookEditorCursorAtBoundary != 'none' && notebookEditorCursorAtBoundary != 'top'"
+  },
+  {
+    "key": "down",
+    "command": "-notebook.focusNextEditor",
+    "when": "editorTextFocus && inputFocus && notebookEditorFocused && notebookEditorCursorAtBoundary != 'none' && notebookEditorCursorAtBoundary != 'top'"
+  },
+  {
+    "key": "ctrl+t",
+    "command": "breadcrumbs.selectFocused",
+    "when": "breadcrumbsActive && breadcrumbsVisible"
+  },
+  {
+    "key": "down",
+    "command": "-breadcrumbs.selectFocused",
+    "when": "breadcrumbsActive && breadcrumbsVisible"
+  },
+  {
+    "key": "ctrl+t",
+    "command": "cursorDown",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "down",
+    "command": "-cursorDown",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+c",
+    "command": "cursorUp",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "up",
+    "command": "-cursorUp",
+    "when": "textInputFocus"
+  }
+]
