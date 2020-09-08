@@ -2,10 +2,6 @@ globalStorage/
 sync/
 VS-Code-Configs/
 workspaceStorage/
-<<<<<<< HEAD
 clipboard.history.json
 sync/extensions/lastSyncextensions.json
-=======
->>>>>>> dd0b5d2... Cleaned Repo
-
 sync/settings/lastSyncSettings.json
