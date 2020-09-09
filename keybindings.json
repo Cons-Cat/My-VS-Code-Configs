@@ -11,6 +11,11 @@
     "when": "editorTextFocus"
   },
   {
+    "key": "enter",
+    "command": "extension.smartBackspace",
+    "when": "editorTextFocus"
+  },
+  {
     "key": "ctrl+c",
     "command": "references-view.next",
     "when": "references-view"
@@ -283,5 +288,9 @@
     "key": "up",
     "command": "-cursorUp",
     "when": "textInputFocus"
+  },
+  {
+    "key": "oem_1",
+    "command": "-smartsemicolon.insert"
   }
 ]

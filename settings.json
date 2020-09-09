@@ -20,6 +20,8 @@
   "editor.fontFamily": "'Dank Mono', 'Hasklig','Fira Code','Cascadia Mono'",
   "editor.fontLigatures": true,
   "editor.accessibilitySupport": "off",
+  "smartsemicolon.enable": true,
+  "smartsemicolon.autoLineChange": true,
   // Theme
   "workbench.colorTheme": "Dracula",
   "editor.tokenColorCustomizations": {
@@ -122,21 +124,12 @@
       "false": "cursorUp"
     },
     "C": {
-      // "command": "cursorMove",
-      // "args": "{ to: 'viewPortTop', select: __selecting }"
       "condition": "__selecting",
-      // "false": "cursorPageUp",
       "false": "block-travel.jumpUp",
       "true": "block-travel.selectUp"
-      // "true": "editor.action.smartSelect.expand"
     },
     "T": {
-      //  "command": "cursorMove",
-      //  "args": "{ to: 'pageDown', select: __selecting }"
-      //  "args": "{ to: 'viewPortBottom', select: __selecting }"
       "condition": "__selecting",
-      // "false": "cursorPageDown",
-      // "true": "editor.action.smartSelect.shrink"
       "false": "block-travel.jumpDown",
       "true": "block-travel.selectDown"
     },
@@ -302,13 +295,43 @@
     // "b": "references-view.next",
     // "B": "references-view.prev",
     // Cut
+    // "q": [
+    //   "copy-word.cut",
+    //   "modaledit.cancelSelection"
+    // ],
     "q": [
-      "copy-word.cut",
+      {
+        "condition": "__col == 0 || __selecting || __char == ''",
+        "true": {
+          "command": "editor.action.clipboardCutAction",
+        },
+        "false": [
+          {
+            "command": "copy-word.cut",
+          },
+          {
+            "command": "editor.action.cancelSelectionAnchor"
+          }
+        ],
+      },
       "modaledit.cancelSelection"
     ],
     // Copy
     "j": [
-      "copy-word.copy",
+      {
+        "condition": "__col == 0 || __selecting || __char == ''",
+        "true": {
+          "command": "editor.action.clipboardCopyAction",
+        },
+        "false": [
+          {
+            "command": "copy-word.copy",
+          },
+          {
+            "command": "editor.action.cancelSelectionAnchor"
+          }
+        ],
+      },
       "modaledit.cancelSelection"
     ],
     // Paste
@@ -336,13 +359,18 @@
     "W": "workbench.action.focusPreviousGroup",
     "_": "editor.togglecase",
     "-": "extension.toggle",
+    "o": "smartsemicolon.insert",
+    "O": "editor.action.insertLineAfter",
     // SPACEBAR STUFF
     " ": {
       // "i": "alm.blockCut",
       "a": "editor.action.selectAll",
       "s": "workbench.action.files.save",
       "k": "clipboardHistory.focus",
-      "i": "editor.action.deleteLines",
+      "i": [
+        "editor.action.deleteLines",
+        "modaledit.cancelSelection"
+      ],
       "m": "extension.dired.open",
       " ": "editor.action.showHover",
       "}": "workbench.action.splitEditorRight",
@@ -368,16 +396,21 @@
         "u": "seito-openfile.openFileFromText",
         "i": "copyFilePath",
         ",": "extension.open",
+        "n": "workbench.action.files.newUntitledFile",
         "o": "revealFileInOS",
         "l": "bookmarks.toggle",
         "c": "bookmarks.list",
         "f": "workbench.action.openRecent",
         "p": "workbench.action.reopenClosedEditor",
-        ".": "workbench.action.files.openFolder",
+        ".": "workbench.action.files.openFile",
+        ">": "workbench.action.files.openFolder",
         "s": "workbench.action.files.saveAs"
       },
       "t": {
-        "b": "workbench.action.closeActiveEditor"
+        "b": "workbench.action.closeActiveEditor",
+        "c": "center-editor-window.center",
+        "g": "cursorPageUp",
+        "m": "cursorPageDown",
       }
     }
   },
@@ -526,6 +559,8 @@
   "bookmarks.label.suggestion": "suggestWhenSelectedOrLineWhenNoSelected",
   "bookmarks.navigateThroughAllFiles": true,
   "bookmarks.saveBookmarksInProject": true,
+  "C_Cpp.errorSquiggles": "Enabled",
+  "C_Cpp.exclusionPolicy": "checkFilesAndFolders",
   // "dired.fixed_window": false,
   // "dired.ask_directory": false,
   /*
