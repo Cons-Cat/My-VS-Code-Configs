@@ -5,3 +5,6 @@ workspaceStorage/
 clipboard.history.json
 sync/extensions/lastSyncextensions.json
 sync/settings/lastSyncSettings.json
+sync/extensions/lastSyncextensions.json
+sync/keybindings/lastSynckeybindings.json
+sync/settings/lastSyncsettings.json

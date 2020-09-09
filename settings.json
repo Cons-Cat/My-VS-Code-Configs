@@ -22,6 +22,7 @@
   "editor.accessibilitySupport": "off",
   "smartsemicolon.enable": true,
   "smartsemicolon.autoLineChange": true,
+  "clipring.selectTextAfterPasteFromMenu": false,
   // Theme
   "workbench.colorTheme": "Dracula",
   "editor.tokenColorCustomizations": {
@@ -201,27 +202,6 @@
         "false": "smartBeginningOfLine"
       }
     },
-    // Move to screen section.
-    // "command": "cursorMove",
-    // "args": "{ to: 'viewPortTop', select: __selecting }"
-    //  "command": "cursorPageUp"
-    //  },
-    //  "T": {
-    //  "command": "cursorMove",
-    //  "command": "cursorPageDown",
-    //  "args": "{ to: 'pageDown', select: __selecting }"
-    //  "args": "{ to: 'viewPortBottom', select: __selecting }"
-    //  },
-    // ")": {
-    //   "condition": "__selecting",
-    //   "true": "editor.action.smartSelect.expand",
-    //   "false": "editor.action.jumpToBracket"
-    // },
-    // "(": {
-    //   "condition": "__selecting",
-    //   "true": "editor.action.smartSelect.expand",
-    //   "false": "editor.action.jumpToBracket"
-    // },
     // Deletion
     ".": {
       "condition": "__selecting",
@@ -235,7 +215,10 @@
       "false": "deleteWordRight"
     },
     "P": "selectPartOfWord.delete",
-    "e": "extension.smartBackspace",
+    "e": [
+      "extension.smartBackspace",
+      "modaledit.cancelSelection"
+    ],
     "(": {
       "command": "deleteRight"
     },
@@ -255,6 +238,12 @@
     // ],
     // */
     "i": "deletehere.delete",
+    "I": [
+      "select-paragraph.selectParagraph",
+      // "editor.actions.deleteLines",
+      "editor.action.deleteLines",
+      "modaledit.cancelSelection"
+    ],
     // ";": "extension.embraceDoubleQuotes",
     "=": "editor.action.smartSelect.expand",
     // "=": "select-paragraph.selectParagraph",
@@ -294,11 +283,6 @@
     // Searching
     // "b": "references-view.next",
     // "B": "references-view.prev",
-    // Cut
-    // "q": [
-    //   "copy-word.cut",
-    //   "modaledit.cancelSelection"
-    // ],
     "q": [
       {
         "condition": "__col == 0 || __selecting || __char == ''",
@@ -336,8 +320,8 @@
     ],
     // Paste
     "k": [
-      "editor.action.clipboardPasteAction",
-      "modaledit.cancelSelection"
+      "clipring.pasteRingItem",
+      // "modaledit.cancelSelection"
     ],
     "K": [
       "editor.action.clipboardPasteAction",
@@ -353,17 +337,23 @@
     // Misc
     "'": "editor.action.commentLine",
     "y": "modaledit.toggleSelection",
-    "f": "undo",
+    "f": [
+      "undo",
+      "modaledit.cancelSelection"
+    ],
     ";": "redo",
     "w": "workbench.action.focusNextGroup",
     "W": "workbench.action.focusPreviousGroup",
     "_": "editor.togglecase",
     "-": "extension.toggle",
     "o": "smartsemicolon.insert",
-    "O": "editor.action.insertLineAfter",
-    // SPACEBAR STUFF
+    "O": "lineBreakInsert",
+    "z": [
+      // Unfortunately, I can't seem to make this not select.
+      "extension.generic-goto",
+    ],
+    // LEADER COMMANDS
     " ": {
-      // "i": "alm.blockCut",
       "a": "editor.action.selectAll",
       "s": "workbench.action.files.save",
       "k": "clipboardHistory.focus",
@@ -376,9 +366,23 @@
       "}": "workbench.action.splitEditorRight",
       "{": "workbench.action.closePanel",
       "r": "editor.toggleFold",
+      // "R": {
+      //   "r": "editor.foldAllMarkerRegions",
+      //   "R": "editor.unfoldAllMarkerRegions",
+      // },
       "f": "editor.action.goToReferences",
       // "f": "references-view.showCallHierarchy",
       "F": "references-view.find",
+      "d": {
+        "condition": "__selecting",
+        "false": "cursorTop",
+        "true": "cursorTopSelect",
+      },
+      "b": {
+        "condition": "__selecting",
+        "false": "cursorBottom",
+        "true": "cursorBottomSelect",
+      },
       ".": {
         "w": "workbench.action.closeWindow",
         "r": "editor.foldAllMarkerRegions",
@@ -390,7 +394,8 @@
         "b": "extension.embraceCurlyBrackets",
         "g": "extension.embraceDoubleQuotes",
         "c": "extension.embraceSingleQuotes",
-        "r": "extension.moveIntoRegion"
+        "r": "region-marker.markNamedRegion",
+        "R": "region-marker.markRegion",
       },
       "c": {
         "u": "seito-openfile.openFileFromText",
@@ -561,6 +566,9 @@
   "bookmarks.saveBookmarksInProject": true,
   "C_Cpp.errorSquiggles": "Enabled",
   "C_Cpp.exclusionPolicy": "checkFilesAndFolders",
+  "GoToAnything.prefix.Commands": "",
+  "GoToAnything.prefix.Recent": "",
+  "GoToAnything.prefix.Symbols": "",
   // "dired.fixed_window": false,
   // "dired.ask_directory": false,
   /*

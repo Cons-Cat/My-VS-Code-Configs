@@ -12,7 +12,7 @@
   },
   {
     "key": "enter",
-    "command": "extension.smartBackspace",
+    "command": "deleteLeft",
     "when": "editorTextFocus"
   },
   {
@@ -292,5 +292,10 @@
   {
     "key": "oem_1",
     "command": "-smartsemicolon.insert"
+  },
+  {
+    "key": "backspace",
+    "command": "-extension.smartBackspace",
+    "when": "config.hungryDelete.enableSmartBackspace && editorTextFocus && !editorReadonly"
   }
 ]
