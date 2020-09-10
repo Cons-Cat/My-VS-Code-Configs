@@ -25,6 +25,7 @@
   "banner-comments-plus.trimTrailingWhitespace": true,
   "banner-comments-plus.trimEmptyLines": true,
   "clipring.selectTextAfterPasteFromMenu": false,
+  "bracket-peek.previewAlways": true,
   "editor.renderWhitespace": "none",
   // Theme
   "workbench.colorTheme": "Dracula",
@@ -99,14 +100,14 @@
     "h": {
       "condition": "__selecting",
       "true": {
-        "command": "cursorLeftSelect"
+        "command": "tabsanity.cursorLeftSelect"
       },
-      "false": "cursorLeft"
+      "false": "tabsanity.cursorLeft"
     },
     "n": {
       "condition": "__selecting",
-      "true": "cursorRightSelect",
-      "false": "cursorRight"
+      "true": "tabsanity.cursorRightSelect",
+      "false": "tabsanity.cursorRight"
     },
     "H": {
       "condition": "__selecting",
@@ -138,6 +139,7 @@
       "false": "block-travel.jumpDown",
       "true": "block-travel.selectDown"
     },
+    "m": "editor.action.jumpToBracket",
     // Move by words.
     "r": {
       "condition": "__selecting",
@@ -233,10 +235,14 @@
       "editor.action.deleteLines",
       "modaledit.cancelSelection"
     ],
-    "=": "editor.action.smartSelect.expand",
+    "=": "extension.selectCurlyBrackets",
     "*": "extension.selectPerfectLine",
     "+": "bracket-pair-colorizer-2.expandBracketSelection",
-    ")": "extension.selectWord",
+    ")": {
+      "condition": "__selecting",
+      "true": "extension.selectSameText",
+      "false": "extension.selectWord",
+    },
     ",": "extension.blockalign",
     "q": [
       {
@@ -289,17 +295,7 @@
       "command": "workbench.action.joinAllGroups"
     },
     // Misc
-    "'": {
-      "'": "editor.action.commentLine",
-      "m": "comment-divider.makeMainHeader",
-      "s": "comment-divider.makeSubHeader",
-      "l": "comment-divider.insertSolidLine",
-      "t": "extension.insertComment",
-      "g": "extension.magicComment",
-      "r": "rewrap.rewrapComment",
-      "b": "banner-comments-plus.Apply",
-      "B": "banner-comments-plus.ApplyFromList"
-    },
+    "'": "editor.action.commentLine",
     // "'": {
     //   "condition": "__selecting",
     //   "true": {
@@ -347,7 +343,8 @@
       "}": "workbench.action.splitEditorRight",
       "{": "workbench.action.closePanel",
       "r": "editor.toggleFold",
-      "f": "references-view.find",
+      "F": "references-view.find",
+      "f": "editor.action.goToReferences",
       "d": {
         "condition": "__selecting",
         "false": "cursorTop",
@@ -380,7 +377,12 @@
         "c": "extension.embraceSingleQuotes",
         "r": "region-marker.markNamedRegion",
         "R": "region-marker.markRegion",
-        "d": "insertDateString.insertDate"
+        "d": "insertDateString.insertDate",
+        "i": "extension.textPastry.1toX",
+        "I": "extension.textPastry.range",
+        "l": "extension.textPastry.AtoX",
+        "h": "editor.action.duplicateSelection",
+        "u": "extension.evalReplace"
       },
       "c": {
         "u": "seito-openfile.openFileFromText",
@@ -394,13 +396,25 @@
         "p": "workbench.action.reopenClosedEditor",
         ".": "workbench.action.files.openFile",
         ">": "workbench.action.files.openFolder",
-        "s": "workbench.action.files.saveAs"
+        "s": "workbench.action.files.saveAs",
+        "t": "todo-tree.showTreeView"
       },
       "t": {
         "b": "workbench.action.closeActiveEditor",
         "t": "center-editor-window.center",
         "c": "cursorPageUp",
         "w": "cursorPageDown",
+      },
+      "'": {
+        "'": "editor.action.blockComment",
+        "s": "comment-divider.makeSubHeader",
+        "l": "comment-divider.insertSolidLine",
+        "t": "extension.insertComment",
+        "g": "extension.magicComment",
+        "r": "rewrap.rewrapComment",
+        "m": "extension.commentBox",
+        "b": "banner-comments-plus.Apply",
+        "B": "banner-comments-plus.ApplyFromList"
       }
     }
   },
@@ -451,8 +465,8 @@
   "todo-tree.general.enableFileWatcher": true,
   "todo-tree.highlights.defaultHighlight": {
     "background": "#4415a2",
-    "opacity": 65,
-    "textDecoration": "underline overline"
+    "opacity": 0,
+    // "textDecoration": "underline overline"
   },
   "todo-tree.tree.buttons.scanMode": true,
   "dimmer.toggleDimmerCommandScope": "workspace",
@@ -563,6 +577,7 @@
   "editor.cursorSurroundingLines": 1,
   "editor.scrollBeyondLastLine": false,
   "workbench.list.smoothScrolling": true,
+  "comment-divider.length": 60,
   // "GoToAnything.prefix.Commands": "",
   // "GoToAnything.prefix.Recent": "",
   // "GoToAnything.prefix.Symbols": "",

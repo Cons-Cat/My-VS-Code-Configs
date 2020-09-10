@@ -18,7 +18,6 @@
   {
     "key": "enter",
     "command": "lineBreakInsert",
-    // "command": "editor.action.insertLineAfter",
     "when": "editorTextFocus"
   },
   {
@@ -54,5 +53,25 @@
     "key": "ctrl+alt+down",
     "command": "-smartmulticursor.insertCursorBelow",
     "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+oem_period",
+    "command": "references-view.next",
+    "when": "reference-list.hasResult"
+  },
+  {
+    "key": "f4",
+    "command": "-references-view.next",
+    "when": "reference-list.hasResult"
+  },
+  {
+    "key": "alt+oem_comma",
+    "command": "references-view.prev",
+    "when": "reference-list.hasResult"
+  },
+  {
+    "key": "shift+f4",
+    "command": "-references-view.prev",
+    "when": "reference-list.hasResult"
   }
 ]
