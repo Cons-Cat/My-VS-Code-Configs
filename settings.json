@@ -17,12 +17,15 @@
   "editor.mouseWheelScrollSensitivity": 5,
   "togglecase.pattern": "[0-9]|[a-z]|[A-Z]|_|-",
   "hungryDelete.keepOneSpace": true,
-  "editor.fontFamily": "'Dank Mono', 'Hasklig','Fira Code','Cascadia Mono'",
+  "editor.fontFamily": "'Dank Mono', 'Cascadia Mono'",
   "editor.fontLigatures": true,
   "editor.accessibilitySupport": "off",
   "smartsemicolon.enable": true,
   "smartsemicolon.autoLineChange": true,
+  "banner-comments-plus.trimTrailingWhitespace": true,
+  "banner-comments-plus.trimEmptyLines": true,
   "clipring.selectTextAfterPasteFromMenu": false,
+  "editor.renderWhitespace": "none",
   // Theme
   "workbench.colorTheme": "Dracula",
   "editor.tokenColorCustomizations": {
@@ -39,8 +42,9 @@
   "terminal.integrated.fontSize": 15,
   // Fonts
   // "vscode_custom_css.imports": [
-  //   "file:///C:Users/wgooc/vscode.css"
-  // ]
+  // "file:///C:/Users/wgooc/Documents/VSCodeCSS.css"
+  // ],
+  // "vscode_custom_css.policy": true,
   // Colors
   "workbench.colorCustomizations": {
     "editor.selectionBackground": "#104956",
@@ -73,8 +77,8 @@
   "dimmer.enabled": true,
   "dimmer.opacity": 65,
   "editor.wordWrap": "on",
-  "editor.formatOnPaste": true,
-  "editor.formatOnSave": true,
+  // "editor.formatOnPaste": true,
+  // "editor.formatOnSave": true,
   "editor.minimap.showSlider": "always",
   "workbench.preferredDarkColorTheme": "Dracula",
   "workbench.tree.indent": 4,
@@ -199,9 +203,10 @@
       "false": {
         "condition": "__selecting",
         "true": "cursorLineStartSelect",
-        "false": "smartBeginningOfLine"
+        "false": "cursorLineStart"
       }
     },
+    "D": "smartBeginningOfLine",
     // Deletion
     ".": {
       "condition": "__selecting",
@@ -222,67 +227,17 @@
     "(": {
       "command": "deleteRight"
     },
-    /*
-      ",": [{
-          "command": "deleteRight",
-          "repeat": "__char.match(/\\s/)"
-        },  {
-          "command":"deleteLeft",
-          "repeat":"__char.match(/\\s/)"
-        }
-      ],  */
-    //  /*
-    // ",": [
-    //   "yo1dog.cursor-trim.trimCursor",
-    //   "extension.hungryDelete"
-    // ],
-    // */
     "i": "deletehere.delete",
     "I": [
       "select-paragraph.selectParagraph",
-      // "editor.actions.deleteLines",
       "editor.action.deleteLines",
       "modaledit.cancelSelection"
     ],
-    // ";": "extension.embraceDoubleQuotes",
     "=": "editor.action.smartSelect.expand",
-    // "=": "select-paragraph.selectParagraph",
     "*": "extension.selectPerfectLine",
     "+": "bracket-pair-colorizer-2.expandBracketSelection",
-    // "+": "vscode-select-by-indent.select",
     ")": "extension.selectWord",
-    ",": "yo1dog.cursor-trim.trimCursor",
-    /*
-           ",": [{
-               "command": "modaledit.selectBetween",
-               "args": {
-                 "from": "'/s'",
-                 "to":"'/s'"
-               }
-             },  {
-               "command":"editor.action.deleteLines"
-             }
-           ],  */
-    /*
-       Searching
-       "b": {
-         "command:": "modaledit.search",
-         "args": {
-           "caseSensitive": false,
-           "wrapAround": true
-         }
-      },
-       "B": {
-         "command:": "modaledit.search",
-         "args": {
-           "caseSensitive": true,
-           "wrapAround": true
-         }
-       },
-       */
-    // Searching
-    // "b": "references-view.next",
-    // "B": "references-view.prev",
+    ",": "extension.blockalign",
     "q": [
       {
         "condition": "__col == 0 || __selecting || __char == ''",
@@ -321,7 +276,6 @@
     // Paste
     "k": [
       "clipring.pasteRingItem",
-      // "modaledit.cancelSelection"
     ],
     "K": [
       "editor.action.clipboardPasteAction",
@@ -335,23 +289,51 @@
       "command": "workbench.action.joinAllGroups"
     },
     // Misc
-    "'": "editor.action.commentLine",
+    "'": {
+      "'": "editor.action.commentLine",
+      "m": "comment-divider.makeMainHeader",
+      "s": "comment-divider.makeSubHeader",
+      "l": "comment-divider.insertSolidLine",
+      "t": "extension.insertComment",
+      "g": "extension.magicComment",
+      "r": "rewrap.rewrapComment",
+      "b": "banner-comments-plus.Apply",
+      "B": "banner-comments-plus.ApplyFromList"
+    },
+    // "'": {
+    //   "condition": "__selecting",
+    //   "true": {
+    //     "command": "editor.action.commentLine"
+    //   },
+    //   "false": {
+    //       "'": "editor.action.commentLine",
+    //       "m": "comment-divider.makeMainHeader",
+    //       "s": "comment-divider.makeSubHeader",
+    //       "l": "comment-divider.insertSolidLine"
+    // }, 
     "y": "modaledit.toggleSelection",
     "f": [
       "undo",
       "modaledit.cancelSelection"
     ],
-    ";": "redo",
+    "F": "redo",
     "w": "workbench.action.focusNextGroup",
     "W": "workbench.action.focusPreviousGroup",
-    "_": "editor.togglecase",
+    "_": "extension.toggleCase",
     "-": "extension.toggle",
     "o": "smartsemicolon.insert",
-    "O": "lineBreakInsert",
+    "O": "join-lines-context-aware.join",
     "z": [
       // Unfortunately, I can't seem to make this not select.
       "extension.generic-goto",
     ],
+    // Formatting
+    ";": {
+      "condition": "__selecting",
+      "true": "editor.action.formatSelection",
+      "false": "editor.action.formatDocument"
+    },
+    ":": "rylogic-textaligner.Align",
     // LEADER COMMANDS
     " ": {
       "a": "editor.action.selectAll",
@@ -361,18 +343,11 @@
         "editor.action.deleteLines",
         "modaledit.cancelSelection"
       ],
-      "m": "extension.dired.open",
       " ": "editor.action.showHover",
       "}": "workbench.action.splitEditorRight",
       "{": "workbench.action.closePanel",
       "r": "editor.toggleFold",
-      // "R": {
-      //   "r": "editor.foldAllMarkerRegions",
-      //   "R": "editor.unfoldAllMarkerRegions",
-      // },
-      "f": "editor.action.goToReferences",
-      // "f": "references-view.showCallHierarchy",
-      "F": "references-view.find",
+      "f": "references-view.find",
       "d": {
         "condition": "__selecting",
         "false": "cursorTop",
@@ -383,10 +358,19 @@
         "false": "cursorBottom",
         "true": "cursorBottomSelect",
       },
+      "m": "cursorToolsAnchorLeave",
+      "M": "cursorToolsAnchorActivate",
+      "v": [
+        "cursorToolsAnchorClean",
+        "removeSecondaryCursors"
+      ],
       ".": {
         "w": "workbench.action.closeWindow",
         "r": "editor.foldAllMarkerRegions",
         "R": "editor.unfoldAllMarkerRegions",
+        "f": "references-view.showCallHierarchy",
+        "s": "extension.insertSnipp",
+        "S": "extension.createSnipp"
       },
       "e": {
         "t": "extension.embraceParenthesis",
@@ -396,6 +380,7 @@
         "c": "extension.embraceSingleQuotes",
         "r": "region-marker.markNamedRegion",
         "R": "region-marker.markRegion",
+        "d": "insertDateString.insertDate"
       },
       "c": {
         "u": "seito-openfile.openFileFromText",
@@ -413,9 +398,9 @@
       },
       "t": {
         "b": "workbench.action.closeActiveEditor",
-        "c": "center-editor-window.center",
-        "g": "cursorPageUp",
-        "m": "cursorPageDown",
+        "t": "center-editor-window.center",
+        "c": "cursorPageUp",
+        "w": "cursorPageDown",
       }
     }
   },
@@ -452,7 +437,7 @@
   // "files.associations": {
   //   "*.gml": "javascript"
   // },
-  "editor.hover.delay": 0,
+  "editor.hover.delay": 50,
   // "[cpp]": {
   // //   // "editor.defaultFormatter": "ryannaddy.vscode-format"
   // },
@@ -478,7 +463,7 @@
       "filenamePattern": "*.exe"
     }
   ],
-  "editor.formatOnType": true,
+  // "editor.formatOnType": true,
   "C_Cpp.vcFormat.newLine.beforeOpenBrace.namespace": "newLine",
   "C_Cpp.vcFormat.newLine.beforeOpenBrace.lambda": "newLine",
   "C_Cpp.vcFormat.newLine.beforeOpenBrace.function": "newLine",
@@ -566,9 +551,21 @@
   "bookmarks.saveBookmarksInProject": true,
   "C_Cpp.errorSquiggles": "Enabled",
   "C_Cpp.exclusionPolicy": "checkFilesAndFolders",
-  "GoToAnything.prefix.Commands": "",
-  "GoToAnything.prefix.Recent": "",
-  "GoToAnything.prefix.Symbols": "",
+  "toggleCase.case.pathCase": false,
+  "toggleCase.case.sentenceCase": false,
+  "toggleCase.case.titleCase": false,
+  "toggleCase.notification.notifyOnChange": false,
+  "toggleCase.case.dotCase": false,
+  "toggleCase.case.capitalCase": false,
+  "enableTelemetry": true,
+  "editor.minimap.enabled": false,
+  "workbench.activityBar.visible": false,
+  "editor.cursorSurroundingLines": 1,
+  "editor.scrollBeyondLastLine": false,
+  "workbench.list.smoothScrolling": true,
+  // "GoToAnything.prefix.Commands": "",
+  // "GoToAnything.prefix.Recent": "",
+  // "GoToAnything.prefix.Symbols": "",
   // "dired.fixed_window": false,
   // "dired.ask_directory": false,
   /*
