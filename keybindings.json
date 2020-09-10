@@ -11,16 +11,6 @@
     "when": "editorTextFocus"
   },
   {
-    "key": "ctrl+enter",
-    "command": "editor.action.insertLineBefore",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "enter",
-    "command": "lineBreakInsert",
-    "when": "editorTextFocus"
-  },
-  {
     "key": "shift+enter",
     "command": "deleteLeft",
     "when": "editorTextFocus"
