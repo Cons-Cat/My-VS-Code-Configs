@@ -1,67 +1,84 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
-  {
-    "key": "alt+a",
-    "command": "modaledit.enterNormal",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "backspace",
-    "command": "modaledit.enterNormal",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "shift+enter",
-    "command": "deleteLeft",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "oem_1",
-    "command": "-smartsemicolon.insert"
-  },
-  {
-    "key": "backspace",
-    "command": "-extension.smartBackspace",
-    "when": "config.hungryDelete.enableSmartBackspace && editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "alt+c",
-    "command": "smartmulticursor.insertCursorAbove",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "ctrl+alt+up",
-    "command": "-smartmulticursor.insertCursorAbove",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "alt+t",
-    "command": "smartmulticursor.insertCursorBelow",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "ctrl+alt+down",
-    "command": "-smartmulticursor.insertCursorBelow",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "alt+oem_period",
-    "command": "references-view.next",
-    "when": "reference-list.hasResult"
-  },
-  {
-    "key": "f4",
-    "command": "-references-view.next",
-    "when": "reference-list.hasResult"
-  },
-  {
-    "key": "alt+oem_comma",
-    "command": "references-view.prev",
-    "when": "reference-list.hasResult"
-  },
-  {
-    "key": "shift+f4",
-    "command": "-references-view.prev",
-    "when": "reference-list.hasResult"
-  }
+    {
+        "key": "alt+a",
+        "command": "modaledit.enterNormal",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "backspace",
+        "command": "modaledit.enterNormal",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+enter",
+        "command": "deleteLeft",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+c",
+        "command": "list.focusUp",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "ctrl+t",
+        "command": "list.focusDown"
+    },
+    {
+        "key": "oem_1",
+        "command": "-smartsemicolon.insert"
+    },
+    {
+        "key": "backspace",
+        "command": "-extension.smartBackspace",
+        "when": "config.hungryDelete.enableSmartBackspace && editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+c",
+        "command": "smartmulticursor.insertCursorAbove",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+alt+up",
+        "command": "-smartmulticursor.insertCursorAbove",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+t",
+        "command": "smartmulticursor.insertCursorBelow",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+alt+down",
+        "command": "-smartmulticursor.insertCursorBelow",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+oem_period",
+        "command": "references-view.next",
+        "when": "reference-list.hasResult"
+    },
+    {
+        "key": "f4",
+        "command": "-references-view.next",
+        "when": "reference-list.hasResult"
+    },
+    {
+        "key": "alt+oem_comma",
+        "command": "references-view.prev",
+        "when": "reference-list.hasResult"
+    },
+    {
+        "key": "shift+f4",
+        "command": "-references-view.prev",
+        "when": "reference-list.hasResult"
+    },
+    {
+        "key": "ctrl+t",
+        "command": "-workbench.action.showAllSymbols"
+    },
+    {
+        "key": "ctrl+c",
+        "command": "-editor.action.clipboardCopyAction"
+    }
 ]

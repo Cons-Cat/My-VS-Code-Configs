@@ -466,7 +466,6 @@
     "todo-tree.highlights.defaultHighlight": {
         "background": "#4415a2",
         "opacity": 0,
-        // "textDecoration": "underline overline"
     },
     "todo-tree.tree.buttons.scanMode": true,
     "dimmer.toggleDimmerCommandScope": "workspace",
@@ -557,7 +556,7 @@
     // Some stuffs.
     "javascript.format.placeOpenBraceOnNewLineForFunctions": true,
     "typescript.format.placeOpenBraceOnNewLineForFunctions": true,
-    "bookmarks.useWorkaroundForFormatters": true,
+    "bookmarks.useWorkaroundForFormatters": false,
     "bookmarks.sideBar.expanded": true,
     "bookmarks.label.suggestion": "suggestWhenSelectedOrLineWhenNoSelected",
     "bookmarks.navigateThroughAllFiles": true,
