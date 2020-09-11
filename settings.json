@@ -98,7 +98,7 @@
     "modaledit.selectCursorStyle": "block-outline",
     "modaledit.searchCursorStyle": "underline",
     "startInNormalMode": "true",
-     "modaledit.keybindings": {
+    "modaledit.keybindings": {
         "u": "modaledit.enterInsert",
         "a": "workbench.action.showCommands",
         // Navigation
@@ -249,29 +249,33 @@
             "false": "extension.selectWord",
         },
         ",": "extension.blockalign",
-        "q": [
-            {
-                "condition": "__col == 0 || __selecting || __char == ''",
-                "true": {
-                    "command": "editor.action.clipboardCutAction",
-                },
+        "q": {
+            "condition": "__col == 0 || __char == ''",
+            "true": "clipring.cutToRing",
+            "false": {
+                "condition": "__selecting",
+                "true": [
+                    "clipring.copyToRing",
+                    "deleteRight",
+                    "modaledit.cancelSelection"
+                ],
                 "false": [
                     {
                         "command": "copy-word.cut",
                     },
                     {
                         "command": "editor.action.cancelSelectionAnchor"
-                    }
+                    },
+                    "modaledit.cancelSelection"
                 ],
-            },
-            "modaledit.cancelSelection"
-        ],
+            }
+        },
         // Copy
         "j": [
             {
                 "condition": "__col == 0 || __selecting || __char == ''",
                 "true": {
-                    "command": "editor.action.clipboardCopyAction",
+                    "command": "clipring.copyToRing",
                 },
                 "false": [
                     {
@@ -301,17 +305,6 @@
         },
         // Misc
         "'": "editor.action.commentLine",
-        // "'": {
-        //   "condition": "__selecting",
-        //   "true": {
-        //     "command": "editor.action.commentLine"
-        //   },
-        //   "false": {
-        //       "'": "editor.action.commentLine",
-        //       "m": "comment-divider.makeMainHeader",
-        //       "s": "comment-divider.makeSubHeader",
-        //       "l": "comment-divider.insertSolidLine"
-        // }, 
         "y": "modaledit.toggleSelection",
         "f": [
             "undo",
@@ -589,6 +582,7 @@
     "C_Cpp.vcFormat.indent.caseLabels": true,
     "C_Cpp.intelliSenseEngineFallback": "Enabled",
     "settingsSync.keybindingsPerPlatform": false,
+    "banner-comments-plus.horizontalLayout": "controlled smushing",
     // "GoToAnything.prefix.Commands": "",
     // "GoToAnything.prefix.Recent": "",
     // "GoToAnything.prefix.Symbols": "",
