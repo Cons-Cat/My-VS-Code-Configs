@@ -80,5 +80,9 @@
     {
         "key": "ctrl+c",
         "command": "-editor.action.clipboardCopyAction"
+    },
+    {
+        "key": "ctrl+oem_1",
+        "command": "extension.jumpy-word"
     }
 ]

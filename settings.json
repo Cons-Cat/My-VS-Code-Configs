@@ -85,6 +85,8 @@
     "editor.wordWrap": "on",
     // "editor.formatOnPaste": true,
     // "editor.formatOnSave": true,
+    "jumpToHint.theme.backgroundColor": "#ff9eddff",
+    "jumpToHint.theme.fontColor": "#1d1e26",
     "editor.minimap.showSlider": "always",
     "workbench.preferredDarkColorTheme": "Dracula",
     "workbench.tree.indent": 4,
@@ -144,7 +146,16 @@
             "false": "block-travel.jumpDown",
             "true": "block-travel.selectDown"
         },
-        "m": "editor.action.jumpToBracket",
+        "m": {
+            "condition": "__selecting",
+            "false":"bracket-jumper.ascendLeft",
+            "true": "bracket-jumper.selectAscendLeft"
+        },
+        "v": {
+            "condition": "__selecting",
+            "false":"bracket-jumper.ascendRight",
+            "true": "bracket-jumper.selectAscendRight"
+        },
         // Move by words.
         "r": {
             "condition": "__selecting",
@@ -317,10 +328,12 @@
         "-": "extension.toggle",
         "o": "smartsemicolon.insert",
         "O": "join-lines-context-aware.join",
-        "z": [
+        "z": {
+            "condition": "__char == '{'||__char=='}'",
+            "true": "editor.action.jumpToBracket",
             // Unfortunately, I can't seem to make this not select.
-            "extension.generic-goto",
-        ],
+            "false": "extension.generic-goto"
+        },
         // Formatting
         ";": {
             "condition": "__selecting",
@@ -378,11 +391,23 @@
                 "R": "region-marker.markRegion",
                 "d": "insertDateString.insertDate",
                 "i": "extension.textPastry.1toX",
-                "I": "extension.textPastry.range",
+                "I": "extension.prettyedit",
+                /* ^^^^^^^^^^^^^^^^^^^^^^^^
+                NUM RANGE:      first-number;last-number
+                LETTERS:        alpha;first-letter
+                RANDOM:         rand;min;max
+                */
                 "l": "extension.textPastry.AtoX",
                 "h": "editor.action.duplicateSelection",
                 "u": "extension.evalReplace",
-                "m": "extension.toggleHEX"
+                "m": "extension.toggleHEX",
+                // Math incrementing
+                "p": "incrementor.incrementByOne",
+                "P": "incrementor.decrementByOne",
+                ".": "incrementor.incrementByTen",
+                ">": "incrementor.decrementByTen",
+                ",": "incrementor.incrementByTenth",
+                "<": "incrementor.decrementByTenth",
             },
             "c": {
                 "u": "seito-openfile.openFileFromText",
@@ -404,6 +429,9 @@
                 "t": "center-editor-window.center",
                 "c": "cursorPageUp",
                 "w": "cursorPageDown",
+                "e": "jumpToHint.jumpByWord",
+                "u": "jumpToHint.jumpByLine",
+                "f": "jumpToHint.jumpBySearch",
             },
             "'": {
                 "'": "editor.action.blockComment",
@@ -532,6 +560,14 @@
         [
             "X",
             "Y"
+        ],
+        [
+            "increment",
+            "decrement"
+        ],
+        [
+            "forward",
+            "backward"
         ]
     ],
     "vssolution.xxprojItemTypes": {
@@ -582,6 +618,15 @@
     "C_Cpp.intelliSenseEngineFallback": "Enabled",
     "settingsSync.keybindingsPerPlatform": false,
     "banner-comments-plus.horizontalLayout": "controlled smushing",
+    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
+    "C_Cpp.vcFormat.space.betweenEmptyLambdaBrackets": true,
+    "C_Cpp.vcFormat.space.betweenEmptySquareBrackets": true,
+    "auto-comment-blocks.singleLineBlockOnEnter": true,
+    "auto-comment-blocks.slashStyleBlocks": [
+        ".gml",
+        ".cpp",
+        ".json"
+    ],
     // "GoToAnything.prefix.Commands": "",
     // "GoToAnything.prefix.Recent": "",
     // "GoToAnything.prefix.Symbols": "",
