@@ -31,7 +31,7 @@
       "\u200E",
       "\u200F"
    ],
-   "editor.renderWhitespace": "none",
+   "editor.renderWhitespace": "trailing",
    // Theme
    "workbench.colorTheme": "Dracula",
    "editor.tokenColorCustomizations": {
@@ -259,7 +259,11 @@
          "true": "extension.selectSameText",
          "false": "extension.selectWord",
       },
-      "2": "extension.subword-select",
+      "2": {
+         "condition": "__selecting",
+         "true": "extension.selectSameText",
+         "false": "extension.subword-select",
+      },
       ",": "extension.blockalign",
       "q": {
          "condition": "__col == 0 || __char == ''",
@@ -351,7 +355,9 @@
             "editor.action.deleteLines",
             "modaledit.cancelSelection"
          ],
-         " ": "editor.action.showHover",
+         " ": [
+            "editor.action.showHover",
+         ],
          "}": "workbench.action.splitEditorRight",
          "{": "workbench.action.joinTwoGroups",
          "r": "editor.toggleFold",
