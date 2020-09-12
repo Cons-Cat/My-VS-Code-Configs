@@ -1,636 +1,653 @@
 ﻿{
-    "extension.enableRunOnSave": true,
-    "csharp.referencesCodeLens.enabled": false,
-    "editor.quickSuggestionsDelay": 800,
-    "editor.tabCompletion": "on",
-    "workbench.editor.highlightModifiedTabs": true,
-    "omnisharp.useEditorFormattingSettings": false,
-    "editor.trimAutoWhitespace": false,
-    "workbench.statusBar.visible": true,
-    "team.showWelcomeMessage": false,
-    "workbench.iconTheme": "file-icons",
-    "window.zoomLevel": -1.5,
-    "editor.mouseWheelZoom": true,
-    // "smartsemicolon.enable": true,
-    "editor.smoothScrolling": true,
-    "short-commands.activatePalette": true,
-    "editor.mouseWheelScrollSensitivity": 5,
-    "togglecase.pattern": "[0-9]|[a-z]|[A-Z]|_|-",
-    "hungryDelete.keepOneSpace": true,
-    "editor.fontFamily": "'Dank Mono', 'Cascadia Mono'",
-    "editor.fontLigatures": true,
-    "editor.accessibilitySupport": "off",
-    "smartsemicolon.enable": true,
-    "smartsemicolon.autoLineChange": true,
-    "banner-comments-plus.trimTrailingWhitespace": true,
-    "banner-comments-plus.trimEmptyLines": true,
-    "clipring.selectTextAfterPasteFromMenu": false,
-    "bracket-peek.previewAlways": true,
-    "highlight-bad-chars.additionalUnicodeChars": [
-        "\u0009",
-        "\u200E",
-        "\u200F"
-    ],
-    "editor.renderWhitespace": "none",
-    // Theme
-    "workbench.colorTheme": "Dracula",
-    "editor.tokenColorCustomizations": {
-        "textMateRules": [
-            {
-                "scope": "comment",
-                "settings": {
-                    "fontStyle": "italic"
-                }
+   "extension.enableRunOnSave": true,
+   "csharp.referencesCodeLens.enabled": false,
+   "editor.quickSuggestionsDelay": 800,
+   "editor.tabCompletion": "on",
+   "workbench.editor.highlightModifiedTabs": true,
+   "omnisharp.useEditorFormattingSettings": false,
+   "editor.trimAutoWhitespace": false,
+   "workbench.statusBar.visible": true,
+   "team.showWelcomeMessage": false,
+   "workbench.iconTheme": "file-icons",
+   "window.zoomLevel": -1.5,
+   "editor.mouseWheelZoom": true,
+   // "smartsemicolon.enable": true,
+   "editor.smoothScrolling": true,
+   "short-commands.activatePalette": true,
+   "editor.mouseWheelScrollSensitivity": 5,
+   "togglecase.pattern": "[0-9]|[a-z]|[A-Z]|_|-",
+   "hungryDelete.keepOneSpace": true,
+   "editor.fontFamily": "'Dank Mono', 'Cascadia Mono'",
+   "editor.fontLigatures": true,
+   "editor.accessibilitySupport": "off",
+   "smartsemicolon.enable": true,
+   "smartsemicolon.autoLineChange": true,
+   "banner-comments-plus.trimTrailingWhitespace": true,
+   "banner-comments-plus.trimEmptyLines": true,
+   "clipring.selectTextAfterPasteFromMenu": false,
+   "bracket-peek.previewAlways": true,
+   "highlight-bad-chars.additionalUnicodeChars": [
+      "\u0009",
+      "\u200E",
+      "\u200F"
+   ],
+   "editor.renderWhitespace": "none",
+   // Theme
+   "workbench.colorTheme": "Dracula",
+   "editor.tokenColorCustomizations": {
+      "textMateRules": [
+         {
+            "scope": "comment",
+            "settings": {
+               "fontStyle": "italic"
             }
-        ]
-    },
-    "terminal.integrated.fontFamily": "'Cascadia Mono'",
-    "terminal.integrated.fontSize": 15,
-    // Fonts
-    // "vscode_custom_css.imports": [
-    // "file:///C:/Users/wgooc/Documents/VSCodeCSS.css"
-    // ],
-    // "vscode_custom_css.policy": true,
-    // Colors
-    "workbench.colorCustomizations": {
-        "editor.selectionBackground": "#104956",
-        "editor.selectionHighlightBackground": "#635937",
-        "editor.lineHighlightBorder": "#9580FF",
-        "editor.lineHighlightBackground": "#433F47",
-        "editor.findMatchBackground": "#104956",
-        "editor.rangeHighlightBackground": "#433F47",
-        "editor.rangeHighlightBorder": "#9580FF",
-        "editor.findMatchHighlightBackground": "#433F47",
-        "editor.foreground": "#f2f2f2",
-        "list.hoverBackground": "#635937",
-        "list.focusBackground": "#635937",
-        "list.hoverBackground": "#104956",
-    },
-    "blockscope-highlighter.rgba": {
-        "red": 48,
-        "green": 36,
-        "blue": 61,
-        "alpha": 0.15
-    },
-    // Other
-    "color-manager.languages": [
-        "css",
-        "html",
-        "javascript",
-        "json",
-        "scss"
-    ],
-    "dimmer.enabled": true,
-    "dimmer.opacity": 65,
-    "editor.wordWrap": "on",
-    // "editor.formatOnPaste": true,
-    // "editor.formatOnSave": true,
-    "jumpToHint.theme.backgroundColor": "#ff9eddff",
-    "jumpToHint.theme.fontColor": "#1d1e26",
-    "editor.minimap.showSlider": "always",
-    "workbench.preferredDarkColorTheme": "Dracula",
-    "workbench.tree.indent": 4,
-    "workbench.tree.renderIndentGuides": "always",
-    "C_Cpp.updateChannel": "Insiders",
-    "editor.renderLineHighlight": "all",
-    "editor.renderLineHighlightOnlyWhenFocus": false,
-    "editor.semanticHighlighting.enabled": true,
-    "workbench.view.alwaysShowHeaderActions": true,
-    // Modal layer;
-    "modaledit.selectCursorStyle": "block-outline",
-    "modaledit.searchCursorStyle": "underline",
-    "startInNormalMode": "true",
-    "modaledit.keybindings": {
-        "u": "modaledit.enterInsert",
-        "a": "workbench.action.showCommands",
-        // Navigation
-        "h": {
+         }
+      ]
+   },
+   "terminal.integrated.fontFamily": "'Cascadia Mono'",
+   "terminal.integrated.fontSize": 15,
+   // Fonts
+   // "vscode_custom_css.imports": [
+   // "file:///C:/Users/wgooc/Documents/VSCodeCSS.css"
+   // ],
+   // "vscode_custom_css.policy": true,
+   // Colors
+   "workbench.colorCustomizations": {
+      "editor.selectionBackground": "#104956",
+      "editor.selectionHighlightBackground": "#635937",
+      "editor.lineHighlightBorder": "#9580FF",
+      "editor.lineHighlightBackground": "#433F47",
+      "editor.findMatchBackground": "#104956",
+      "editor.rangeHighlightBackground": "#433F47",
+      "editor.rangeHighlightBorder": "#9580FF",
+      "editor.findMatchHighlightBackground": "#433F47",
+      "editor.foreground": "#f2f2f2",
+      "list.hoverBackground": "#635937",
+      "list.focusBackground": "#635937",
+      "list.hoverBackground": "#104956",
+   },
+   "blockscope-highlighter.rgba": {
+      "red": 48,
+      "green": 36,
+      "blue": 61,
+      "alpha": 0.15
+   },
+   // Other
+   "color-manager.languages": [
+      "css",
+      "html",
+      "javascript",
+      "json",
+      "scss"
+   ],
+   "dimmer.enabled": true,
+   "dimmer.opacity": 65,
+   "editor.wordWrap": "on",
+   // "editor.formatOnPaste": true,
+   // "editor.formatOnSave": true,
+   "jumpToHint.theme.backgroundColor": "#ff9eddff",
+   "jumpToHint.theme.fontColor": "#1d1e26",
+   "editor.minimap.showSlider": "always",
+   "workbench.preferredDarkColorTheme": "Dracula",
+   "workbench.tree.indent": 4,
+   "workbench.tree.renderIndentGuides": "always",
+   "C_Cpp.updateChannel": "Insiders",
+   "editor.renderLineHighlight": "all",
+   "editor.renderLineHighlightOnlyWhenFocus": true,
+   "editor.semanticHighlighting.enabled": true,
+   "workbench.view.alwaysShowHeaderActions": true,
+   // Modal layer;
+   "modaledit.selectCursorStyle": "block-outline",
+   "modaledit.searchCursorStyle": "underline",
+   "startInNormalMode": "true",
+   "modaledit.keybindings": {
+      "u": "modaledit.enterInsert",
+      "a": "workbench.action.showCommands",
+      // Navigation
+      "h": {
+         "condition": "__selecting",
+         "true": {
+            "command": "tabsanity.cursorLeftSelect"
+         },
+         "false": "tabsanity.cursorLeft"
+      },
+      "n": {
+         "condition": "__selecting",
+         "true": "tabsanity.cursorRightSelect",
+         "false": "tabsanity.cursorRight"
+      },
+      "H": {
+         "condition": "__selecting",
+         "true": "selectPartOfWord.selectLeft",
+         "false": "selectPartOfWord.moveLeft"
+      },
+      "N": {
+         "condition": "__selecting",
+         "true": "selectPartOfWord.selectRight",
+         "false": "selectPartOfWord.moveRight"
+      },
+      "t": {
+         "condition": "__selecting",
+         "true": "cursorDownSelect",
+         "false": "cursorDown"
+      },
+      "c": {
+         "condition": "__selecting",
+         "true": "cursorUpSelect",
+         "false": "cursorUp"
+      },
+      "C": {
+         "condition": "__selecting",
+         "false": "block-travel.jumpUp",
+         "true": "block-travel.selectUp"
+      },
+      "T": {
+         "condition": "__selecting",
+         "false": "block-travel.jumpDown",
+         "true": "block-travel.selectDown"
+      },
+      "m": {
+         "condition": "__selecting",
+         "false": "bracket-jumper.ascendLeft",
+         "true": "bracket-jumper.selectAscendLeft"
+      },
+      "v": {
+         "condition": "__selecting",
+         "false": "bracket-jumper.ascendRight",
+         "true": "bracket-jumper.selectAscendRight"
+      },
+      // Move by words.
+      "r": {
+         "condition": "__selecting",
+         "false": {
+            "command": "cursorWordStartRight",
+         },
+         "true": {
+            "command": "cursorWordRightSelect",
+         }
+      },
+      "g": {
+         "condition": "__selecting",
+         "false": {
+            "command": "cursorWordStartLeft",
+         },
+         "true": {
+            "command": "cursorWordLeftSelect",
+         }
+      },
+      "R": {
+         "condition": "__selecting",
+         "false": {
+            "command": "cursorWordStartRight",
+            "repeat": "__char.match(/\\W/)"
+         },
+         "true": {
+            "command": "cursorWordRightSelect",
+            "repeat": "__char.match(/\\W/)"
+         }
+      },
+      "G": {
+         "condition": "__selecting",
+         "false": {
+            "command": "cursorWordStartLeft",
+            "repeat": "__char.match(/\\W/)"
+         },
+         "true": {
+            "command": "cursorWordLeftSelect",
+            "repeat": "__char.match(/\\W/)"
+         }
+      },
+      // Move by blocks.
+      "s": {
+         "condition": "__char == ''",
+         "true": {
             "condition": "__selecting",
+            "true": "block-travel.selectDown",
+            "false": "block-travel.jumpDown"
+         },
+         "false": {
+            "condition": "__selecting",
+            "true": "cursorLineEndSelect",
+            "false": "cursorLineEnd"
+         }
+      },
+      "d": {
+         "condition": "__col == 0",
+         "true": {
+            "condition": "__selecting",
+            "true": "block-travel.selectUp",
+            "false": "block-travel.jumpUp"
+         },
+         "false": {
+            "condition": "__selecting",
+            "true": "cursorLineStartSelect",
+            "false": "cursorLineStart"
+         }
+      },
+      "D": "smartBeginningOfLine",
+      // Deletion
+      ".": {
+         "condition": "__selecting",
+         "true": "modaledit.previousMatch",
+         "false": "deleteWordLeft"
+      },
+      ">": "selectPartOfWord.backspace",
+      "p": {
+         "condition": "__selecting",
+         "true": "modaledit.nextMatch",
+         "false": "deleteWordRight"
+      },
+      "P": "selectPartOfWord.delete",
+      "e": [
+         "extension.smartBackspace",
+         "modaledit.cancelSelection"
+      ],
+      "(": {
+         "command": "deleteRight"
+      },
+      "i": "deletehere.delete",
+      "I": [
+         "select-paragraph.selectParagraph",
+         "editor.action.deleteLines",
+         "modaledit.cancelSelection"
+      ],
+      "=": "extension.selectCurlyBrackets",
+      "*": "extension.selectPerfectLine",
+      "+": "bracket-pair-colorizer-2.expandBracketSelection",
+      ")": {
+         "condition": "__selecting",
+         "true": "extension.selectSameText",
+         "false": "extension.selectWord",
+      },
+      "2": "extension.subword-select",
+      ",": "extension.blockalign",
+      "q": {
+         "condition": "__col == 0 || __char == ''",
+         "true": "clipring.cutToRing",
+         "false": {
+            "condition": "__selecting",
+            "true": [
+               "clipring.copyToRing",
+               "deleteRight",
+               "modaledit.cancelSelection"
+            ],
+            "false": [
+               {
+                  "command": "copy-word.cut",
+               },
+               {
+                  "command": "editor.action.cancelSelectionAnchor"
+               },
+               "modaledit.cancelSelection"
+            ],
+         }
+      },
+      // Copy
+      "j": [
+         {
+            "condition": "__col == 0 || __selecting || __char == ''",
             "true": {
-                "command": "tabsanity.cursorLeftSelect"
+               "command": "clipring.copyToRing",
             },
-            "false": "tabsanity.cursorLeft"
-        },
-        "n": {
-            "condition": "__selecting",
-            "true": "tabsanity.cursorRightSelect",
-            "false": "tabsanity.cursorRight"
-        },
-        "H": {
-            "condition": "__selecting",
-            "true": "selectPartOfWord.selectLeft",
-            "false": "selectPartOfWord.moveLeft"
-        },
-        "N": {
-            "condition": "__selecting",
-            "true": "selectPartOfWord.selectRight",
-            "false": "selectPartOfWord.moveRight"
-        },
-        "t": {
-            "condition": "__selecting",
-            "true": "cursorDownSelect",
-            "false": "cursorDown"
-        },
-        "c": {
-            "condition": "__selecting",
-            "true": "cursorUpSelect",
-            "false": "cursorUp"
-        },
-        "C": {
-            "condition": "__selecting",
-            "false": "block-travel.jumpUp",
-            "true": "block-travel.selectUp"
-        },
-        "T": {
-            "condition": "__selecting",
-            "false": "block-travel.jumpDown",
-            "true": "block-travel.selectDown"
-        },
-        "m": {
-            "condition": "__selecting",
-            "false":"bracket-jumper.ascendLeft",
-            "true": "bracket-jumper.selectAscendLeft"
-        },
-        "v": {
-            "condition": "__selecting",
-            "false":"bracket-jumper.ascendRight",
-            "true": "bracket-jumper.selectAscendRight"
-        },
-        // Move by words.
-        "r": {
-            "condition": "__selecting",
-            "false": {
-                "command": "cursorWordStartRight",
-            },
-            "true": {
-                "command": "cursorWordRightSelect",
-            }
-        },
-        "g": {
-            "condition": "__selecting",
-            "false": {
-                "command": "cursorWordStartLeft",
-            },
-            "true": {
-                "command": "cursorWordLeftSelect",
-            }
-        },
-        "R": {
-            "condition": "__selecting",
-            "false": {
-                "command": "cursorWordStartRight",
-                "repeat": "__char.match(/\\W/)"
-            },
-            "true": {
-                "command": "cursorWordRightSelect",
-                "repeat": "__char.match(/\\W/)"
-            }
-        },
-        "G": {
-            "condition": "__selecting",
-            "false": {
-                "command": "cursorWordStartLeft",
-                "repeat": "__char.match(/\\W/)"
-            },
-            "true": {
-                "command": "cursorWordLeftSelect",
-                "repeat": "__char.match(/\\W/)"
-            }
-        },
-        // Move by blocks.
-        "s": {
-            "condition": "__char == ''",
-            "true": {
-                "condition": "__selecting",
-                "true": "block-travel.selectDown",
-                "false": "block-travel.jumpDown"
-            },
-            "false": {
-                "condition": "__selecting",
-                "true": "cursorLineEndSelect",
-                "false": "cursorLineEnd"
-            }
-        },
-        "d": {
-            "condition": "__col == 0",
-            "true": {
-                "condition": "__selecting",
-                "true": "block-travel.selectUp",
-                "false": "block-travel.jumpUp"
-            },
-            "false": {
-                "condition": "__selecting",
-                "true": "cursorLineStartSelect",
-                "false": "cursorLineStart"
-            }
-        },
-        "D": "smartBeginningOfLine",
-        // Deletion
-        ".": {
-            "condition": "__selecting",
-            "true": "modaledit.previousMatch",
-            "false": "deleteWordLeft"
-        },
-        ">": "selectPartOfWord.backspace",
-        "p": {
-            "condition": "__selecting",
-            "true": "modaledit.nextMatch",
-            "false": "deleteWordRight"
-        },
-        "P": "selectPartOfWord.delete",
-        "e": [
-            "extension.smartBackspace",
-            "modaledit.cancelSelection"
-        ],
-        "(": {
-            "command": "deleteRight"
-        },
-        "i": "deletehere.delete",
-        "I": [
-            "select-paragraph.selectParagraph",
+            "false": [
+               {
+                  "command": "copy-word.copy",
+               },
+               {
+                  "command": "editor.action.cancelSelectionAnchor"
+               }
+            ],
+         },
+         "modaledit.cancelSelection"
+      ],
+      // Paste
+      "k": [
+         "clipring.pasteRingItem",
+      ],
+      "K": [
+         "editor.action.clipboardPasteAction",
+         "modaledit.cancelSelection"
+      ],
+      // Windows
+      "}": {
+         "command": "workbench.action.splitEditorDown"
+      },
+      "{": {
+         "command": "workbench.action.joinAllGroups"
+      },
+      // Misc
+      "'": "editor.action.commentLine",
+      "y": "modaledit.toggleSelection",
+      "f": [
+         "undo",
+         "modaledit.cancelSelection"
+      ],
+      "F": "redo",
+      "w": "workbench.action.focusNextGroup",
+      "W": "workbench.action.focusPreviousGroup",
+      "_": "extension.toggleCase",
+      "-": "extension.toggle",
+      "o": "smartsemicolon.insert",
+      "O": "join-lines-context-aware.join",
+      "z": {
+         "condition": "__char == '{'||__char=='}'",
+         "true": "editor.action.jumpToBracket",
+         // Unfortunately, I can't seem to make this not select.
+         "false": "extension.generic-goto"
+      },
+      // Formatting
+      ";": {
+         "condition": "__selecting",
+         "true": "editor.action.formatSelection",
+         "false": "editor.action.formatDocument"
+      },
+      ":": "rylogic-textaligner.Align",
+      // LEADER COMMANDS
+      " ": {
+         "a": "editor.action.selectAll",
+         "s": "workbench.action.files.save",
+         "k": "clipboardHistory.focus",
+         "i": [
             "editor.action.deleteLines",
             "modaledit.cancelSelection"
-        ],
-        "=": "extension.selectCurlyBrackets",
-        "*": "extension.selectPerfectLine",
-        "+": "bracket-pair-colorizer-2.expandBracketSelection",
-        ")": {
+         ],
+         " ": "editor.action.showHover",
+         "}": "workbench.action.splitEditorRight",
+         "{": "workbench.action.joinTwoGroups",
+         "r": "editor.toggleFold",
+         "F": "references-view.find",
+         "f": "editor.action.goToReferences",
+         "o": "lineBreakInsert",
+         "d": {
             "condition": "__selecting",
-            "true": "extension.selectSameText",
-            "false": "extension.selectWord",
-        },
-        ",": "extension.blockalign",
-        "q": {
-            "condition": "__col == 0 || __char == ''",
-            "true": "clipring.cutToRing",
-            "false": {
-                "condition": "__selecting",
-                "true": [
-                    "clipring.copyToRing",
-                    "deleteRight",
-                    "modaledit.cancelSelection"
-                ],
-                "false": [
-                    {
-                        "command": "copy-word.cut",
-                    },
-                    {
-                        "command": "editor.action.cancelSelectionAnchor"
-                    },
-                    "modaledit.cancelSelection"
-                ],
-            }
-        },
-        // Copy
-        "j": [
-            {
-                "condition": "__col == 0 || __selecting || __char == ''",
-                "true": {
-                    "command": "clipring.copyToRing",
-                },
-                "false": [
-                    {
-                        "command": "copy-word.copy",
-                    },
-                    {
-                        "command": "editor.action.cancelSelectionAnchor"
-                    }
-                ],
-            },
-            "modaledit.cancelSelection"
-        ],
-        // Paste
-        "k": [
-            "clipring.pasteRingItem",
-        ],
-        "K": [
-            "editor.action.clipboardPasteAction",
-            "modaledit.cancelSelection"
-        ],
-        // Windows
-        "}": {
-            "command": "workbench.action.splitEditorDown"
-        },
-        "{": {
-            "command": "workbench.action.joinAllGroups"
-        },
-        // Misc
-        "'": "editor.action.commentLine",
-        "y": "modaledit.toggleSelection",
-        "f": [
-            "undo",
-            "modaledit.cancelSelection"
-        ],
-        "F": "redo",
-        "w": "workbench.action.focusNextGroup",
-        "W": "workbench.action.focusPreviousGroup",
-        "_": "extension.toggleCase",
-        "-": "extension.toggle",
-        "o": "smartsemicolon.insert",
-        "O": "join-lines-context-aware.join",
-        "z": {
-            "condition": "__char == '{'||__char=='}'",
-            "true": "editor.action.jumpToBracket",
-            // Unfortunately, I can't seem to make this not select.
-            "false": "extension.generic-goto"
-        },
-        // Formatting
-        ";": {
+            "false": "cursorTop",
+            "true": "cursorTopSelect",
+         },
+         "b": {
             "condition": "__selecting",
-            "true": "editor.action.formatSelection",
-            "false": "editor.action.formatDocument"
-        },
-        ":": "rylogic-textaligner.Align",
-        // LEADER COMMANDS
-        " ": {
-            "a": "editor.action.selectAll",
-            "s": "workbench.action.files.save",
-            "k": "clipboardHistory.focus",
-            "i": [
-                "editor.action.deleteLines",
-                "modaledit.cancelSelection"
-            ],
-            " ": "editor.action.showHover",
-            "}": "workbench.action.splitEditorRight",
-            "{": "workbench.action.joinTwoGroups",
-            "r": "editor.toggleFold",
-            "F": "references-view.find",
-            "f": "editor.action.goToReferences",
-            "o": "lineBreakInsert",
-            "d": {
-                "condition": "__selecting",
-                "false": "cursorTop",
-                "true": "cursorTopSelect",
-            },
-            "b": {
-                "condition": "__selecting",
-                "false": "cursorBottom",
-                "true": "cursorBottomSelect",
-            },
-            "m": "cursorToolsAnchorLeave",
-            "M": "cursorToolsAnchorActivate",
-            "v": [
-                "cursorToolsAnchorClean",
-                "removeSecondaryCursors"
-            ],
-            ".": {
-                "w": "workbench.action.closeWindow",
-                "r": "editor.foldAllMarkerRegions",
-                "R": "editor.unfoldAllMarkerRegions",
-                "f": "references-view.showCallHierarchy",
-                "s": "extension.insertSnipp",
-                "S": "extension.createSnipp"
-            },
-            "e": {
-                "t": "extension.embraceParenthesis",
-                "n": "extension.embraceSquareBrackets",
-                "b": "extension.embraceCurlyBrackets",
-                "g": "extension.embraceDoubleQuotes",
-                "c": "extension.embraceSingleQuotes",
-                "r": "region-marker.markNamedRegion",
-                "R": "region-marker.markRegion",
-                "d": "insertDateString.insertDate",
-                "i": "extension.textPastry.1toX",
-                "I": "extension.prettyedit",
-                /* ^^^^^^^^^^^^^^^^^^^^^^^^
+            "false": "cursorBottom",
+            "true": "cursorBottomSelect",
+         },
+         "m": "cursorToolsAnchorLeave",
+         "M": "cursorToolsAnchorActivate",
+         "v": [
+            "cursorToolsAnchorClean",
+            "removeSecondaryCursors"
+         ],
+         ".": {
+            "w": "workbench.action.closeWindow",
+            "r": "editor.foldAllMarkerRegions",
+            "R": "editor.unfoldAllMarkerRegions",
+            "f": "references-view.showCallHierarchy",
+            "s": "extension.insertSnipp",
+            "S": "extension.createSnipp"
+         },
+         "e": {
+            "t": "extension.embraceParenthesis",
+            "n": "extension.embraceSquareBrackets",
+            "b": "extension.embraceCurlyBrackets",
+            "g": "extension.embraceDoubleQuotes",
+            "c": "extension.embraceSingleQuotes",
+            "r": "region-marker.markNamedRegion",
+            "R": "region-marker.markRegion",
+            "d": "insertDateString.insertDate",
+            "i": "extension.textPastry.1toX",
+            "I": "extension.prettyedit",
+            /* ^^^^^^^^^^^^^^^^^^^^^^^^
                 NUM RANGE:      first-number;last-number
                 LETTERS:        alpha;first-letter
                 RANDOM:         rand;min;max
                 */
-                "l": "extension.textPastry.AtoX",
-                "h": "editor.action.duplicateSelection",
-                "u": "extension.evalReplace",
-                "m": "extension.toggleHEX",
-                // Math incrementing
-                "p": "incrementor.incrementByOne",
-                "P": "incrementor.decrementByOne",
-                ".": "incrementor.incrementByTen",
-                ">": "incrementor.decrementByTen",
-                ",": "incrementor.incrementByTenth",
-                "<": "incrementor.decrementByTenth",
-            },
-            "c": {
-                "u": "seito-openfile.openFileFromText",
-                "i": "copyFilePath",
-                ",": "extension.open",
-                "n": "workbench.action.files.newUntitledFile",
-                "o": "revealFileInOS",
-                "l": "bookmarks.toggle",
-                "c": "bookmarks.list",
-                "f": "workbench.action.openRecent",
-                "p": "workbench.action.reopenClosedEditor",
-                ".": "workbench.action.files.openFile",
-                ">": "workbench.action.files.openFolder",
-                "s": "workbench.action.files.saveAs",
-                "t": "todo-tree.showTreeView"
-            },
-            "t": {
-                "b": "workbench.action.closeActiveEditor",
-                "t": "center-editor-window.center",
-                "c": "cursorPageUp",
-                "w": "cursorPageDown",
-                "e": "jumpToHint.jumpByWord",
-                "u": "jumpToHint.jumpByLine",
-                "f": "jumpToHint.jumpBySearch",
-            },
-            "'": {
-                "'": "editor.action.blockComment",
-                "s": "comment-divider.makeSubHeader",
-                "l": "comment-divider.insertSolidLine",
-                "t": "extension.insertComment", // Attempted TODO: insertion.
-                "g": "extension.magicComment", // Swapping comments and non-comments.
-                "r": "rewrap.rewrapComment",
-                "m": "extension.commentBox",
-                "b": "banner-comments-plus.Apply",
-                "B": "banner-comments-plus.ApplyFromList"
-            }
-        }
-    },
-    // FORMATTING
-    "files.insertFinalNewline": true,
-    "trailing-spaces.includeEmptyLines": false,
-    "trailing-spaces.deleteModifiedLinesOnly": true,
-    "trailing-spaces.trimOnSave": true,
-    // "beautify.language": {
-    //   "indent_size": 4,
-    //   "indent_char": " ",
-    //   "end_with_newline": true,
-    //   "indent_handlebars": false,
-    //   "indent_with_tabs": false,
-    //   "preserve_newlines": false,
-    //   "max_preserve_newlines": 1,
-    //   "space_around_comxinator": true,
-    //   "space_before_conditional": true,
-    //   //
-    //   "js": {
-    //     "type": [
-    //       "javascript"
-    //     ],
-    //     "filename": [
-    //       ".jshintrc"
-    //     ],
-    //     "ext": [
-    //       "gml"
-    //     ]
-    //     // "ext": ["js", "json"]
-    //     // ^^ to set extensions to be beautified using the javascript beautifier
-    //   },
-    // }
-    // "files.associations": {
-    //   "*.gml": "javascript"
-    // },
-    "editor.hover.delay": 50,
-    // "[cpp]": {
-    // //   // "editor.defaultFormatter": "ryannaddy.vscode-format"
-    // },
-    "cSpell.allowCompoundWords": true,
-    "tabnine.experimentalAutoImports": true,
-    "workbench.editor.scrollToSwitchTabs": true,
-    "markdown.preview.breaks": true,
-    "todo-tree.tree.showScanModeButton": true,
-    "todo-tree.filtering.ignoreGitSubmodules": true,
-    "todo-tree.filtering.useBuiltInExcludes": "file and search excludes",
-    "todo-tree.general.enableFileWatcher": true,
-    "todo-tree.highlights.defaultHighlight": {
-        "background": "#4415a2",
-        "opacity": 0,
-    },
-    "todo-tree.tree.buttons.scanMode": true,
-    "dimmer.toggleDimmerCommandScope": "workspace",
-    "dimmer.delay": 1,
-    "workbench.editorAssociations": [
-        {
-            "viewType": "hexEditor.hexedit",
-            "filenamePattern": "*.exe"
-        }
-    ],
-    // "editor.formatOnType": true,
-    "C_Cpp.vcFormat.newLine.beforeOpenBrace.namespace": "newLine",
-    "C_Cpp.vcFormat.newLine.beforeOpenBrace.lambda": "newLine",
-    "C_Cpp.vcFormat.newLine.beforeOpenBrace.function": "newLine",
-    "C_Cpp.vcFormat.newLine.beforeOpenBrace.block": "newLine",
-    "C_Cpp.vcFormat.indent.preserveWithinParentheses": true,
-    "C_Cpp.vcFormat.indent.gotoLabels": "oneLeft",
-    "C_Cpp.vcFormat.newLine.beforeOpenBrace.type": "newLine",
-    "C_Cpp.vcFormat.newLine.scopeBracesOnSeparateLines": true,
-    "C_Cpp.vcFormat.space.afterCastCloseParenthesis": true,
-    "C_Cpp.vcFormat.space.beforeEmptySquareBrackets": true,
-    "C_Cpp.vcFormat.space.beforeInitializerListOpenBrace": true,
-    "C_Cpp.vcFormat.space.betweenEmptyBraces": true,
-    "C_Cpp.vcFormat.space.groupSquareBrackets": false,
-    "C_Cpp.vcFormat.space.withinExpressionParentheses": true,
-    "C_Cpp.vcFormat.space.withinControlFlowStatementParentheses": true,
-    "C_Cpp.vcFormat.space.withinParameterListParentheses": true,
-    "C_Cpp.vcFormat.space.withinSquareBrackets": true,
-    "html.format.endWithNewline": true,
-    "editor.cursorBlinking": "phase",
-    "editor.suggest.shareSuggestSelections": true,
-    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
-    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": true,
-    "javascript.format.semicolons": "insert",
-    "editor.cursorSmoothCaretAnimation": true,
-    "editor.suggest.statusBar.visible": true,
-    "modaledit.insertStatusText": "-- $(symbol-key) INSERT --",
-    "modaledit.normalStatusText": "-- $(tools) NORMAL --",
-    "modaledit.selectStatusText": "-- $(arrow-both) VISUAL --",
-    "spaces-inside-braces.enableForAngle": false,
-    "autoimport.spaceBetweenBraces": false,
-    "editor.autoClosingBrackets": "always",
-    "spaces-inside-braces.enableForBrackets": false,
-    "extensions.ignoreRecommendations": false,
-    "sync.gist": "91e872f274082eae582cc7996692deb2",
-    "cSpell.userWords": [
-        "Blit",
-        "Bresenham",
-        "Lerp"
-    ],
-    "toggler.toggles": [
-        [
-            "absolute",
-            "relative"
-        ],
-        [
-            "high",
-            "low"
-        ],
-        [
-            "i",
-            "j"
-        ],
-        [
-            "X",
-            "Y"
-        ],
-        [
-            "increment",
-            "decrement"
-        ],
-        [
-            "forward",
-            "backward"
-        ]
-    ],
-    "vssolution.xxprojItemTypes": {
-        "*": "Content",
-        "cs": "Compile",
-        "cpp": "ClCompile",
-        "cc": "ClCompile",
-        "c": "ClCompile",
-        "h": "ClInclude",
-        "hpp": "ClInclude",
-        "vb": "Compile",
-        "fs": "Compile",
-        "ts": "TypeScriptCompile"
-    },
-    "javascript.format.placeOpenBraceOnNewLineForControlBlocks": true,
-    "typescript.format.placeOpenBraceOnNewLineForControlBlocks": true,
-    "terminal.integrated.cursorStyle": "line",
-    "C_Cpp.commentContinuationPatterns": [
-        "/**"
-    ],
-    "short-commands.includeWorkspaceTasks": true,
-    // Some stuffs.
-    "javascript.format.placeOpenBraceOnNewLineForFunctions": true,
-    "typescript.format.placeOpenBraceOnNewLineForFunctions": true,
-    "bookmarks.useWorkaroundForFormatters": false,
-    "bookmarks.sideBar.expanded": true,
-    "bookmarks.label.suggestion": "suggestWhenSelectedOrLineWhenNoSelected",
-    "bookmarks.navigateThroughAllFiles": true,
-    "bookmarks.saveBookmarksInProject": true,
-    "C_Cpp.errorSquiggles": "Enabled",
-    "C_Cpp.exclusionPolicy": "checkFilesAndFolders",
-    "toggleCase.case.pathCase": false,
-    "toggleCase.case.sentenceCase": false,
-    "toggleCase.case.titleCase": false,
-    "toggleCase.notification.notifyOnChange": false,
-    "toggleCase.case.dotCase": false,
-    "toggleCase.case.capitalCase": false,
-    "enableTelemetry": true,
-    "editor.minimap.enabled": false,
-    "workbench.activityBar.visible": false,
-    "editor.cursorSurroundingLines": 1,
-    "editor.scrollBeyondLastLine": false,
-    "workbench.list.smoothScrolling": true,
-    "comment-divider.length": 60,
-    "editor.formatOnPaste": true,
-    "editor.detectIndentation": false,
-    "C_Cpp.vcFormat.indent.caseLabels": true,
-    "C_Cpp.intelliSenseEngineFallback": "Enabled",
-    "settingsSync.keybindingsPerPlatform": false,
-    "banner-comments-plus.horizontalLayout": "controlled smushing",
-    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
-    "C_Cpp.vcFormat.space.betweenEmptyLambdaBrackets": true,
-    "C_Cpp.vcFormat.space.betweenEmptySquareBrackets": true,
-    "auto-comment-blocks.singleLineBlockOnEnter": true,
-    "auto-comment-blocks.slashStyleBlocks": [
-        ".gml",
-        ".cpp",
-        ".json"
-    ],
-    // "GoToAnything.prefix.Commands": "",
-    // "GoToAnything.prefix.Recent": "",
-    // "GoToAnything.prefix.Symbols": "",
-    /*
+            "l": "extension.textPastry.AtoX",
+            "h": "editor.action.duplicateSelection",
+            "u": "extension.evalReplace",
+            "m": "extension.toggleHEX",
+            // Math incrementing
+            "p": "incrementor.incrementByOne",
+            "P": "incrementor.decrementByOne",
+            ".": "incrementor.incrementByTen",
+            ">": "incrementor.decrementByTen",
+            ",": "incrementor.incrementByTenth",
+            "<": "incrementor.decrementByTenth",
+            // Sorting
+            "s": "sortLines.sortLinesNatural",
+         },
+         "c": {
+            "u": "seito-openfile.openFileFromText",
+            "i": "copyFilePath",
+            ",": "extension.open",
+            "n": "workbench.action.files.newUntitledFile",
+            "N": "workbench.action.files.newWindow",
+            "o": "revealFileInOS",
+            "l": "bookmarks.toggle",
+            "c": "bookmarks.list",
+            "f": "workbench.action.openRecent",
+            "p": "workbench.action.reopenClosedEditor",
+            ".": "workbench.action.files.openFile",
+            ">": "workbench.action.files.openFolder",
+            "s": "workbench.action.files.saveAs",
+            "t": "todo-tree.showTreeView",
+            "h": "workbench.action.toggleSidebarVisibility",
+            "g": "workbench.action.focusPanel"
+         },
+         "t": {
+            "b": "workbench.action.closeActiveEditor",
+            "t": "center-editor-window.center",
+            "c": "cursorPageUp",
+            "w": "cursorPageDown",
+            "e": "jumpToHint.jumpByWord",
+            "u": "jumpToHint.jumpByLine",
+            "f": "jumpToHint.jumpBySearch",
+         },
+         "'": {
+            "'": "editor.action.blockComment",
+            "s": "comment-divider.makeSubHeader",
+            "l": "comment-divider.insertSolidLine",
+            "t": "extension.insertComment", // Attempted TODO: insertion.
+            "g": "extension.magicComment", // Swapping comments and non-comments.
+            "r": "rewrap.rewrapComment",
+            "m": "extension.commentBox",
+            "b": "banner-comments-plus.Apply",
+            "B": "banner-comments-plus.ApplyFromList"
+         }
+      }
+   },
+   // FORMATTING
+   "files.insertFinalNewline": true,
+   "trailing-spaces.includeEmptyLines": false,
+   "trailing-spaces.deleteModifiedLinesOnly": true,
+   "trailing-spaces.trimOnSave": true,
+   // "beautify.language": {
+   //   "indent_size": 4,
+   //   "indent_char": " ",
+   //   "end_with_newline": true,
+   //   "indent_handlebars": false,
+   //   "indent_with_tabs": false,
+   //   "preserve_newlines": false,
+   //   "max_preserve_newlines": 1,
+   //   "space_around_comxinator": true,
+   //   "space_before_conditional": true,
+   //   //
+   //   "js": {
+   //     "type": [
+   //       "javascript"
+   //     ],
+   //     "filename": [
+   //       ".jshintrc"
+   //     ],
+   //     "ext": [
+   //       "gml"
+   //     ]
+   //     // "ext": ["js", "json"]
+   //     // ^^ to set extensions to be beautified using the javascript beautifier
+   //   },
+   // }
+   // "files.associations": {
+   //   "*.gml": "javascript"
+   // },
+   "editor.hover.delay": 50,
+   // "[cpp]": {
+   // //   // "editor.defaultFormatter": "ryannaddy.vscode-format"
+   // },
+   "cSpell.allowCompoundWords": true,
+   "tabnine.experimentalAutoImports": true,
+   "workbench.editor.scrollToSwitchTabs": true,
+   "markdown.preview.breaks": true,
+   "todo-tree.tree.showScanModeButton": true,
+   "todo-tree.filtering.ignoreGitSubmodules": true,
+   "todo-tree.filtering.useBuiltInExcludes": "file and search excludes",
+   "todo-tree.general.enableFileWatcher": true,
+   "todo-tree.highlights.defaultHighlight": {
+      "background": "#4415a2",
+      "opacity": 0,
+   },
+   "todo-tree.tree.buttons.scanMode": true,
+   "dimmer.toggleDimmerCommandScope": "user",
+   "dimmer.delay": 1,
+   "workbench.editorAssociations": [
+      {
+         "viewType": "hexEditor.hexedit",
+         "filenamePattern": "*.exe"
+      }
+   ],
+   // "editor.formatOnType": true,
+   "C_Cpp.vcFormat.newLine.beforeOpenBrace.namespace": "newLine",
+   "C_Cpp.vcFormat.newLine.beforeOpenBrace.lambda": "newLine",
+   "C_Cpp.vcFormat.newLine.beforeOpenBrace.function": "newLine",
+   "C_Cpp.vcFormat.newLine.beforeOpenBrace.block": "newLine",
+   "C_Cpp.vcFormat.indent.preserveWithinParentheses": true,
+   "C_Cpp.vcFormat.indent.gotoLabels": "oneLeft",
+   "C_Cpp.vcFormat.newLine.beforeOpenBrace.type": "newLine",
+   "C_Cpp.vcFormat.newLine.scopeBracesOnSeparateLines": true,
+   "C_Cpp.vcFormat.space.afterCastCloseParenthesis": true,
+   "C_Cpp.vcFormat.space.beforeEmptySquareBrackets": true,
+   "C_Cpp.vcFormat.space.beforeInitializerListOpenBrace": true,
+   "C_Cpp.vcFormat.space.betweenEmptyBraces": true,
+   "C_Cpp.vcFormat.space.groupSquareBrackets": false,
+   "C_Cpp.vcFormat.space.withinExpressionParentheses": true,
+   "C_Cpp.vcFormat.space.withinControlFlowStatementParentheses": true,
+   "C_Cpp.vcFormat.space.withinParameterListParentheses": true,
+   "C_Cpp.vcFormat.space.withinSquareBrackets": true,
+   "html.format.endWithNewline": true,
+   "editor.cursorBlinking": "phase",
+   "editor.suggest.shareSuggestSelections": true,
+   "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
+   "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": true,
+   "javascript.format.semicolons": "insert",
+   "editor.cursorSmoothCaretAnimation": true,
+   "editor.suggest.statusBar.visible": true,
+   "modaledit.insertStatusText": "-- $(symbol-key) INSERT --",
+   "modaledit.normalStatusText": "-- $(tools) NORMAL --",
+   "modaledit.selectStatusText": "-- $(arrow-both) VISUAL --",
+   "spaces-inside-braces.enableForAngle": false,
+   "autoimport.spaceBetweenBraces": false,
+   "editor.autoClosingBrackets": "always",
+   "spaces-inside-braces.enableForBrackets": false,
+   "extensions.ignoreRecommendations": false,
+   "sync.gist": "91e872f274082eae582cc7996692deb2",
+   "cSpell.userWords": [
+      "Blit",
+      "Bresenham",
+      "Lerp",
+      "Verts"
+   ],
+   "toggler.toggles": [
+      [
+         "absolute",
+         "relative"
+      ],
+      [
+         "high",
+         "low"
+      ],
+      [
+         "i",
+         "j"
+      ],
+      [
+         "X",
+         "Y"
+      ],
+      [
+         "increment",
+         "decrement"
+      ],
+      [
+         "forward",
+         "backward"
+      ],
+      [
+         ".",
+         "->"
+      ]
+   ],
+   "vssolution.xxprojItemTypes": {
+      "*": "Content",
+      "cs": "Compile",
+      "cpp": "ClCompile",
+      "cc": "ClCompile",
+      "c": "ClCompile",
+      "h": "ClInclude",
+      "hpp": "ClInclude",
+      "vb": "Compile",
+      "fs": "Compile",
+      "ts": "TypeScriptCompile"
+   },
+   "javascript.format.placeOpenBraceOnNewLineForControlBlocks": true,
+   "typescript.format.placeOpenBraceOnNewLineForControlBlocks": true,
+   "terminal.integrated.cursorStyle": "line",
+   "C_Cpp.commentContinuationPatterns": [
+      "/**"
+   ],
+   "short-commands.includeWorkspaceTasks": true,
+   // Some stuffs.
+   "javascript.format.placeOpenBraceOnNewLineForFunctions": true,
+   "typescript.format.placeOpenBraceOnNewLineForFunctions": true,
+   "bookmarks.useWorkaroundForFormatters": false,
+   "bookmarks.sideBar.expanded": true,
+   "bookmarks.label.suggestion": "suggestWhenSelectedOrLineWhenNoSelected",
+   "bookmarks.navigateThroughAllFiles": true,
+   "bookmarks.saveBookmarksInProject": true,
+   "C_Cpp.errorSquiggles": "Enabled",
+   "C_Cpp.exclusionPolicy": "checkFilesAndFolders",
+   "toggleCase.case.pathCase": false,
+   "toggleCase.case.sentenceCase": false,
+   "toggleCase.case.titleCase": false,
+   "toggleCase.notification.notifyOnChange": false,
+   "toggleCase.case.dotCase": false,
+   "toggleCase.case.capitalCase": false,
+   "enableTelemetry": true,
+   "editor.minimap.enabled": false,
+   "workbench.activityBar.visible": false,
+   "editor.cursorSurroundingLines": 1,
+   "editor.scrollBeyondLastLine": false,
+   "workbench.list.smoothScrolling": true,
+   "comment-divider.length": 60,
+   "editor.formatOnPaste": true,
+   "editor.detectIndentation": false,
+   "C_Cpp.vcFormat.indent.caseLabels": true,
+   "C_Cpp.intelliSenseEngineFallback": "Enabled",
+   "settingsSync.keybindingsPerPlatform": false,
+   "banner-comments-plus.horizontalLayout": "controlled smushing",
+   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
+   "C_Cpp.vcFormat.space.betweenEmptyLambdaBrackets": true,
+   "C_Cpp.vcFormat.space.betweenEmptySquareBrackets": true,
+   "auto-comment-blocks.singleLineBlockOnEnter": true,
+   "auto-comment-blocks.slashStyleBlocks": [
+      ".gml",
+      ".cpp",
+      ".json"
+   ],
+   "gitlens.views.repositories.location": "gitlens",
+   "gitlens.views.fileHistory.location": "gitlens",
+   "gitlens.views.lineHistory.location": "gitlens",
+   "gitlens.views.compare.location": "gitlens",
+   "gitlens.views.search.location": "gitlens",
+   "editor.tabSize": 3,
+   // "GoToAnything.prefix.Commands": "",
+   // "GoToAnything.prefix.Recent": "",
+   // "GoToAnything.prefix.Symbols": "",
+   /*
   "beautify.language": {
 
     "js": {
@@ -655,7 +672,7 @@
     ]
   },
 */
-    /*
+   /*
   "beautify.language": {
   "js": {
     "type": [
@@ -679,22 +696,22 @@
   ]
 }
 */
-    // "kirankotari.RunCommandOnSave": [
-    //   {
-    //     "cmd": "extension.awarestAlignFirst",
-    //     "args": "//"
-    //   }.
-    //   {
-    //     "cmd": "extension.awarestAlignFirst",
-    //     "args": "="
-    //   }
-    // ]
-    // "runOnSave.statusMessageTimeout": 3000,
-    // "runOnSave.commands": [
-    //   {
-    //     // "match": ".*\\.json$",
-    //     "command": "extension.awarestAlignEach",
-    //     "runIn": "vscode"
-    //   }
-    // ]
+   // "kirankotari.RunCommandOnSave": [
+   //   {
+   //     "cmd": "extension.awarestAlignFirst",
+   //     "args": "//"
+   //   }.
+   //   {
+   //     "cmd": "extension.awarestAlignFirst",
+   //     "args": "="
+   //   }
+   // ]
+   // "runOnSave.statusMessageTimeout": 3000,
+   // "runOnSave.commands": [
+   //   {
+   //     // "match": ".*\\.json$",
+   //     "command": "extension.awarestAlignEach",
+   //     "runIn": "vscode"
+   //   }
+   // ]
 }
