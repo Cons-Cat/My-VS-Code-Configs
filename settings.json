@@ -657,6 +657,7 @@
    "window.menuBarVisibility": "default",
    "dashboard.projectData": null,
    "workbench.startupEditor": "none",
+   "git.autofetch": true,
    // "GoToAnything.prefix.Commands": "",
    // "GoToAnything.prefix.Recent": "",
    // "GoToAnything.prefix.Symbols": "",

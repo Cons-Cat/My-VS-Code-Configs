@@ -15,21 +15,21 @@
         "command": "deleteLeft",
         "when": "editorTextFocus"
     },
-    {
-        "key": "ctrl+c",
-        "command": "scrollLineUp",
-        "when": "editorTextFocus"
-    },
+   //  {
+   //      "key": "ctrl+c",
+   //      "command": "scrollLineUp",
+   //      "when": "editorTextFocus"
+   //  },
     {
         "key": "ctrl+t",
         "command": "scrollLineDown",
         "when": "editorTextFocus"
     },
-    {
-        "key": "ctrl+c",
-        "command": "list.focusUp",
-        "when": "listFocus && !inputFocus"
-    },
+   //  {
+   //      "key": "ctrl+c",
+   //      "command": "list.focusUp",
+   //      "when": "listFocus && !inputFocus"
+   //  },
     {
         "key": "ctrl+t",
         "command": "list.focusDown",
