@@ -34,7 +34,7 @@
    ],
    "editor.renderWhitespace": "trailing",
    // Theme
-   "workbench.colorTheme": "Dracula",
+   "workbench.colorTheme": "Dracula-Soft Syntax Theme",
    "editor.tokenColorCustomizations": {
       "textMateRules": [
          {
@@ -86,7 +86,7 @@
    "editor.wordWrap": "on",
    // "editor.formatOnPaste": true,
    // "editor.formatOnSave": true,
-   "jumpToHint.theme.backgroundColor": "#ff9eddff",
+   "jumpToHint.theme.backgroundColor": "#9eddff",
    "jumpToHint.theme.fontColor": "#1d1e26",
    "editor.minimap.showSlider": "always",
    "workbench.preferredDarkColorTheme": "Dracula",
@@ -658,6 +658,12 @@
    "dashboard.projectData": null,
    "workbench.startupEditor": "none",
    "git.autofetch": true,
+   "jumpToHint.type.hintLengthType": "Fixed",
+   "jumpToHint.type.fixedHintLength": 3,
+   "jumpToHint.common.hintCharacters": "etuhonsgpc.gpr,",
+   "nightswitch.dayTheme": "Dracula",
+   "nightswitch.nightTheme": "Dracula-Soft Syntax Theme",
+   "nightswitch.geolocation": true,
    // "GoToAnything.prefix.Commands": "",
    // "GoToAnything.prefix.Recent": "",
    // "GoToAnything.prefix.Symbols": "",
