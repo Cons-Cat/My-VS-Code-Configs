@@ -26,6 +26,7 @@
    "banner-comments-plus.trimEmptyLines": true,
    "clipring.selectTextAfterPasteFromMenu": false,
    "bracket-peek.previewAlways": true,
+   "dashboard.openOnStartup": "always",
    "highlight-bad-chars.additionalUnicodeChars": [
       "\u0009",
       "\u200E",
@@ -434,7 +435,8 @@
             "s": "workbench.action.files.saveAs",
             "t": "todo-tree.showTreeView",
             "h": "workbench.action.toggleSidebarVisibility",
-            "g": "workbench.action.focusPanel"
+            "g": "workbench.action.focusPanel",
+            "d": "dashboard.open"
          },
          "t": {
             "b": "workbench.action.closeActiveEditor",
@@ -529,7 +531,6 @@
    "C_Cpp.vcFormat.space.beforeEmptySquareBrackets": true,
    "C_Cpp.vcFormat.space.beforeInitializerListOpenBrace": true,
    "C_Cpp.vcFormat.space.betweenEmptyBraces": true,
-   "C_Cpp.vcFormat.space.groupSquareBrackets": false,
    "C_Cpp.vcFormat.space.withinExpressionParentheses": true,
    "C_Cpp.vcFormat.space.withinControlFlowStatementParentheses": true,
    "C_Cpp.vcFormat.space.withinParameterListParentheses": true,
@@ -625,7 +626,7 @@
    "enableTelemetry": true,
    "editor.minimap.enabled": false,
    "workbench.activityBar.visible": false,
-   "editor.cursorSurroundingLines": 1,
+   "editor.cursorSurroundingLines": 5,
    "editor.scrollBeyondLastLine": false,
    "workbench.list.smoothScrolling": true,
    "comment-divider.length": 60,
@@ -650,6 +651,12 @@
    "gitlens.views.compare.location": "gitlens",
    "gitlens.views.search.location": "gitlens",
    "editor.tabSize": 3,
+   "search.showLineNumbers": true,
+   "C_Cpp.vcFormat.wrap.preserveBlocks": "never",
+   "C_Cpp.vcFormat.space.groupSquareBrackets": false,
+   "window.menuBarVisibility": "default",
+   "dashboard.projectData": null,
+   "workbench.startupEditor": "none",
    // "GoToAnything.prefix.Commands": "",
    // "GoToAnything.prefix.Recent": "",
    // "GoToAnything.prefix.Symbols": "",
