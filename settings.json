@@ -9,7 +9,7 @@
    "workbench.statusBar.visible": true,
    "team.showWelcomeMessage": false,
    "workbench.iconTheme": "file-icons",
-   "window.zoomLevel": -1.5,
+   "window.zoomLevel": -2,
    "editor.mouseWheelZoom": true,
    // "smartsemicolon.enable": true,
    "editor.smoothScrolling": true,
@@ -81,7 +81,7 @@
       "scss"
    ],
    "dimmer.enabled": true,
-   "dimmer.opacity": 65,
+   "dimmer.opacity": 73,
    "editor.wordWrap": "on",
    "editor.formatOnPaste": true,
    // "editor.formatOnSave": true,
@@ -468,11 +468,13 @@
             "l": "comment-divider.insertSolidLine",
             "t": "extension.insertComment", // Attempted TODO: insertion.
             "g": "extension.magicComment", // Swapping comments and non-comments.
-            "r": "rewrap.rewrapComment",
+            // "r": "rewrap.rewrapComment",
+            "r": "editor.foldAllBlockComments",
             "m": "extension.commentBox",
             "b": "banner-comments-plus.Apply",
             "B": "banner-comments-plus.ApplyFromList",
             "p": "extension.table.formatCurrent",
+            "h": "extension.duplicateThenCommentOut"
          }
       }
    },
