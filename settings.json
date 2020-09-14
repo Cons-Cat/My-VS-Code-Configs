@@ -43,7 +43,7 @@
                "fontStyle": "italic"
             }
          }
-      ]
+      ],
    },
    "terminal.integrated.fontFamily": "'Cascadia Mono'",
    "terminal.integrated.fontSize": 15,
@@ -62,7 +62,6 @@
       "editor.rangeHighlightBackground": "#433F47",
       "editor.rangeHighlightBorder": "#9580FF",
       "editor.findMatchHighlightBackground": "#433F47",
-      "editor.foreground": "#f2f2f2",
       "list.hoverBackground": "#635937",
       "list.focusBackground": "#635937",
       "list.hoverBackground": "#104956",
@@ -84,8 +83,9 @@
    "dimmer.enabled": true,
    "dimmer.opacity": 65,
    "editor.wordWrap": "on",
-   // "editor.formatOnPaste": true,
+   "editor.formatOnPaste": true,
    // "editor.formatOnSave": true,
+   "dired.fixed_window": true,
    "jumpToHint.theme.backgroundColor": "#9eddff",
    "jumpToHint.theme.fontColor": "#1d1e26",
    "editor.minimap.showSlider": "always",
@@ -97,6 +97,7 @@
    "editor.renderLineHighlightOnlyWhenFocus": true,
    "editor.semanticHighlighting.enabled": true,
    "workbench.view.alwaysShowHeaderActions": true,
+   "tableformatter.markdown.tableEdgesType": "Normal",
    // Modal layer;
    "modaledit.selectCursorStyle": "block-outline",
    "modaledit.searchCursorStyle": "underline",
@@ -332,7 +333,11 @@
       "W": "workbench.action.focusPreviousGroup",
       "_": "extension.toggleCase",
       "-": "extension.toggle",
-      "o": "smartsemicolon.insert",
+      "o": {
+         "condition": "__char !='}'",
+         "true": "smartsemicolon.insert",
+         "false": "editor.action.insertLineAfter"
+      },
       "O": "join-lines-context-aware.join",
       "z": {
          "condition": "__char == '{'||__char=='}'",
@@ -364,7 +369,7 @@
          "r": "editor.toggleFold",
          "F": "references-view.find",
          "f": "editor.action.goToReferences",
-         "o": "lineBreakInsert",
+         "o": "editor.action.insertLineAfter",
          "d": {
             "condition": "__selecting",
             "false": "cursorTop",
@@ -387,7 +392,8 @@
             "R": "editor.unfoldAllMarkerRegions",
             "f": "references-view.showCallHierarchy",
             "s": "extension.insertSnipp",
-            "S": "extension.createSnipp"
+            "S": "extension.createSnipp",
+            ".": "editor.action.quickFix"
          },
          "e": {
             "t": "extension.embraceParenthesis",
@@ -430,7 +436,8 @@
             "c": "bookmarks.list",
             "f": "workbench.action.openRecent",
             "p": "workbench.action.reopenClosedEditor",
-            ".": "workbench.action.files.openFile",
+            // ".": "workbench.action.files.openFile",
+            ".": "extension.dired.open",
             ">": "workbench.action.files.openFolder",
             "s": "workbench.action.files.saveAs",
             "t": "todo-tree.showTreeView",
@@ -441,8 +448,16 @@
          "t": {
             "b": "workbench.action.closeActiveEditor",
             "t": "center-editor-window.center",
-            "c": "cursorPageUp",
-            "w": "cursorPageDown",
+            "c": {
+               "condition": "__selecting",
+               "false": "betterPageUp",
+               "true": "betterPageUpSelect"
+            },
+            "w": {
+               "condition": "__selecting",
+               "false": "betterPageDown",
+               "true": "betterPageDownSelect"
+            },
             "e": "jumpToHint.jumpByWord",
             "u": "jumpToHint.jumpByLine",
             "f": "jumpToHint.jumpBySearch",
@@ -456,7 +471,8 @@
             "r": "rewrap.rewrapComment",
             "m": "extension.commentBox",
             "b": "banner-comments-plus.Apply",
-            "B": "banner-comments-plus.ApplyFromList"
+            "B": "banner-comments-plus.ApplyFromList",
+            "p": "extension.table.formatCurrent",
          }
       }
    },
@@ -556,7 +572,8 @@
       "Blit",
       "Bresenham",
       "Lerp",
-      "Verts"
+      "Verts",
+      "dired"
    ],
    "toggler.toggles": [
       [
@@ -625,7 +642,7 @@
    "toggleCase.case.capitalCase": false,
    "enableTelemetry": true,
    "editor.minimap.enabled": false,
-   "workbench.activityBar.visible": false,
+   "workbench.activityBar.visible": true,
    "editor.cursorSurroundingLines": 5,
    "editor.scrollBeyondLastLine": false,
    "workbench.list.smoothScrolling": true,
@@ -664,6 +681,16 @@
    "nightswitch.dayTheme": "Dracula",
    "nightswitch.nightTheme": "Dracula-Soft Syntax Theme",
    "nightswitch.geolocation": true,
+   "workbench.colorTheme": "Dracula",
+   "editor.renderControlCharacters": false,
+   "C_Cpp.clang_format_sortIncludes": true,
+   "C_Cpp.codeFolding": "Disabled",
+   "C_Cpp.dimInactiveRegions": false,
+   "enabledCodeActions": true,
+   "tabnine.disable_line_regex": [
+      "include",
+      "for"
+   ],
    // "GoToAnything.prefix.Commands": "",
    // "GoToAnything.prefix.Recent": "",
    // "GoToAnything.prefix.Symbols": "",

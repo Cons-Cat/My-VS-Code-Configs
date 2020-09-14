@@ -1,104 +1,159 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
-    {
-        "key": "alt+a",
-        "command": "modaledit.enterNormal",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "backspace",
-        "command": "modaledit.enterNormal",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "shift+enter",
-        "command": "deleteLeft",
-        "when": "editorTextFocus"
-    },
+   {
+      "key": "alt+a",
+      "command": "modaledit.enterNormal",
+      "when": "editorTextFocus"
+   },
+   {
+      "key": "backspace",
+      "command": "modaledit.enterNormal",
+      "when": "editorTextFocus"
+   },
+   {
+      "key": "shift+enter",
+      "command": "deleteLeft",
+      "when": "editorTextFocus"
+   },
    //  {
    //      "key": "ctrl+c",
    //      "command": "scrollLineUp",
    //      "when": "editorTextFocus"
    //  },
-    {
-        "key": "ctrl+t",
-        "command": "scrollLineDown",
-        "when": "editorTextFocus"
-    },
+   {
+      "key": "ctrl+t",
+      "command": "scrollLineDown",
+      "when": "editorTextFocus"
+   },
    //  {
    //      "key": "ctrl+c",
    //      "command": "list.focusUp",
    //      "when": "listFocus && !inputFocus"
    //  },
-    {
-        "key": "ctrl+t",
-        "command": "list.focusDown",
-        "when": "listFocus && !inputFocus"
-    },
-    {
-        "key": "escape",
-        "command":"workbench.action.togglePanel",
-        "when": "focusedView == 'workbench.panel.markers.view'"
-    },
-    {
-        "key": "oem_1",
-        "command": "-smartsemicolon.insert"
-    },
-    {
-        "key": "backspace",
-        "command": "-extension.smartBackspace",
-        "when": "config.hungryDelete.enableSmartBackspace && editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "alt+c",
-        "command": "smartmulticursor.insertCursorAbove",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+alt+up",
-        "command": "-smartmulticursor.insertCursorAbove",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "alt+t",
-        "command": "smartmulticursor.insertCursorBelow",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+alt+down",
-        "command": "-smartmulticursor.insertCursorBelow",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "alt+oem_period",
-        "command": "references-view.next",
-        "when": "reference-list.hasResult"
-    },
-    {
-        "key": "f4",
-        "command": "-references-view.next",
-        "when": "reference-list.hasResult"
-    },
-    {
-        "key": "alt+oem_comma",
-        "command": "references-view.prev",
-        "when": "reference-list.hasResult"
-    },
-    {
-        "key": "shift+f4",
-        "command": "-references-view.prev",
-        "when": "reference-list.hasResult"
-    },
-    {
-        "key": "ctrl+t",
-        "command": "-workbench.action.showAllSymbols"
-    },
-    {
-        "key": "ctrl+c",
-        "command": "-editor.action.clipboardCopyAction"
-    },
-    {
-        "key": "ctrl+oem_1",
-        "command": "extension.jumpy-word"
-    }
+   {
+      "key": "ctrl+t",
+      "command": "list.focusDown",
+      "when": "listFocus && !inputFocus"
+   },
+   {
+      "key": "escape",
+      "command": "workbench.action.togglePanel",
+      "when": "focusedView == 'workbench.panel.markers.view'"
+   },
+   {
+      "key": "oem_1",
+      "command": "-smartsemicolon.insert"
+   },
+   {
+      "key": "backspace",
+      "command": "-extension.smartBackspace",
+      "when": "config.hungryDelete.enableSmartBackspace && editorTextFocus && !editorReadonly"
+   },
+   {
+      "key": "alt+c",
+      "command": "smartmulticursor.insertCursorAbove",
+      "when": "editorTextFocus"
+   },
+   {
+      "key": "ctrl+alt+up",
+      "command": "-smartmulticursor.insertCursorAbove",
+      "when": "editorTextFocus"
+   },
+   {
+      "key": "alt+t",
+      "command": "smartmulticursor.insertCursorBelow",
+      "when": "editorTextFocus"
+   },
+   {
+      "key": "ctrl+alt+down",
+      "command": "-smartmulticursor.insertCursorBelow",
+      "when": "editorTextFocus"
+   },
+   {
+      "key": "alt+oem_period",
+      "command": "references-view.next",
+      "when": "reference-list.hasResult"
+   },
+   {
+      "key": "f4",
+      "command": "-references-view.next",
+      "when": "reference-list.hasResult"
+   },
+   {
+      "key": "alt+oem_comma",
+      "command": "references-view.prev",
+      "when": "reference-list.hasResult"
+   },
+   {
+      "key": "shift+f4",
+      "command": "-references-view.prev",
+      "when": "reference-list.hasResult"
+   },
+   {
+      "key": "ctrl+t",
+      "command": "-workbench.action.showAllSymbols"
+   },
+   {
+      "key": "ctrl+c",
+      "command": "-editor.action.clipboardCopyAction"
+   },
+   {
+      "key": "ctrl+oem_1",
+      "command": "extension.jumpy-word"
+   },
+   {
+      "key": "j",
+      "command": "extension.dired.copy",
+      "when": "dired.open && !findWidgetVisible && !inQuickOpen"
+   },
+   {
+      "key": "shift+c",
+      "command": "-extension.dired.copy",
+      "when": "dired.open && !findWidgetVisible && !inQuickOpen"
+   },
+   {
+      "key": "r",
+      "command": "extension.dired.rename",
+      "when": "dired.open && !findWidgetVisible && !inQuickOpen"
+   },
+   {
+      "key": "shift+r",
+      "command": "-extension.dired.rename",
+      "when": "dired.open && !findWidgetVisible && !inQuickOpen"
+   },
+   {
+      "key": "v",
+      "command": "extension.dired.unselect",
+      "when": "dired.open && !findWidgetVisible && !inQuickOpen"
+   },
+   {
+      "key": "u",
+      "command": "-extension.dired.unselect",
+      "when": "dired.open && !findWidgetVisible && !inQuickOpen"
+   },
+   {
+      "key": "oem_period",
+      "command": "extension.dired.goUpDir",
+      "when": "dired.open && !findWidgetVisible && !inQuickOpen"
+   },
+   {
+      "key": "shift+b",
+      "command": "-extension.dired.goUpDir",
+      "when": "dired.open && !findWidgetVisible && !inQuickOpen"
+   },
+   {
+      "key": "oem_comma",
+      "command": "extension.dired.close",
+      "when": "dired.open && !findWidgetVisible && !inQuickOpen"
+   },
+   {
+      "key": "q",
+      "command": "-extension.dired.close",
+      "when": "dired.open && !findWidgetVisible && !inQuickOpen"
+   },
+   {
+      "key": "p",
+      "command": "extension.dired.createDir",
+      "when": "dired.open && !findWidgetVisible && !inQuickOpen"
+   }
 ]
