@@ -321,6 +321,12 @@
       "{": {
          "command": "workbench.action.joinAllGroups"
       },
+      "!": {
+         "command": "workbench.action.previousEditor",
+      },
+      "#": {
+         "command": "workbench.action.nextEditor",
+      },
       // Misc
       "'": "editor.action.commentLine",
       "y": "modaledit.toggleSelection",
@@ -693,6 +699,10 @@
       "include",
       "for"
    ],
+   "update.mode": "start",
+   "workbench.commandPalette.preserveInput": true,
+   "window.newWindowDimensions": "maximized",
+   "window.restoreWindows": "none",
    // "GoToAnything.prefix.Commands": "",
    // "GoToAnything.prefix.Recent": "",
    // "GoToAnything.prefix.Symbols": "",

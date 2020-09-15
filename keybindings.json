@@ -41,6 +41,16 @@
       "when": "focusedView == 'workbench.panel.markers.view'"
    },
    {
+      "key": "8",
+      "command": "workbench.action.previousEditor",
+      "when":"!editorTextFocus"
+   },
+   {
+      "key": "oem_8",
+      "command": "workbench.action.nextEditor",
+      "when":"!editorTextFocus"
+   },
+   {
       "key": "oem_1",
       "command": "-smartsemicolon.insert"
    },
@@ -155,5 +165,9 @@
       "key": "p",
       "command": "extension.dired.createDir",
       "when": "dired.open && !findWidgetVisible && !inQuickOpen"
+   },
+   {
+      "key": "ctrl+pagedown",
+      "command": "-workbench.action.nextEditor"
    }
 ]
