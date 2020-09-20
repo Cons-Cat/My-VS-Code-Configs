@@ -17,7 +17,10 @@
    "editor.mouseWheelScrollSensitivity": 5,
    "togglecase.pattern": "[0-9]|[a-z]|[A-Z]|_|-",
    "hungryDelete.keepOneSpace": true,
-   "editor.fontFamily": "'Dank Mono', 'Cascadia Mono'",
+   // "editor.fontFamily": "'Operator Mono Medium'",
+   // "editor.fontFamily": "'Dank Mono', 'Cascadia Mono'",
+   // "editor.fontFamily": "'OperatorMono Nerd Font'",
+   "editor.fontFamily": "'Operator Mono Lig'",
    "editor.fontLigatures": true,
    "editor.accessibilitySupport": "off",
    "smartsemicolon.enable": true,
@@ -33,18 +36,10 @@
       "\u200F"
    ],
    "editor.renderWhitespace": "trailing",
+   // "editor.fontWeight": "bold",
    // Theme
-   "workbench.colorTheme": "Dracula-Soft Syntax Theme",
-   "editor.tokenColorCustomizations": {
-      "textMateRules": [
-         {
-            "scope": "comment",
-            "settings": {
-               "fontStyle": "italic"
-            }
-         }
-      ],
-   },
+   // "workbench.colorTheme": "Dracula-Soft Syntax Theme",
+   "editor.fontSize": 15.65,
    "terminal.integrated.fontFamily": "'Cascadia Mono'",
    "terminal.integrated.fontSize": 15,
    // Fonts
@@ -81,9 +76,9 @@
       "scss"
    ],
    "dimmer.enabled": true,
-   "dimmer.opacity": 73,
+   "dimmer.opacity": 87,
    "editor.wordWrap": "on",
-   "editor.formatOnPaste": true,
+   // "editor.formatOnPaste": true,
    // "editor.formatOnSave": true,
    "dired.fixed_window": true,
    "jumpToHint.theme.backgroundColor": "#9eddff",
@@ -130,12 +125,26 @@
       },
       "t": {
          "condition": "__selecting",
-         "true": "cursorDownSelect",
+         "true": {
+            "condition": "__char == ''",
+            "true": [
+               "cursorDownSelect",
+               "cursorLineEndSelect"
+            ],
+            "false": "cursorDownSelect",
+         },
          "false": "cursorDown"
       },
       "c": {
          "condition": "__selecting",
-         "true": "cursorUpSelect",
+         "true": {
+            "condition": "__char == ''",
+            "true": [
+               "cursorUpSelect",
+               "cursorLineEndSelect"
+            ],
+            "false": "cursorUpSelect",
+         },
          "false": "cursorUp"
       },
       "C": {
@@ -185,7 +194,7 @@
          },
          "true": {
             "command": "cursorWordRightSelect",
-            "repeat": "__char.match(/\\W/)"
+            // "repeat": "__char.match(/\\W/)"
          }
       },
       "G": {
@@ -253,9 +262,10 @@
          "editor.action.deleteLines",
          "modaledit.cancelSelection"
       ],
+      // "=": "bracket-pair-colorizer-2.expandBracketSelection",
       "=": "extension.selectCurlyBrackets",
       "*": "extension.selectPerfectLine",
-      "+": "bracket-pair-colorizer-2.expandBracketSelection",
+      "+": "modaledit.selectBetween",
       ")": {
          "condition": "__selecting",
          "true": "extension.selectSameText",
@@ -316,7 +326,7 @@
       ],
       // Windows
       "}": {
-         "command": "workbench.action.splitEditorDown"
+         "command": "smart.split.horizontal"
       },
       "{": {
          "command": "workbench.action.joinAllGroups"
@@ -370,7 +380,7 @@
          " ": [
             "editor.action.showHover",
          ],
-         "}": "workbench.action.splitEditorRight",
+         "}": "smart.split.vertical",
          "{": "workbench.action.joinTwoGroups",
          "r": "editor.toggleFold",
          "F": "references-view.find",
@@ -404,7 +414,7 @@
          "e": {
             "t": "extension.embraceParenthesis",
             "n": "extension.embraceSquareBrackets",
-            "b": "extension.embraceCurlyBrackets",
+            "h": "extension.embraceCurlyBrackets",
             "g": "extension.embraceDoubleQuotes",
             "c": "extension.embraceSingleQuotes",
             "r": "region-marker.markNamedRegion",
@@ -418,7 +428,7 @@
                 RANDOM:         rand;min;max
                 */
             "l": "extension.textPastry.AtoX",
-            "h": "editor.action.duplicateSelection",
+            "o": "editor.action.duplicateSelection",
             "u": "extension.evalReplace",
             "m": "extension.toggleHEX",
             // Math incrementing
@@ -577,11 +587,14 @@
    "extensions.ignoreRecommendations": false,
    "sync.gist": "91e872f274082eae582cc7996692deb2",
    "cSpell.userWords": [
+      "Arwen",
       "Blit",
       "Bresenham",
       "Lerp",
       "Verts",
-      "dired"
+      "dired",
+      "ligaturized",
+      "tris"
    ],
    "toggler.toggles": [
       [
@@ -692,17 +705,35 @@
    "workbench.colorTheme": "Dracula",
    "editor.renderControlCharacters": false,
    "C_Cpp.clang_format_sortIncludes": true,
-   "C_Cpp.codeFolding": "Disabled",
    "C_Cpp.dimInactiveRegions": false,
    "enabledCodeActions": true,
    "tabnine.disable_line_regex": [
       "include",
-      "for"
+      "for",
+      "new"
    ],
    "update.mode": "start",
    "workbench.commandPalette.preserveInput": true,
    "window.newWindowDimensions": "maximized",
    "window.restoreWindows": "none",
+   "diffEditor.ignoreTrimWhitespace": true,
+   "bracket-pair-colorizer-2.highlightActiveScope": true,
+   // "bracket-pair-colorizer-2.unmatchedScopeColor": "#7A71AB",
+   "color-manager.insertClassicHex": true,
+   "bracket-pair-colorizer-2.colors": [
+      "Gold",
+      "Orchid",
+      "LightSkyBlue"
+   ],
+   "bracket-pair-colorizer-2.showBracketsInGutter": true,
+   "bracket-pair-colorizer-2.scopeLineCSS": [
+      "borderStyle : solid",
+      "borderWidth : 1px",
+      "borderColor : {color}",
+      "opacity: 0.35"
+   ],
+   // "bracket-pair-colorizer-2.unmatchedScopeColor": "BLACK",
+   "bracket-pair-colorizer-2.showBracketsInRuler": true,
    // "GoToAnything.prefix.Commands": "",
    // "GoToAnything.prefix.Recent": "",
    // "GoToAnything.prefix.Symbols": "",
