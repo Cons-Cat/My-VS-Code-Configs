@@ -535,12 +535,7 @@
 				"h": "extension.duplicateThenCommentOut"
 			},
 			"k": {
-				"n": {
-					// "condition": "__col == 0 || __selecting || __char == ''",
-					"condition": "false",
-					"true": "",
-					"false": "org.doDemote",
-				},
+				"n": "org.doDemote",
 				"h": "org.doPromote",
 				"H": "org.promoteSubtree",
 				"N": "org.demoteSubtree",
