@@ -43,12 +43,12 @@
    {
       "key": "8",
       "command": "workbench.action.previousEditor",
-      "when":"!editorTextFocus"
+      "when": "!editorTextFocus"
    },
    {
       "key": "oem_8",
       "command": "workbench.action.nextEditor",
-      "when":"!editorTextFocus"
+      "when": "!editorTextFocus"
    },
    {
       "key": "oem_1",
@@ -169,5 +169,15 @@
    {
       "key": "ctrl+pagedown",
       "command": "-workbench.action.nextEditor"
+   },
+   {
+      "key": "h",
+      "command": "magit.help",
+      "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+   },
+   {
+      "key": "shift+oem_2",
+      "command": "-magit.help",
+      "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
    },
 ]

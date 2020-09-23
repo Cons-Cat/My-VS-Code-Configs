@@ -376,7 +376,10 @@
 		";": {
 			"condition": "__selecting",
 			"true": "editor.action.formatSelection",
-			"false": "editor.action.formatDocument"
+			"false": [
+				"editor.action.formatDocument",
+				"markdowntable.format"
+			]
 		},
 		":": "rylogic-textaligner.Align",
 		// LEADER COMMANDS
@@ -531,7 +534,7 @@
 				"m": "extension.commentBox",
 				"b": "banner-comments-plus.Apply",
 				"B": "banner-comments-plus.ApplyFromList",
-				"p": "extension.table.formatCurrent",
+				// "p": "extension.table.formatCurrent",
 				"h": "extension.duplicateThenCommentOut"
 			},
 			"k": {
@@ -544,15 +547,42 @@
 				"l": "org.timestamp",
 				"c": "org.incrementContext",
 				"g": "org.decrementContext",
-				// "r": "org."
 			},
 			"j": {
 				"h": "org.bold",
-				"t": "org.italics",
-				"n": "org.underscore",
+				"t": "org.italic",
+				"n": "org.underline",
 				"s": "org.code",
 				"g": "org.literal",
 				"c": "org.verbose",
+				"m": "org.clockin",
+				"v": "org.clockout",
+				"w": "org.timestamp",
+			},
+			"y": {
+				// TODO: replace all markdowntable commands with text-tables.
+				"e": {
+					"e": "text-tables.createTable",
+					"h": "markdowntable.insertLeft",
+					"n": "markdowntable.insertRight",
+				},
+				"t": "text-tables.moveRowDown",
+				"c": "text-tables.moveRowUp",
+				"n": "markdowntable.nextCell",
+				"h": "markdowntable.prevCell",
+				"r": "text-tables.moveColRight",
+				"g": "text-tables.moveColLeft",
+				"-": "text-tables.gotoNextCell",
+				"d": "text-tables.gotoPreviousCell",
+				"i": [
+					"text-tables.clearCell",
+					"text-tables.formatUnderCursor"
+				],
+				"o": "text-tables.nextRow",
+				"y": {
+					"condition": "tableMode",
+					"false": "text-tables.tableModeOn"
+				}
 			}
 		}
 	},
@@ -562,6 +592,7 @@
 		"DONE",
 		"WAIT",
 	],
+	"text-tables.clearCell": "org",
 	// FORMATTING
 	// "files.insertFinalNewline": true,
 	"trailing-spaces.includeEmptyLines": false,
@@ -801,7 +832,7 @@
 		"borderStyle : solid",
 		"borderWidth : 1px",
 		"borderColor : {color}",
-		"opacity: 0.35"
+		"opacity: 0.45"
 	],
 	// "bracket-pair-colorizer-2.unmatchedScopeColor": "BLACK",
 	"bracket-pair-colorizer-2.showBracketsInRuler": true,
@@ -810,6 +841,7 @@
 	"workbench.editor.labelFormat": "short",
 	"workbench.editor.untitled.labelFormat": "name",
 	"editor.minimap.renderCharacters": false,
+	"dateTime.use24HourClock": false,
 	// "GoToAnything.prefix.Commands": "",
 	// "GoToAnything.prefix.Recent": "",
 	// "GoToAnything.prefix.Symbols": "",
