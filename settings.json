@@ -513,6 +513,7 @@
 				// "S": "extension.createSnipp",
 				"g": "editor.action.quickFix"
 			},
+
 			"e": {
 				"t": "extension.embraceParenthesis",
 				"n": "extension.embraceSquareBrackets",
@@ -521,23 +522,22 @@
 				"c": "extension.embraceSingleQuotes",
 				"r": "region-marker.markNamedRegion",
 				"R": "region-marker.markRegion",
-				"w": [
-					"extension.addNewLineAfterSelection",
-					"extension.addNewLineBeforeSelection",
-					"modaledit.cancelSelection"
-				],
 				"d": "insertDateString.insertDate",
 				"i": "extension.textPastry.1toX",
+				"w": "insert-unicode.insertText",
+
 				"I": "extension.prettyedit",
 				/* ^^^^^^^^^^^^^^^^^^^^^^^^
 					 NUM RANGE:      first-number;last-number
 					 LETTERS:        alpha;first-letter
 					 RANDOM:         rand;min;max
-					 */
+				*/
+
 				"l": "extension.textPastry.AtoX",
 				"o": "editor.action.duplicateSelection",
 				"u": "extension.evalReplace",
 				"m": "extension.toggleHEX",
+
 				// Math incrementing
 				"p": "incrementor.incrementByOne",
 				"P": "incrementor.decrementByOne",
@@ -545,9 +545,11 @@
 				">": "incrementor.decrementByTen",
 				",": "incrementor.incrementByTenth",
 				"<": "incrementor.decrementByTenth",
+
 				// Sorting
 				"s": "sortLines.sortLinesNatural"
 			},
+
 			"c": {
 				"u": "seito-openfile.openFileFromText",
 				"i": "copyFilePath",
@@ -568,23 +570,28 @@
 				"g": "workbench.action.focusPanel",
 				"d": "dashboard.open"
 			},
+
 			"t": {
 				"b": "workbench.action.closeActiveEditor",
 				"w": "center-editor-window.center",
+
 				"c": {
 					"condition": "__selecting",
 					"false": "betterPageUp",
 					"true": "betterPageUpSelect"
 				},
+
 				"t": {
 					"condition": "__selecting",
 					"false": "betterPageDown",
 					"true": "betterPageDownSelect"
 				},
+
 				"e": "jumpToHint.jumpByWord",
 				"u": "jumpToHint.jumpByLine",
 				"f": "jumpToHint.jumpBySearch"
 			},
+
 			"'": {
 				"'": "editor.action.blockComment",
 				"s": "comment-divider.makeSubHeader",
@@ -599,6 +606,7 @@
 				// "p": "extension.table.formatCurrent",
 				"h": "extension.duplicateThenCommentOut"
 			},
+
 			"k": {
 				"n": "org.doDemote",
 				"h": "org.doPromote",
@@ -610,6 +618,7 @@
 				"c": "org.incrementContext",
 				"g": "org.decrementContext"
 			},
+
 			"j": {
 				"h": "org.bold",
 				"t": "org.italic",
@@ -621,6 +630,7 @@
 				"v": "org.clockout",
 				"w": "org.timestamp"
 			},
+
 			"y": {
 				// TODO: replace all markdowntable commands with text-tables.
 				"e": {
@@ -645,6 +655,7 @@
 			}
 		}
 	},
+
 	"org.todoKeywords": ["TODO", "WIP", "DONE", "WAIT"],
 	"text-tables.clearCell": "org",
 	// FORMATTING
