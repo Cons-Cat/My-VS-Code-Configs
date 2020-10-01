@@ -264,7 +264,7 @@
 		",": "extension.blockalign",
 		"q": {
 			"condition": "__col == 0 || __char == ''",
-			"true": "clipring.cutToRing",
+			"true": ["clipring.cutToRing", "modaledit.cancelSelection"],
 			"false": {
 				"condition": "__selecting",
 				"true": [
@@ -391,7 +391,11 @@
 			"{": "workbench.action.joinTwoGroups",
 			"r": "editor.toggleFold",
 			"F": "references-view.find",
-			"f": "editor.action.goToReferences",
+			"f": {
+				"condition": "__selecting",
+				"true": "editor.action.goToReferences",
+				"false": "extension.fuzzy-search"
+			},
 			"o": "editor.action.insertLineAfter",
 			"!": {
 				"command": "fileextswitch"
