@@ -48,6 +48,7 @@
 	// ],
 	// "vscode_custom_css.policy": true,
 	// Colors
+
 	"workbench.colorCustomizations": {
 		"editor.selectionBackground": "#104956",
 		"editor.selectionHighlightBackground": "#635937",
@@ -61,12 +62,14 @@
 		"list.focusBackground": "#635937",
 		"list.hoverBackground": "#104956"
 	},
+
 	"blockscope-highlighter.rgba": {
 		"red": 48,
 		"green": 36,
 		"blue": 61,
 		"alpha": 0.15
 	},
+
 	// Other
 	"color-manager.languages": ["css", "html", "javascript", "json", "scss"],
 	"dimmer.enabled": true,
@@ -87,10 +90,12 @@
 	"editor.semanticHighlighting.enabled": true,
 	"workbench.view.alwaysShowHeaderActions": true,
 	"tableformatter.markdown.tableEdgesType": "Normal",
+
 	// Modal layer;
 	"modaledit.selectCursorStyle": "block-outline",
 	"modaledit.searchCursorStyle": "underline",
 	"startInNormalMode": "true",
+
 	"modaledit.keybindings": {
 		"u": "modaledit.enterInsert",
 		"a": "workbench.action.showCommands",
@@ -102,21 +107,25 @@
 			},
 			"false": "tabsanity.cursorLeft"
 		},
+
 		"n": {
 			"condition": "__selecting",
 			"true": "tabsanity.cursorRightSelect",
 			"false": "tabsanity.cursorRight"
 		},
+
 		"H": {
 			"condition": "__selecting",
 			"true": "selectPartOfWord.selectLeft",
 			"false": "selectPartOfWord.moveLeft"
 		},
+
 		"N": {
 			"condition": "__selecting",
 			"true": "selectPartOfWord.selectRight",
 			"false": "selectPartOfWord.moveRight"
 		},
+
 		"t": {
 			"condition": "__selecting",
 			"true": {
@@ -126,6 +135,7 @@
 			},
 			"false": "cursorDown"
 		},
+
 		"c": {
 			"condition": "__selecting",
 			"true": {
@@ -135,28 +145,53 @@
 			},
 			"false": "cursorUp"
 		},
+
 		"C": {
 			"condition": "__selecting",
 			"false": "block-travel.jumpUp",
 			"true": "block-travel.selectUp"
 		},
+
 		"T": {
 			"condition": "__selecting",
 			"false": "block-travel.jumpDown",
 			"true": "block-travel.selectDown"
 		},
+
 		"m": {
 			"condition": "__selecting",
 			"false": "bracket-jumper.ascendLeft",
 			"true": "bracket-jumper.selectAscendLeft"
 		},
+
 		"v": {
 			"condition": "__selecting",
 			"false": "bracket-jumper.ascendRight",
 			"true": "bracket-jumper.selectAscendRight"
 		},
+
 		// Move by words.
 		"r": {
+			"condition": "__selecting",
+			"false": {
+				"command": "metaGo.cursorSpaceWordRight"
+			},
+			"true": {
+				"command": "metaGo.cursorSpaceWordRightSelect"
+			}
+		},
+
+		"g": {
+			"condition": "__selecting",
+			"false": {
+				"command": "metaGo.cursorSpaceWordLeft"
+			},
+			"true": {
+				"command": "metaGo.cursorSpaceWordLeftSelect"
+			}
+		},
+
+		"R": {
 			"condition": "__selecting",
 			"false": {
 				"command": "cursorWordStartRight"
@@ -165,7 +200,8 @@
 				"command": "cursorWordRightSelect"
 			}
 		},
-		"g": {
+
+		"G": {
 			"condition": "__selecting",
 			"false": {
 				"command": "cursorWordStartLeft"
@@ -174,28 +210,7 @@
 				"command": "cursorWordLeftSelect"
 			}
 		},
-		"R": {
-			"condition": "__selecting",
-			"false": {
-				"command": "cursorWordStartRight",
-				"repeat": "__char.match(/\\W/)"
-			},
-			"true": {
-				"command": "cursorWordRightSelect"
-				// "repeat": "__char.match(/\\W/)"
-			}
-		},
-		"G": {
-			"condition": "__selecting",
-			"false": {
-				"command": "cursorWordStartLeft",
-				"repeat": "__char.match(/\\W/)"
-			},
-			"true": {
-				"command": "cursorWordLeftSelect",
-				"repeat": "__char.match(/\\W/)"
-			}
-		},
+
 		// Move by blocks.
 		"s": {
 			"condition": "__char == ''",
@@ -210,6 +225,7 @@
 				"false": "cursorLineEnd"
 			}
 		},
+
 		"d": {
 			"condition": "__col == 0",
 			"true": {
@@ -223,45 +239,60 @@
 				"false": "cursorLineStart"
 			}
 		},
+
 		"D": "smartBeginningOfLine",
+
 		// Deletion
 		".": {
 			"condition": "__selecting",
+
 			"true": "modaledit.previousMatch",
 			"false": "deleteWordLeft"
 		},
+
 		">": ["selectPartOfWord.backspace", "modaledit.cancelSelection"],
+
 		"p": {
 			"condition": "__selecting",
 			"true": "modaledit.nextMatch", // Needs work!
 			"false": "deleteWordRight"
 		},
+
 		"P": ["selectPartOfWord.delete", "modaledit.cancelSelection"],
+
 		"e": ["extension.smartBackspace", "modaledit.cancelSelection"],
+
 		"(": {
 			"command": "deleteRight"
 		},
+
 		"i": "deletehere.delete",
+
 		"I": [
 			"select-paragraph.selectParagraph",
 			"editor.action.deleteLines",
 			"modaledit.cancelSelection"
 		],
+
 		// "=": "bracket-pair-colorizer-2.expandBracketSelection",
 		"=": "extension.selectCurlyBrackets",
 		"*": "extension.selectPerfectLine",
 		"+": "modaledit.selectBetween",
+
 		")": {
 			"condition": "__selecting",
 			"true": "extension.selectSameText",
 			"false": "extension.selectWord"
 		},
+
 		"2": {
 			"condition": "__selecting",
 			"true": "extension.selectSameText",
 			"false": "extension.subword-select"
 		},
+
 		",": "extension.blockalign",
+
 		"q": {
 			"condition": "__col == 0 || __char == ''",
 			"true": ["clipring.cutToRing", "modaledit.cancelSelection"],
@@ -283,6 +314,7 @@
 				]
 			}
 		},
+
 		// Copy
 		"j": [
 			{
@@ -301,6 +333,7 @@
 			},
 			"modaledit.cancelSelection"
 		],
+
 		// Paste
 		"k": [
 			{
@@ -313,10 +346,11 @@
 					}
 				]
 			},
-			"clipring.pasteRingItem",
 			{ "condition": "__selecting", "false": "modaledit.cancelSelection" }
 		],
+
 		"K": ["editor.action.clipboardPasteAction", "modaledit.cancelSelection"],
+
 		// Windows
 		"}": {
 			// "command": "smart.split.horizontal"
@@ -326,13 +360,17 @@
 			// "command": "workbench.action.joinAllGroups"
 			"command": "workbench.action.splitEditorDown"
 		},
+
 		"!": {
 			"command": "workbench.action.previousEditor"
 		},
+
 		"#": {
 			"command": "workbench.action.nextEditor"
 		},
+
 		// Magit
+
 		// Misc
 		"'": "editor.action.commentLine",
 		"y": "modaledit.toggleSelection",
@@ -342,11 +380,13 @@
 		"W": "workbench.action.focusPreviousGroup",
 		"_": "extension.toggleCase",
 		"-": "extension.toggle",
+
 		"o": {
 			"condition": "__char !='}'",
 			"true": "smartsemicolon.insert",
 			"false": "editor.action.insertLineAfter"
 		},
+
 		"O": "join-lines-context-aware.join",
 		"z": {
 			"condition": "__char == '{'||__char=='}'",
@@ -354,27 +394,63 @@
 			// Unfortunately, I can't seem to make this not select.
 			"false": "extension.generic-goto"
 		},
+
 		// Formatting
 		";": {
 			"condition": "__selecting",
 			"true": "editor.action.formatSelection",
 			"false": ["editor.action.formatDocument", "markdowntable.format"]
 		},
+
 		":": "rylogic-textaligner.Align",
+
+		"1-9": {
+			"id": 3,
+			"help": "Repeat / go to line", // TODO: Use more of these.
+			"0-9": 3,
+
+			/* ----------------- Repeatable Commands ---------------- */
+			"c,t,C,T,h,n,d,s,.,p,H,N,>,P,m,v,e,O,i": {
+				"command": "modaledit.typeNormalKeys",
+				"args": "{ keys: __rcmd[0] }",
+				"repeat": "parseInt(__cmd)"
+			},
+
+			" ": {
+				"i": {
+					"command": "editor.action.deleteLines",
+					"args": "{ keys: __rcmd[0] }",
+					"repeat": "parseInt(__cmd)"
+				},
+
+				"o": {
+					"command": "editor.action.insertLineAfter",
+					"args": "{ keys: __rcmd[0] }",
+					"repeat": "parseInt(__cmd)"
+				},
+
+				"O": {
+					"command": "editor.action.insertLineBefore",
+					"args": "{ keys: __rcmd[0] }",
+					"repeat": "parseInt(__cmd)"
+				}
+			}
+		},
+
 		// LEADER COMMANDS
 		" ": {
 			"a": "editor.action.selectAll",
 			"s": {
-				// "condition": "editorLangId == 'magit'",
 				"condition": "false",
-				// "true": "magit.stage",
 				"false": "workbench.action.files.save"
 			},
+
 			"S": {
 				// "condition": "editorLangId == 'magit'",
 				// "true": "magit.stage-all",
 				// "false": "workbench.action.files.save"
 			},
+
 			// "n": {
 			// "condition": "editorLangId == 'magit'",
 			// "condition": "true",
@@ -385,45 +461,57 @@
 			//    "true": "magit.unstage-all",
 			// },
 			// "k": "clipboardHistory.focus",
+
 			"i": ["editor.action.deleteLines", "modaledit.cancelSelection"],
+			".": "deleteAllLeft",
+			"p": "deleteAllRight",
 			" ": ["editor.action.showHover"],
 			"}": "smart.split.vertical",
 			"{": "workbench.action.joinTwoGroups",
 			"r": "editor.toggleFold",
 			"F": "references-view.find",
+
 			"f": {
 				"condition": "__selecting",
 				"true": "editor.action.goToReferences",
 				"false": "extension.fuzzy-search"
 			},
+
 			"o": "editor.action.insertLineAfter",
+			"O": "editor.action.insertLineBefore",
+
 			"!": {
 				"command": "fileextswitch"
 			},
+
 			"#": {
 				"command": "fileextswitch"
 			},
+
 			"d": {
 				"condition": "__selecting",
 				"false": "cursorTop",
 				"true": "cursorTopSelect"
 			},
+
 			"b": {
 				"condition": "__selecting",
 				"false": "cursorBottom",
 				"true": "cursorBottomSelect"
 			},
+
 			"m": "cursorToolsAnchorLeave",
 			"M": "cursorToolsAnchorActivate",
 			"v": ["cursorToolsAnchorClean", "removeSecondaryCursors"],
-			".": {
+
+			"g": {
 				"w": "workbench.action.closeWindow",
 				"r": "editor.foldAllMarkerRegions",
 				"R": "editor.unfoldAllMarkerRegions",
 				"f": "references-view.showCallHierarchy",
-				"s": "extension.insertSnipp",
-				"S": "extension.createSnipp",
-				".": "editor.action.quickFix"
+				// "s": "extension.insertSnipp",
+				// "S": "extension.createSnipp",
+				"g": "editor.action.quickFix"
 			},
 			"e": {
 				"t": "extension.embraceParenthesis",
@@ -465,7 +553,7 @@
 				"i": "copyFilePath",
 				",": "extension.open",
 				"n": "workbench.action.files.newUntitledFile",
-				"N": "workbench.action.files.newWindow",
+				"N": "workbench.action.newWindow",
 				"o": "revealFileInOS",
 				"l": "bookmarks.toggle",
 				"c": "bookmarks.list",
@@ -482,13 +570,13 @@
 			},
 			"t": {
 				"b": "workbench.action.closeActiveEditor",
-				"t": "center-editor-window.center",
+				"w": "center-editor-window.center",
 				"c": {
 					"condition": "__selecting",
 					"false": "betterPageUp",
 					"true": "betterPageUpSelect"
 				},
-				"w": {
+				"t": {
 					"condition": "__selecting",
 					"false": "betterPageDown",
 					"true": "betterPageDownSelect"
@@ -496,7 +584,6 @@
 				"e": "jumpToHint.jumpByWord",
 				"u": "jumpToHint.jumpByLine",
 				"f": "jumpToHint.jumpBySearch"
-				// "n": "workbench.action.newWindow"
 			},
 			"'": {
 				"'": "editor.action.blockComment",
@@ -660,6 +747,7 @@
 		"Verts",
 		"dired",
 		"ligaturized",
+		"reimplementing",
 		"tris"
 	],
 	"toggler.toggles": [
