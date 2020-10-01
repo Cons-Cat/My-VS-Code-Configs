@@ -27,7 +27,6 @@
 	"smartsemicolon.autoLineChange": true,
 	"banner-comments-plus.trimTrailingWhitespace": true,
 	"banner-comments-plus.trimEmptyLines": true,
-	"clipring.selectTextAfterPasteFromMenu": false,
 	"bracket-peek.previewAlways": true,
 	"workbench.editor.enablePreviewFromQuickOpen": false,
 	"dashboard.openOnStartup": "empty workspace",
@@ -60,7 +59,7 @@
 		"editor.findMatchHighlightBackground": "#433F47",
 		// "list.hoverBackground": "#635937",
 		"list.focusBackground": "#635937",
-		"list.hoverBackground": "#104956",
+		"list.hoverBackground": "#104956"
 	},
 	"blockscope-highlighter.rgba": {
 		"red": 48,
@@ -69,13 +68,7 @@
 		"alpha": 0.15
 	},
 	// Other
-	"color-manager.languages": [
-		"css",
-		"html",
-		"javascript",
-		"json",
-		"scss"
-	],
+	"color-manager.languages": ["css", "html", "javascript", "json", "scss"],
 	"dimmer.enabled": true,
 	"dimmer.opacity": 87,
 	"editor.wordWrap": "on",
@@ -128,11 +121,8 @@
 			"condition": "__selecting",
 			"true": {
 				"condition": "__char == ''",
-				"true": [
-					"cursorDownSelect",
-					"cursorLineEndSelect"
-				],
-				"false": "cursorDownSelect",
+				"true": ["cursorDownSelect", "cursorLineEndSelect"],
+				"false": "cursorDownSelect"
 			},
 			"false": "cursorDown"
 		},
@@ -140,11 +130,8 @@
 			"condition": "__selecting",
 			"true": {
 				"condition": "__char == ''",
-				"true": [
-					"cursorUpSelect",
-					"cursorLineEndSelect"
-				],
-				"false": "cursorUpSelect",
+				"true": ["cursorUpSelect", "cursorLineEndSelect"],
+				"false": "cursorUpSelect"
 			},
 			"false": "cursorUp"
 		},
@@ -172,19 +159,19 @@
 		"r": {
 			"condition": "__selecting",
 			"false": {
-				"command": "cursorWordStartRight",
+				"command": "cursorWordStartRight"
 			},
 			"true": {
-				"command": "cursorWordRightSelect",
+				"command": "cursorWordRightSelect"
 			}
 		},
 		"g": {
 			"condition": "__selecting",
 			"false": {
-				"command": "cursorWordStartLeft",
+				"command": "cursorWordStartLeft"
 			},
 			"true": {
-				"command": "cursorWordLeftSelect",
+				"command": "cursorWordLeftSelect"
 			}
 		},
 		"R": {
@@ -194,7 +181,7 @@
 				"repeat": "__char.match(/\\W/)"
 			},
 			"true": {
-				"command": "cursorWordRightSelect",
+				"command": "cursorWordRightSelect"
 				// "repeat": "__char.match(/\\W/)"
 			}
 		},
@@ -243,23 +230,14 @@
 			"true": "modaledit.previousMatch",
 			"false": "deleteWordLeft"
 		},
-		">": [
-			"selectPartOfWord.backspace",
-			"modaledit.cancelSelection"
-		],
+		">": ["selectPartOfWord.backspace", "modaledit.cancelSelection"],
 		"p": {
 			"condition": "__selecting",
 			"true": "modaledit.nextMatch", // Needs work!
 			"false": "deleteWordRight"
 		},
-		"P": [
-			"selectPartOfWord.delete",
-			"modaledit.cancelSelection"
-		],
-		"e": [
-			"extension.smartBackspace",
-			"modaledit.cancelSelection"
-		],
+		"P": ["selectPartOfWord.delete", "modaledit.cancelSelection"],
+		"e": ["extension.smartBackspace", "modaledit.cancelSelection"],
 		"(": {
 			"command": "deleteRight"
 		},
@@ -276,12 +254,12 @@
 		")": {
 			"condition": "__selecting",
 			"true": "extension.selectSameText",
-			"false": "extension.selectWord",
+			"false": "extension.selectWord"
 		},
 		"2": {
 			"condition": "__selecting",
 			"true": "extension.selectSameText",
-			"false": "extension.subword-select",
+			"false": "extension.subword-select"
 		},
 		",": "extension.blockalign",
 		"q": {
@@ -296,13 +274,13 @@
 				],
 				"false": [
 					{
-						"command": "copy-word.cut",
+						"command": "copy-word.cut"
 					},
 					{
 						"command": "editor.action.cancelSelectionAnchor"
 					},
 					"modaledit.cancelSelection"
-				],
+				]
 			}
 		},
 		// Copy
@@ -310,28 +288,35 @@
 			{
 				"condition": "__col == 0 || __selecting || __char == ''",
 				"true": {
-					"command": "clipring.copyToRing",
+					"command": "clipring.copyToRing"
 				},
 				"false": [
 					{
-						"command": "copy-word.copy",
+						"command": "copy-word.copy"
 					},
 					{
 						"command": "editor.action.cancelSelectionAnchor"
 					}
-				],
+				]
 			},
 			"modaledit.cancelSelection"
 		],
 		// Paste
 		"k": [
+			{
+				"condition": "__col == 0",
+				"true": "clipring.pasteRingItem",
+				"false": [
+					{
+						"condition": "__selecting",
+						"true": "clipring.pasteRingItem"
+					}
+				]
+			},
 			"clipring.pasteRingItem",
-			"modaledit.cancelSelection"
+			{ "condition": "__selecting", "false": "modaledit.cancelSelection" }
 		],
-		"K": [
-			"editor.action.clipboardPasteAction",
-			"modaledit.cancelSelection"
-		],
+		"K": ["editor.action.clipboardPasteAction", "modaledit.cancelSelection"],
 		// Windows
 		"}": {
 			// "command": "smart.split.horizontal"
@@ -342,19 +327,16 @@
 			"command": "workbench.action.splitEditorDown"
 		},
 		"!": {
-			"command": "workbench.action.previousEditor",
+			"command": "workbench.action.previousEditor"
 		},
 		"#": {
-			"command": "workbench.action.nextEditor",
+			"command": "workbench.action.nextEditor"
 		},
 		// Magit
 		// Misc
 		"'": "editor.action.commentLine",
 		"y": "modaledit.toggleSelection",
-		"f": [
-			"undo",
-			"modaledit.cancelSelection"
-		],
+		"f": ["undo", "modaledit.cancelSelection"],
 		"F": "redo",
 		"w": "workbench.action.focusNextGroup",
 		"W": "workbench.action.focusPreviousGroup",
@@ -376,10 +358,7 @@
 		";": {
 			"condition": "__selecting",
 			"true": "editor.action.formatSelection",
-			"false": [
-				"editor.action.formatDocument",
-				"markdowntable.format"
-			]
+			"false": ["editor.action.formatDocument", "markdowntable.format"]
 		},
 		":": "rylogic-textaligner.Align",
 		// LEADER COMMANDS
@@ -406,13 +385,8 @@
 			//    "true": "magit.unstage-all",
 			// },
 			// "k": "clipboardHistory.focus",
-			"i": [
-				"editor.action.deleteLines",
-				"modaledit.cancelSelection"
-			],
-			" ": [
-				"editor.action.showHover",
-			],
+			"i": ["editor.action.deleteLines", "modaledit.cancelSelection"],
+			" ": ["editor.action.showHover"],
 			"}": "smart.split.vertical",
 			"{": "workbench.action.joinTwoGroups",
 			"r": "editor.toggleFold",
@@ -420,27 +394,24 @@
 			"f": "editor.action.goToReferences",
 			"o": "editor.action.insertLineAfter",
 			"!": {
-				"command": "fileextswitch",
+				"command": "fileextswitch"
 			},
 			"#": {
-				"command": "fileextswitch",
+				"command": "fileextswitch"
 			},
 			"d": {
 				"condition": "__selecting",
 				"false": "cursorTop",
-				"true": "cursorTopSelect",
+				"true": "cursorTopSelect"
 			},
 			"b": {
 				"condition": "__selecting",
 				"false": "cursorBottom",
-				"true": "cursorBottomSelect",
+				"true": "cursorBottomSelect"
 			},
 			"m": "cursorToolsAnchorLeave",
 			"M": "cursorToolsAnchorActivate",
-			"v": [
-				"cursorToolsAnchorClean",
-				"removeSecondaryCursors"
-			],
+			"v": ["cursorToolsAnchorClean", "removeSecondaryCursors"],
 			".": {
 				"w": "workbench.action.closeWindow",
 				"r": "editor.foldAllMarkerRegions",
@@ -483,7 +454,7 @@
 				",": "incrementor.incrementByTenth",
 				"<": "incrementor.decrementByTenth",
 				// Sorting
-				"s": "sortLines.sortLinesNatural",
+				"s": "sortLines.sortLinesNatural"
 			},
 			"c": {
 				"u": "seito-openfile.openFileFromText",
@@ -520,7 +491,7 @@
 				},
 				"e": "jumpToHint.jumpByWord",
 				"u": "jumpToHint.jumpByLine",
-				"f": "jumpToHint.jumpBySearch",
+				"f": "jumpToHint.jumpBySearch"
 				// "n": "workbench.action.newWindow"
 			},
 			"'": {
@@ -546,7 +517,7 @@
 				"w": "org.insertSubheading",
 				"l": "org.timestamp",
 				"c": "org.incrementContext",
-				"g": "org.decrementContext",
+				"g": "org.decrementContext"
 			},
 			"j": {
 				"h": "org.bold",
@@ -557,14 +528,14 @@
 				"c": "org.verbose",
 				"m": "org.clockin",
 				"v": "org.clockout",
-				"w": "org.timestamp",
+				"w": "org.timestamp"
 			},
 			"y": {
 				// TODO: replace all markdowntable commands with text-tables.
 				"e": {
 					"e": "text-tables.createTable",
 					"h": "markdowntable.insertLeft",
-					"n": "markdowntable.insertRight",
+					"n": "markdowntable.insertRight"
 				},
 				"t": "text-tables.moveRowDown",
 				"c": "text-tables.moveRowUp",
@@ -574,10 +545,7 @@
 				"g": "text-tables.moveColLeft",
 				"-": "text-tables.gotoNextCell",
 				"d": "text-tables.gotoPreviousCell",
-				"i": [
-					"text-tables.clearCell",
-					"text-tables.formatUnderCursor"
-				],
+				"i": ["text-tables.clearCell", "text-tables.formatUnderCursor"],
 				"o": "text-tables.nextRow",
 				"y": {
 					"condition": "tableMode",
@@ -586,12 +554,7 @@
 			}
 		}
 	},
-	"org.todoKeywords": [
-		"TODO",
-		"WIP",
-		"DONE",
-		"WAIT",
-	],
+	"org.todoKeywords": ["TODO", "WIP", "DONE", "WAIT"],
 	"text-tables.clearCell": "org",
 	// FORMATTING
 	// "files.insertFinalNewline": true,
@@ -640,7 +603,7 @@
 	"todo-tree.general.enableFileWatcher": true,
 	"todo-tree.highlights.defaultHighlight": {
 		"background": "#4415a2",
-		"opacity": 0,
+		"opacity": 0
 	},
 	"todo-tree.tree.buttons.scanMode": true,
 	"dimmer.toggleDimmerCommandScope": "user",
@@ -696,38 +659,14 @@
 		"tris"
 	],
 	"toggler.toggles": [
-		[
-			"absolute",
-			"relative"
-		],
-		[
-			"high",
-			"low"
-		],
-		[
-			"i",
-			"j"
-		],
-		[
-			"X",
-			"Y"
-		],
-		[
-			"increment",
-			"decrement"
-		],
-		[
-			"forward",
-			"backward"
-		],
-		[
-			".",
-			"->"
-		],
-		[
-			"promote",
-			"demote"
-		],
+		["absolute", "relative"],
+		["high", "low"],
+		["i", "j"],
+		["X", "Y"],
+		["increment", "decrement"],
+		["forward", "backward"],
+		[".", "->"],
+		["promote", "demote"]
 	],
 	"vssolution.xxprojItemTypes": {
 		"*": "Content",
@@ -744,9 +683,7 @@
 	"javascript.format.placeOpenBraceOnNewLineForControlBlocks": true,
 	"typescript.format.placeOpenBraceOnNewLineForControlBlocks": true,
 	"terminal.integrated.cursorStyle": "line",
-	"C_Cpp.commentContinuationPatterns": [
-		"/**"
-	],
+	"C_Cpp.commentContinuationPatterns": ["/**"],
 	"short-commands.includeWorkspaceTasks": true,
 	// Some stuffs.
 	"javascript.format.placeOpenBraceOnNewLineForFunctions": true,
@@ -781,11 +718,7 @@
 	"C_Cpp.vcFormat.space.betweenEmptyLambdaBrackets": true,
 	"C_Cpp.vcFormat.space.betweenEmptySquareBrackets": true,
 	"auto-comment-blocks.singleLineBlockOnEnter": true,
-	"auto-comment-blocks.slashStyleBlocks": [
-		".gml",
-		".cpp",
-		".json"
-	],
+	"auto-comment-blocks.slashStyleBlocks": [".gml", ".cpp", ".json"],
 	"gitlens.views.repositories.location": "gitlens",
 	"gitlens.views.fileHistory.location": "gitlens",
 	"gitlens.views.lineHistory.location": "gitlens",
@@ -810,10 +743,7 @@
 	"C_Cpp.clang_format_sortIncludes": true,
 	"C_Cpp.dimInactiveRegions": false,
 	"enabledCodeActions": true,
-	"tabnine.disable_line_regex": [
-		"include",
-		"for",
-	],
+	"tabnine.disable_line_regex": ["include", "for"],
 	"update.mode": "start",
 	"workbench.commandPalette.preserveInput": true,
 	"window.newWindowDimensions": "maximized",
@@ -822,11 +752,7 @@
 	"bracket-pair-colorizer-2.highlightActiveScope": true,
 	// "bracket-pair-colorizer-2.unmatchedScopeColor": "#7A71AB",
 	"color-manager.insertClassicHex": true,
-	"bracket-pair-colorizer-2.colors": [
-		"Gold",
-		"Orchid",
-		"LightSkyBlue"
-	],
+	"bracket-pair-colorizer-2.colors": ["Gold", "Orchid", "LightSkyBlue"],
 	"bracket-pair-colorizer-2.showBracketsInGutter": true,
 	"bracket-pair-colorizer-2.scopeLineCSS": [
 		"borderStyle : solid",
@@ -842,6 +768,223 @@
 	"workbench.editor.untitled.labelFormat": "name",
 	"editor.minimap.renderCharacters": false,
 	"dateTime.use24HourClock": false,
+	"search.quickOpen.includeSymbols": true,
+	"editor.lineNumbers": "relative",
+	"[magit]": {
+		// Can modal editing bindings be overwritten here?
+		"editor.lineNumbers": "off",
+		"editor.lineHeight": 15,
+		"editor.minimap.enabled": false,
+		"editor.renderWhitespace": "none"
+	},
+	"zenMode.hideLineNumbers": false,
+	"prettifySymbolsMode.adjustCursorMovement": true,
+	//   "prettifySymbolsMode.substitutions": [
+	//     //  {
+	//     //    "language": [
+	//     //      "coq",
+	//     //      {
+	//     //        "pattern": "**/*.v"
+	//     //      }
+	//     //    ],
+	//     //    "substitutions": [
+	//     //      {
+	//     //        "pre": "\\b",
+	//     //        "ugly": "lambda",
+	//     //        "post": "\\b",
+	//     //        "pretty": "λ"
+	//     //      },
+	//     //      {
+	//     //        "pre": "\\b",
+	//     //        "ugly": "Defined[.]",
+	//     //        "post": "(?:$|\\s)",
+	//     //        "pretty": "□"
+	//     //      },
+	//     //      {
+	//     //        "pre": "[a-zA-Z]",
+	//     //        "ugly": "_1",
+	//     //        "post": "\\b",
+	//     //        "pretty": "₁"
+	//     //      },
+	//     //      {
+	//     //        "pre": "[a-zA-Z]",
+	//     //        "ugly": "_2",
+	//     //        "post": "\\b",
+	//     //        "pretty": "₂"
+	//     //      },
+	//     //      {
+	//     //        "pre": "[a-zA-Z]",
+	//     //        "ugly": "_3",
+	//     //        "post": "\\b",
+	//     //        "pretty": "₃"
+	//     //      },
+	//     //      {
+	//     //        "pre": "[a-zA-Z]",
+	//     //        "ugly": "_4",
+	//     //        "post": "\\b",
+	//     //        "pretty": "₄"
+	//     //      },
+	//     //      {
+	//     //        "pre": "[a-zA-Z]",
+	//     //        "ugly": "_5",
+	//     //        "post": "\\b",
+	//     //        "pretty": "₅"
+	//     //      },
+	//     //      {
+	//     //        "pre": "[a-zA-Z]",
+	//     //        "ugly": "_6",
+	//     //        "post": "\\b",
+	//     //        "pretty": "₆"
+	//     //      },
+	//     //      {
+	//     //        "pre": "[a-zA-Z]",
+	//     //        "ugly": "_7",
+	//     //        "post": "\\b",
+	//     //        "pretty": "₇"
+	//     //      },
+	//     //      {
+	//     //        "pre": "[a-zA-Z]",
+	//     //        "ugly": "_8",
+	//     //        "post": "\\b",
+	//     //        "pretty": "₈"
+	//     //      },
+	//     //      {
+	//     //        "pre": "[a-zA-Z]",
+	//     //        "ugly": "_9",
+	//     //        "post": "\\b",
+	//     //        "pretty": "₉"
+	//     //      },
+	//     //      {
+	//     //        "pre": "[a-zA-Z]",
+	//     //        "ugly": "_0",
+	//     //        "post": "\\b",
+	//     //        "pretty": "₀"
+	//     //      },
+	//     //      {
+	//     //        "ugly": "/\\\\",
+	//     //        "pretty": "∧"
+	//     //      },
+	//     //      {
+	//     //        "ugly": "\\\\/",
+	//     //        "pretty": "∨"
+	//     //      },
+	//     //      {
+	//     //        "ugly": "\\(\\)",
+	//     //        "pretty": "∅"
+	//     //      },
+	//     //      {
+	//     //        "ugly": "<>",
+	//     //        "pretty": "≠"
+	//     //      },
+	//     //      {
+	//     //        "ugly": "sqrt\\s?",
+	//     //        "pretty": "√",
+	//     //        "pre": "\\b",
+	//     //        "post": "\\b"
+	//     //      },
+	//     //      {
+	//     //        "ugly": "&&",
+	//     //        "pretty": "∧"
+	//     //      },
+	//     //      {
+	//     //        "ugly": "\\|\\|",
+	//     //        "pretty": "∨"
+	//     //      },
+	//     //      {
+	//     //        "ugly": ">=",
+	//     //        "pretty": "≥",
+	//     //        "pre": "[^=\\-<>]|^",
+	//     //        "post": "[^=\\-<>]|$"
+	//     //      },
+	//     //      {
+	//     //        "ugly": "<=",
+	//     //        "pretty": "≤",
+	//     //        "pre": "[^=\\-<>]|^",
+	//     //        "post": "[^=\\-<>]|$"
+	//     //      },
+	//     //      {
+	//     //        "ugly": "alpha",
+	//     //        "pretty": "α",
+	//     //        "pre": "\\b",
+	//     //        "post": "\\b"
+	//     //      },
+	//     //      {
+	//     //        "ugly": "beta",
+	//     //        "pretty": "β",
+	//     //        "pre": "\\b",
+	//     //        "post": "\\b"
+	//     //      },
+	//     //      {
+	//     //        "ugly": "gamma",
+	//     //        "pretty": "γ",
+	//     //        "pre": "\\b",
+	//     //        "post": "\\b"
+	//     //      },
+	//     //      {
+	//     //        "ugly": "delta",
+	//     //        "pretty": "δ",
+	//     //        "pre": "\\b",
+	//     //        "post": "\\b"
+	//     //      }
+	//     //      //   {
+	//     //      //     "ugly": "''",
+	//     //      //     "pretty": "″"
+	//     //      //   }
+	//     //      //   {
+	//     //      //     "ugly": "'",
+	//     //      //     "pretty": "′"
+	//     //      //   }
+	//     //      //   {
+	//     //      //     "ugly": "List[.]forall",
+	//     //      //     "pretty": "∀",
+	//     //      //     "pre": "\\b",
+	//     //      //     "post": "\\b"
+	//     //      //   },
+	//     //      //   {
+	//     //      //     "ugly": "List[.]exists",
+	//     //      //     "pretty": "∃",
+	//     //      //     "pre": "\\b",
+	//     //      //     "post": "\\b"
+	//     //      //   }
+	//     //      //   {
+	//     //      //     "ugly": ">>",
+	//     //      //     "pretty": "≫",
+	//     //      //     "pre": "[^=<>]|^",
+	//     //      //     "post": "[^=<>]|$"
+	//     //      //   },
+	//     //      //   {
+	//     //      //     "ugly": "<<",
+	//     //      //     "pretty": "≪",
+	//     //      //     "pre": "[^=<>]|^",
+	//     //      //     "post": "[^=<>]|$"
+	//     //      //   },
+	//     //      //   {
+	//     //      //     "ugly": "\\|",
+	//     //      //     "pretty": "║",
+	//     //      //     "pre": "^\\s+"
+	//     //      //   }
+	//     //    ]
+	//     //  }
+	//   ],
+	"prettifySymbolsMode.revealOn": "selection",
+	"[jsonc]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"prettier.endOfLine": "auto",
+	"prettier.useTabs": true,
+	"prettier.tabWidth": 3,
+	"[cpp]": {
+		"editor.defaultFormatter": "ms-vscode.cpptools"
+	},
+	"C_Cpp.formatting": "Default",
+	"printcode.tabSize": 3,
+	"typescript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
+	"javascript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
+	"javascript.format.insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces": true,
+	"typescript.format.insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces": true
 	// "GoToAnything.prefix.Commands": "",
 	// "GoToAnything.prefix.Recent": "",
 	// "GoToAnything.prefix.Symbols": "",
