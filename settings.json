@@ -70,6 +70,8 @@
 		"alpha": 0.15
 	},
 
+	"labelClosing.darkFontColor": "#7A71AB",
+
 	// Other
 	"color-manager.languages": ["css", "html", "javascript", "json", "scss"],
 	"dimmer.enabled": true,
@@ -415,6 +417,12 @@
 				"command": "modaledit.typeNormalKeys",
 				"args": "{ keys: __rcmd[0] }",
 				"repeat": "parseInt(__cmd)"
+			},
+
+			"\t": {
+				"command": "__selecting",
+				"false": "tabout",
+				"true": "Alignment Preserving Indent"
 			},
 
 			" ": {
@@ -1116,7 +1124,8 @@
 	"typescript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
 	"javascript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
 	"javascript.format.insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces": true,
-	"typescript.format.insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces": true
+	"typescript.format.insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces": true,
+	"editor.insertSpaces": false
 
 	// "GoToAnything.prefix.Commands": "",
 	// "GoToAnything.prefix.Recent": "",

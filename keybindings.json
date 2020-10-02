@@ -179,5 +179,20 @@
 		"key": "shift+oem_2",
 		"command": "-magit.help",
 		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+	},
+	{
+		"key": "tab",
+		"command": "-tab",
+		"when": "editorTextFocus && !editorReadonly && !editorTabMovesFocus"
+	},
+	{
+		"key": "tab",
+		"command": "-Alignment Preserving Indent",
+		"when": "editorTextFocus && !editorReadOnly && !editorTabMovesFocus && !inSnippetMode && !suggestWidgetVisible && config.editor.tabCompletion != 'on'"
+	},
+	{
+		"key": "tab",
+		"command": "-Alignment Preserving Indent",
+		"when": "editorTextFocus && !editorReadOnly && !editorTabMovesFocus && !hasOtherSuggestions && !inSnippetMode && !suggestWidgetVisible && config.editor.tabCompletion == 'on'"
 	}
 ]
