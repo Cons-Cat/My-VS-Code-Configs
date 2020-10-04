@@ -43,12 +43,17 @@
 	{
 		"key": "8",
 		"command": "workbench.action.previousEditor",
-		"when": "!editorTextFocus"
+		"when": "!editorTextFocus && !inputFocus"
 	},
 	{
 		"key": "oem_8",
 		"command": "workbench.action.nextEditor",
-		"when": "!editorTextFocus"
+		"when": "!editorTextFocus && !inputFocus"
+	},
+	{
+		"key": "w",
+		"command": "workbench.action.nextEditor",
+		"when": "!editorTextFocus && !inputFocus"
 	},
 	{
 		"key": "oem_1",
@@ -142,7 +147,7 @@
 		"when": "dired.open && !findWidgetVisible && !inQuickOpen"
 	},
 	{
-		"key": "oem_period",
+		"key": "oem_comma",
 		"command": "extension.dired.goUpDir",
 		"when": "dired.open && !findWidgetVisible && !inQuickOpen"
 	},
@@ -171,7 +176,7 @@
 		"command": "-workbench.action.nextEditor"
 	},
 	{
-		"key": "h",
+		"key": "oem_2",
 		"command": "magit.help",
 		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
 	},
@@ -194,5 +199,184 @@
 		"key": "tab",
 		"command": "-Alignment Preserving Indent",
 		"when": "editorTextFocus && !editorReadOnly && !editorTabMovesFocus && !hasOtherSuggestions && !inSnippetMode && !suggestWidgetVisible && config.editor.tabCompletion == 'on'"
+	},
+	{
+		"key": "oem_period",
+		"command": "extension.dired.enter",
+		"when": "dired.open && !findWidgetVisible && !inQuickOpen"
+	},
+	{
+		"key": "enter",
+		"command": "-extension.dired.enter",
+		"when": "dired.open && !findWidgetVisible && !inQuickOpen"
+	},
+	{
+		"key": "e",
+		"command": "magit.discard-at-point",
+		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+	},
+	{
+		"key": "k",
+		"command": "-magit.discard-at-point",
+		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+	},
+	{
+		"key": "oem_comma",
+		"command": "magit.branching",
+		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+	},
+	{
+		"key": "b",
+		"command": "-magit.branching",
+		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+	},
+	{
+		"key": "p",
+		"command": "magit.commit",
+		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+	},
+	{
+		"key": "c",
+		"command": "-magit.commit",
+		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+	},
+	{
+		"key": "oem_period",
+		"command": "magit.merging",
+		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+	},
+	{
+		"key": "m",
+		"command": "-magit.merging",
+		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+	},
+	{
+		"key": "shift+oem_period",
+		"command": "magit.rebasing",
+		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+	},
+	{
+		"key": "r",
+		"command": "-magit.rebasing",
+		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+	},
+	{
+		"key": "k",
+		"command": "magit.stage",
+		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+	},
+	{
+		"key": "s",
+		"command": "-magit.stage",
+		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+	},
+	{
+		"key": "shift+k",
+		"command": "magit.stage-all",
+		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+	},
+	{
+		"key": "shift+s",
+		"command": "-magit.stage-all",
+		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+	},
+	{
+		"key": "z",
+		"command": "magit.visit-at-point",
+		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+	},
+	{
+		"key": "enter",
+		"command": "-magit.visit-at-point",
+		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+	},
+	{
+		"key": "oem_7",
+		"command": "magit.stashing",
+		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+	},
+	{
+		"key": "z",
+		"command": "-magit.stashing",
+		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+	},
+	{
+		"key": "x",
+		"command": "magit.unstage",
+		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+	},
+	{
+		"key": "u",
+		"command": "-magit.unstage",
+		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+	},
+	{
+		"key": "shift+x",
+		"command": "magit.unstage-all",
+		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+	},
+	{
+		"key": "shift+u",
+		"command": "-magit.unstage-all",
+		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+	},
+	{
+		"key": "q",
+		"command": "magit.tagging",
+		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+	},
+	{
+		"key": "t",
+		"command": "-magit.tagging",
+		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+	},
+	{
+		"key": "alt+x g",
+		"command": "-magit.status"
+	},
+	{
+		"key": "f",
+		"command": "magit.refresh",
+		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+	},
+	{
+		"key": "g",
+		"command": "-magit.refresh",
+		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+	},
+	{
+		"key": "j",
+		"command": "magit.diffing",
+		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+	},
+	{
+		"key": "d",
+		"command": "-magit.diffing",
+		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+	},
+	{
+		"key": "shift+oem_comma",
+		"command": "magit.reverting",
+		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+	},
+	{
+		"key": "shift+v",
+		"command": "-magit.reverting",
+		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+	},
+	{
+		"key": "oem_comma",
+		"command": "magit.reverse-at-point",
+		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+	},
+	{
+		"key": "v",
+		"command": "-magit.reverse-at-point",
+		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+	},
+	{
+		"key": "q",
+		"command": "-magit.quit",
+		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
 	}
 ]

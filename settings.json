@@ -3,57 +3,50 @@
 	"csharp.referencesCodeLens.enabled": false,
 	"editor.quickSuggestionsDelay": 800,
 	"editor.tabCompletion": "on",
-	"workbench.editor.highlightModifiedTabs": true,
 	"omnisharp.useEditorFormattingSettings": false,
-	"editor.trimAutoWhitespace": false,
+
 	"workbench.statusBar.visible": true,
+
 	"team.showWelcomeMessage": false,
 	"workbench.iconTheme": "file-icons",
 	"window.zoomLevel": -2,
 	"editor.mouseWheelZoom": true,
-	// "smartsemicolon.enable": true,
+
 	"editor.smoothScrolling": true,
 	"short-commands.activatePalette": true,
 	"editor.mouseWheelScrollSensitivity": 5,
 	"togglecase.pattern": "[0-9]|[a-z]|[A-Z]|_|-",
+
 	"hungryDelete.keepOneSpace": true,
-	// "editor.fontFamily": "'Operator Mono Medium'",
-	// "editor.fontFamily": "'Dank Mono', 'Cascadia Mono'",
-	// "editor.fontFamily": "'OperatorMono Nerd Font'",
+
 	"editor.fontFamily": "'Operator Mono Lig'",
 	"editor.fontLigatures": true,
 	"editor.accessibilitySupport": "off",
+
 	"smartsemicolon.enable": true,
 	"smartsemicolon.autoLineChange": true,
+
 	"banner-comments-plus.trimTrailingWhitespace": true,
 	"banner-comments-plus.trimEmptyLines": true,
+
 	"bracket-peek.previewAlways": true,
 	"workbench.editor.enablePreviewFromQuickOpen": false,
 	"dashboard.openOnStartup": "empty workspace",
-	"highlight-bad-chars.additionalUnicodeChars": [
-		// "\u0009",
-		// "\u200E",
-		// "\u200F"
-	],
-	"editor.renderWhitespace": "trailing",
-	// "editor.fontWeight": "bold",
-	// Theme
-	// "workbench.colorTheme": "Dracula-Soft Syntax Theme",
+
+	"workbench.editor.highlightModifiedTabs": true,
+	"editor.trimAutoWhitespace": false,
+	"editor.renderWhitespace": "selection",
+
 	"editor.fontSize": 15.65,
 	"terminal.integrated.fontFamily": "'Cascadia Mono'",
 	"terminal.integrated.fontSize": 15,
-	// Fonts
-	// "vscode_custom_css.imports": [
-	// "file:///C:/Users/wgooc/Documents/VSCodeCSS.css"
-	// ],
-	// "vscode_custom_css.policy": true,
-	// Colors
 
+	// Colors
 	"workbench.colorCustomizations": {
-		"editor.selectionBackground": "#104956",
+		"editor.selectionBackground": "#423D5B",
 		"editor.selectionHighlightBackground": "#635937",
 		"editor.lineHighlightBorder": "#9580FF",
-		"editor.lineHighlightBackground": "#433F47",
+		"editor.lineHighlightBackground": "#423D5B",
 		"editor.findMatchBackground": "#104956",
 		"editor.rangeHighlightBackground": "#433F47",
 		"editor.rangeHighlightBorder": "#9580FF",
@@ -63,6 +56,10 @@
 		"list.hoverBackground": "#104956"
 	},
 
+	"highlight.color": "#423D5B",
+	"fuzzy-search.border-dark-theme-color": "#9580FF",
+	"fuzzy-search.border-ruler-color": "#9580FF",
+
 	"blockscope-highlighter.rgba": {
 		"red": 48,
 		"green": 36,
@@ -71,6 +68,7 @@
 	},
 
 	"labelClosing.darkFontColor": "#7A71AB",
+	"labelClosing.seperatorChar": " ... ",
 
 	// Other
 	"color-manager.languages": ["css", "html", "javascript", "json", "scss"],
@@ -287,12 +285,6 @@
 			"false": "extension.selectWord"
 		},
 
-		"2": {
-			"condition": "__selecting",
-			"true": "extension.selectSameText",
-			"false": "extension.subword-select"
-		},
-
 		",": "extension.blockalign",
 
 		"q": {
@@ -422,7 +414,7 @@
 			"\t": {
 				"command": "__selecting",
 				"false": "tabout",
-				"true": "Alignment Preserving Indent"
+				"true": "indent-line.indentLine"
 			},
 
 			" ": {
@@ -454,6 +446,8 @@
 				"false": "workbench.action.files.save"
 			},
 
+			"A": "magit.status",
+
 			"S": {
 				// "condition": "editorLangId == 'magit'",
 				// "true": "magit.stage-all",
@@ -470,6 +464,12 @@
 			//    "true": "magit.unstage-all",
 			// },
 			// "k": "clipboardHistory.focus",
+
+			")": {
+				"condition": "__selecting",
+				"true": "extension.selectSameText",
+				"false": "extension.subword-select"
+			},
 
 			"i": ["editor.action.deleteLines", "modaledit.cancelSelection"],
 			".": "deleteAllLeft",
@@ -782,6 +782,7 @@
 		"dired",
 		"ligaturized",
 		"reimplementing",
+		"struct",
 		"tris"
 	],
 
@@ -793,7 +794,8 @@
 		["increment", "decrement"],
 		["forward", "backward"],
 		[".", "->"],
-		["promote", "demote"]
+		["promote", "demote"],
+		["hor", "ver"]
 	],
 
 	"vssolution.xxprojItemTypes": {
@@ -847,21 +849,29 @@
 	"typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
 	"C_Cpp.vcFormat.space.betweenEmptyLambdaBrackets": true,
 	"C_Cpp.vcFormat.space.betweenEmptySquareBrackets": true,
-	"auto-comment-blocks.singleLineBlockOnEnter": true,
-	"auto-comment-blocks.slashStyleBlocks": [".gml", ".cpp", ".json"],
+
+	"auto-comment-blocks.singleLineBlockOnEnter": false,
+	// "auto-comment-blocks.slashStyleBlocks": [".gml", ".cpp", ".json"],
+
 	"gitlens.views.repositories.location": "gitlens",
 	"gitlens.views.fileHistory.location": "gitlens",
 	"gitlens.views.lineHistory.location": "gitlens",
 	"gitlens.views.compare.location": "gitlens",
 	"gitlens.views.search.location": "gitlens",
+
 	"editor.tabSize": 3,
 	"search.showLineNumbers": true,
+
 	"C_Cpp.vcFormat.wrap.preserveBlocks": "never",
 	"C_Cpp.vcFormat.space.groupSquareBrackets": false,
-	"window.menuBarVisibility": "default",
+	"window.menuBarVisibility": "toggle",
 	"dashboard.projectData": null,
 	"workbench.startupEditor": "none",
+
 	"git.autofetch": true,
+	"gitlens.blame.ignoreWhitespace": true,
+	"gitlens.currentLine.scrollable": false,
+
 	"jumpToHint.type.hintLengthType": "Fixed",
 	"jumpToHint.type.fixedHintLength": 3,
 	"jumpToHint.common.hintCharacters": "etuhonsgpc.gpr,",
@@ -1103,6 +1113,14 @@
 
 	"prettifySymbolsMode.revealOn": "selection",
 
+	"prettier.documentSelectors": ["**/*.gml"],
+	"overrides": [
+		{
+			"files": "*.gml",
+			"options": { "parser": "babel" }
+		}
+	],
+
 	"[jsonc]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
@@ -1125,7 +1143,8 @@
 	"javascript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
 	"javascript.format.insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces": true,
 	"typescript.format.insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces": true,
-	"editor.insertSpaces": false
+	"editor.insertSpaces": false,
+	"workbench.editor.showTabs": true
 
 	// "GoToAnything.prefix.Commands": "",
 	// "GoToAnything.prefix.Recent": "",
