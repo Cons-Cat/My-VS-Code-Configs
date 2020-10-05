@@ -81,8 +81,6 @@
 	"dimmer.enabled": true,
 	"dimmer.opacity": 87,
 	"editor.wordWrap": "on",
-	// "editor.formatOnPaste": true,
-	// "editor.formatOnSave": true,
 	"dired.fixed_window": true,
 	"jumpToHint.theme.backgroundColor": "#9eddff",
 	"jumpToHint.theme.fontColor": "#1d1e26",
@@ -105,6 +103,7 @@
 	"modaledit.keybindings": {
 		"u": "modaledit.enterInsert",
 		"a": "workbench.action.showCommands",
+
 		// Navigation
 		"h": {
 			"condition": "__selecting",
@@ -280,7 +279,7 @@
 			"modaledit.cancelSelection"
 		],
 
-		// "=": "bracket-pair-colorizer-2.expandBracketSelection",
+		"]": "bracket-pair-colorizer-2.expandBracketSelection",
 		"=": "extension.selectCurlyBrackets",
 		"*": "extension.selectPerfectLine",
 		"+": "modaledit.selectBetween",
@@ -370,8 +369,6 @@
 			"command": "workbench.action.nextEditor"
 		},
 
-		// Magit
-
 		// Misc
 		"'": "editor.action.commentLine",
 		"y": "modaledit.toggleSelection",
@@ -447,24 +444,16 @@
 		// LEADER COMMANDS
 		" ": {
 			"a": "editor.action.selectAll",
-			// "s": {
-			// 	"condition": "false",
-			// 	"false": "workbench.action.files.save"
-			// },
-			"s": "exchangeSelectionStartAndEnd.exchange",
-
 			"A": "magit.status",
 
-			// "n": {
-			// "condition": "editorLangId == 'magit'",
-			// "condition": "true",
-			// "true": "magit.unstage",
-			// },
-			// "N": {
-			//    "condition": "editorLangId == 'magit'",
-			//    "true": "magit.unstage-all",
-			// },
-			// "k": "clipboardHistory.focus",
+			"s": {
+				"condition": "__selecting",
+				"false": "workbench.action.files.save",
+				"true": "exchangeSelectionStartAndEnd.exchange"
+			},
+
+			"h": "workbench.action.navigateBack",
+			"n": "workbench.action.navigateForward",
 
 			")": {
 				"condition": "__selecting",
