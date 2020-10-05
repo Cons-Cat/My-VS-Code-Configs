@@ -44,19 +44,36 @@
 	// Colors
 	"workbench.colorCustomizations": {
 		"editor.selectionBackground": "#423D5B",
-		"editor.selectionHighlightBackground": "#635937",
+		"editor.selectionHighlightBackground": "#433F47",
 		"editor.lineHighlightBorder": "#9580FF",
 		"editor.lineHighlightBackground": "#423D5B",
 		"editor.findMatchBackground": "#104956",
 		"editor.rangeHighlightBackground": "#433F47",
 		"editor.rangeHighlightBorder": "#9580FF",
 		"editor.findMatchHighlightBackground": "#433F47",
-		"list.focusBackground": "#635937",
+		"list.focusBackground": "#433F47",
 		"list.hoverBackground": "#104956",
+
+		"editor.selectionHighlightBorder": "#9580FF",
+		"editor.wordHighlightBorder": "#9580FF",
+
+		"editor.wordHighlightStrongBackground": "#0066ff2a",
+		// "editor.selectionHighlightBorder": "2px solid",
 
 		"highlight.color": "#423D5B",
 		"fuzzy-search.border-dark-theme-color": "#9580FF",
-		"fuzzy-search.border-ruler-color": "#9580FF"
+		"fuzzy-search.border-ruler-color": "#9580FF",
+
+		"window.activeBorder": "#433F47",
+		"window.inactiveBorder": "#1d1e26",
+
+		"titleBar.activeBackground": "#22212c",
+		"titleBar.activeForeground": "#F2F2F2",
+		"titleBar.border": "#1d1e26",
+		// "titleBar.border": "#433F47",
+
+		"titleBar.inactiveBackground": "#1B1B21",
+		"titleBar.inactiveForeground": "#7A71AB"
 	},
 
 	"aceJump.placeholder.backgroundColor": "#423D5B",
@@ -151,17 +168,17 @@
 			"false": "cursorUp"
 		},
 
-		"C": {
-			"condition": "__selecting",
-			"false": "block-travel.jumpUp",
-			"true": "block-travel.selectUp"
-		},
+		// "C": {
+		// 	"condition": "__selecting",
+		// 	"false": "block-travel.jumpUp",
+		// 	"true": "block-travel.selectUp"
+		// },
 
-		"T": {
-			"condition": "__selecting",
-			"false": "block-travel.jumpDown",
-			"true": "block-travel.selectDown"
-		},
+		// "T": {
+		// 	"condition": "__selecting",
+		// 	"false": "block-travel.jumpDown",
+		// 	"true": "block-travel.selectDown"
+		//},
 
 		"m": {
 			"condition": "__selecting",
@@ -587,8 +604,6 @@
 					"true": "betterPageDownSelect"
 				},
 
-				// "e": "jumpToHint.jumpByWord",
-				// "u": "jumpToHint.jumpByLine",
 				"u": "extension.aceJump.line",
 				"e": {
 					"condition": "__selecting",
@@ -817,7 +832,7 @@
 	// Some stuffs.
 	"javascript.format.placeOpenBraceOnNewLineForFunctions": true,
 	"typescript.format.placeOpenBraceOnNewLineForFunctions": true,
-	"bookmarks.useWorkaroundForFormatters": false,
+	"bookmarks.useWorkaroundForFormatters": true,
 	"bookmarks.sideBar.expanded": true,
 	"bookmarks.label.suggestion": "suggestWhenSelectedOrLineWhenNoSelected",
 	"bookmarks.navigateThroughAllFiles": true,
@@ -880,7 +895,7 @@
 	"C_Cpp.clang_format_sortIncludes": true,
 	"C_Cpp.dimInactiveRegions": false,
 	"enabledCodeActions": true,
-	"tabnine.disable_line_regex": ["include", "for"],
+	// "tabnine.disable_line_regex": ["include", "for"],
 	"update.mode": "start",
 	"workbench.commandPalette.preserveInput": true,
 	"window.newWindowDimensions": "maximized",
@@ -1144,7 +1159,9 @@
 	"workbench.editor.showTabs": true,
 	"[json]": {
 		"editor.defaultFormatter": "vscode.json-language-features"
-	}
+	},
+	"editor.snippetSuggestions": "top",
+	"editor.formatOnSaveMode": "modifications"
 
 	// "GoToAnything.prefix.Commands": "",
 	// "GoToAnything.prefix.Recent": "",
