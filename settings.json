@@ -51,14 +51,20 @@
 		"editor.rangeHighlightBackground": "#433F47",
 		"editor.rangeHighlightBorder": "#9580FF",
 		"editor.findMatchHighlightBackground": "#433F47",
-		// "list.hoverBackground": "#635937",
 		"list.focusBackground": "#635937",
-		"list.hoverBackground": "#104956"
+		"list.hoverBackground": "#104956",
+
+		"highlight.color": "#423D5B",
+		"fuzzy-search.border-dark-theme-color": "#9580FF",
+		"fuzzy-search.border-ruler-color": "#9580FF"
 	},
 
-	"highlight.color": "#423D5B",
-	"fuzzy-search.border-dark-theme-color": "#9580FF",
-	"fuzzy-search.border-ruler-color": "#9580FF",
+	"aceJump.placeholder.backgroundColor": "#423D5B",
+	"aceJump.placeholder.color": "#ff80bf",
+	"aceJump.placeholder.border": "1px groove",
+	"aceJump.highlight.backgroundColor": "#9580FF",
+	"aceJump.placeholder.upperCase": false,
+	"aceJump.dim.enabled": false,
 
 	"blockscope-highlighter.rgba": {
 		"red": 48,
@@ -441,18 +447,13 @@
 		// LEADER COMMANDS
 		" ": {
 			"a": "editor.action.selectAll",
-			"s": {
-				"condition": "false",
-				"false": "workbench.action.files.save"
-			},
+			// "s": {
+			// 	"condition": "false",
+			// 	"false": "workbench.action.files.save"
+			// },
+			"s": "exchangeSelectionStartAndEnd.exchange",
 
 			"A": "magit.status",
-
-			"S": {
-				// "condition": "editorLangId == 'magit'",
-				// "true": "magit.stage-all",
-				// "false": "workbench.action.files.save"
-			},
 
 			// "n": {
 			// "condition": "editorLangId == 'magit'",
@@ -573,7 +574,8 @@
 				// ".": "workbench.action.files.openFile",
 				".": "extension.dired.open",
 				">": "workbench.action.files.openFolder",
-				"s": "workbench.action.files.saveAs",
+				"s": "workbench.action.files.save",
+				"S": "workbench.action.files.saveAs",
 				"t": "todo-tree.showTreeView",
 				"h": "workbench.action.toggleSidebarVisibility",
 				"g": "workbench.action.focusPanel",
@@ -596,8 +598,14 @@
 					"true": "betterPageDownSelect"
 				},
 
-				"e": "jumpToHint.jumpByWord",
-				"u": "jumpToHint.jumpByLine",
+				// "e": "jumpToHint.jumpByWord",
+				// "u": "jumpToHint.jumpByLine",
+				"u": "extension.aceJump.line",
+				"e": {
+					"condition": "__selecting",
+					"false": "extension.aceJump.multiChar",
+					"true": "extension.aceJump.selection"
+				},
 				"f": "jumpToHint.jumpBySearch"
 			},
 
@@ -1144,7 +1152,10 @@
 	"javascript.format.insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces": true,
 	"typescript.format.insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces": true,
 	"editor.insertSpaces": false,
-	"workbench.editor.showTabs": true
+	"workbench.editor.showTabs": true,
+	"[json]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
+	}
 
 	// "GoToAnything.prefix.Commands": "",
 	// "GoToAnything.prefix.Recent": "",
