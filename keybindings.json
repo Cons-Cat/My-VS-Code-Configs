@@ -52,7 +52,12 @@
 	},
 	{
 		"key": "w",
-		"command": "workbench.action.nextEditor",
+		"command": "workbench.action.focusNextGroup",
+		"when": "!editorTextFocus && !inputFocus"
+	},
+	{
+		"key": "shift+w",
+		"command": "workbench.action.focusPreviousGroup",
 		"when": "!editorTextFocus && !inputFocus"
 	},
 	{
