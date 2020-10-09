@@ -64,13 +64,12 @@
 		"fuzzy-search.border-dark-theme-color": "#9580FF",
 		"fuzzy-search.border-ruler-color": "#9580FF",
 
-		"window.activeBorder": "#433F47",
+		"window.activeBorder": "#9580FF",
 		"window.inactiveBorder": "#1d1e26",
 
 		"titleBar.activeBackground": "#22212c",
 		"titleBar.activeForeground": "#F2F2F2",
-		"titleBar.border": "#1d1e26",
-		// "titleBar.border": "#433F47",
+		"titleBar.border": "#433F47",
 
 		"titleBar.inactiveBackground": "#1B1B21",
 		"titleBar.inactiveForeground": "#7A71AB"
@@ -92,6 +91,7 @@
 
 	"labelClosing.darkFontColor": "#7A71AB",
 	"labelClosing.seperatorChar": " ... ",
+	"labelClosing.amountOfLines": 20,
 
 	// Other
 	"color-manager.languages": ["css", "html", "javascript", "json", "scss"],
@@ -116,6 +116,7 @@
 	"modaledit.selectCursorStyle": "block-outline",
 	"modaledit.searchCursorStyle": "underline",
 	"startInNormalMode": "true",
+	"dance.enabled": false,
 
 	"modaledit.keybindings": {
 		"u": "modaledit.enterInsert",
@@ -282,6 +283,7 @@
 
 		"P": ["selectPartOfWord.delete", "modaledit.cancelSelection"],
 
+		// TODO: Shift modifier
 		"e": ["extension.smartBackspace", "modaledit.cancelSelection"],
 
 		"(": {
@@ -296,10 +298,11 @@
 			"modaledit.cancelSelection"
 		],
 
-		"]": "bracket-pair-colorizer-2.expandBracketSelection",
-		"=": "extension.selectCurlyBrackets",
+		// "]": "bracket-pair-colorizer-2.expandBracketSelection",
+		"]": "select-paragraph.selectParagraph",
+		"=": "bracketeer.selectQuotesContent",
 		"*": "extension.selectPerfectLine",
-		"+": "modaledit.selectBetween",
+		"+": "bracketeer.selectBracketContent",
 
 		")": {
 			"condition": "__selecting",
@@ -368,6 +371,14 @@
 
 		"K": ["editor.action.clipboardPasteAction", "modaledit.cancelSelection"],
 
+		// Finding
+		"b": {
+			"condition": "__selecting",
+			"true": "selectMatchesOrAdjustSelection.selectMatchesInSelection",
+			"false": "extension.fuzzy-search"
+		},
+		"B": "betterSearch.searchFull",
+
 		// Windows
 		"}": {
 			// "command": "smart.split.horizontal"
@@ -406,7 +417,7 @@
 		"z": {
 			"condition": "__char == '{'||__char=='}'",
 			"true": "editor.action.jumpToBracket",
-			// Unfortunately, I can't seem to make this not select.
+			// Unfortunately, I can't seem to make this not select:
 			"false": "extension.generic-goto"
 		},
 
@@ -461,7 +472,6 @@
 		// LEADER COMMANDS
 		" ": {
 			"a": "editor.action.selectAll",
-			"A": "magit.status",
 
 			"s": {
 				"condition": "__selecting",
@@ -485,13 +495,7 @@
 			"}": "smart.split.vertical",
 			"{": "workbench.action.joinTwoGroups",
 			"r": "editor.toggleFold",
-			"F": "references-view.find",
-
-			"f": {
-				"condition": "__selecting",
-				"true": "editor.action.goToReferences",
-				"false": "extension.fuzzy-search"
-			},
+			// "F": "references-view.find",
 
 			"o": "editor.action.insertLineAfter",
 			"O": "editor.action.insertLineBefore",
@@ -515,6 +519,8 @@
 				"false": "cursorBottom",
 				"true": "cursorBottomSelect"
 			},
+
+			"B": "betterSearch.searchInFolder",
 
 			"m": "cursorToolsAnchorLeave",
 			"M": "cursorToolsAnchorActivate",
@@ -567,6 +573,7 @@
 			},
 
 			"c": {
+				"a": "magit.status",
 				"u": "seito-openfile.openFileFromText",
 				"i": "copyFilePath",
 				",": "extension.open",
@@ -585,7 +592,8 @@
 				"t": "todo-tree.showTreeView",
 				"h": "workbench.action.toggleSidebarVisibility",
 				"g": "workbench.action.focusPanel",
-				"d": "dashboard.open"
+				"d": "dashboard.open",
+				"b": "betterSearch.searchInFolder"
 			},
 
 			"t": {
@@ -604,13 +612,15 @@
 					"true": "betterPageDownSelect"
 				},
 
+				"C": "extension.halfUp",
+				"T": "extension.halfDown",
+
 				"u": "extension.aceJump.line",
 				"e": {
 					"condition": "__selecting",
 					"false": "extension.aceJump.multiChar",
 					"true": "extension.aceJump.selection"
-				},
-				"f": "jumpToHint.jumpBySearch"
+				}
 			},
 
 			"'": {
@@ -675,6 +685,20 @@
 					"condition": "tableMode",
 					"false": "text-tables.tableModeOn"
 				}
+			},
+
+			"-": {
+				// I cannot make this de-select afterwards.
+				"u": "extension.changeCase.snake",
+				"p": "extension.changeCase.constant",
+				"e": "extension.changeCase.camel",
+				".": "extension.changeCase.pascal",
+				"o": "extension.changeCase.kebab",
+				// "o": "extension.changeCase.kebab",
+				"a": "extension.changeCase.lower",
+				";": "extension.changecase.upper",
+				"i": "extension.changeCase.commands",
+				"y": "extension.changeCase.swap"
 			}
 		}
 	},
@@ -1161,7 +1185,10 @@
 		"editor.defaultFormatter": "vscode.json-language-features"
 	},
 	"editor.snippetSuggestions": "top",
-	"editor.formatOnSaveMode": "modifications"
+	"editor.formatOnSaveMode": "modifications",
+	"files.trimFinalNewlines": true,
+	"files.insertFinalNewline": true,
+	"editor.acceptSuggestionOnEnter": "off"
 
 	// "GoToAnything.prefix.Commands": "",
 	// "GoToAnything.prefix.Recent": "",

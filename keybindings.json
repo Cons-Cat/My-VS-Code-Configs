@@ -226,7 +226,7 @@
 		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
 	},
 	{
-		"key": "oem_comma",
+		"key": ";",
 		"command": "magit.branching",
 		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
 	},
@@ -246,7 +246,7 @@
 		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
 	},
 	{
-		"key": "oem_period",
+		"key": ".",
 		"command": "magit.merging",
 		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
 	},
@@ -256,7 +256,7 @@
 		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
 	},
 	{
-		"key": "shift+oem_period",
+		"key": "shift+.",
 		"command": "magit.rebasing",
 		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
 	},
@@ -296,7 +296,7 @@
 		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
 	},
 	{
-		"key": "oem_7",
+		"key": "'",
 		"command": "magit.stashing",
 		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
 	},
@@ -360,7 +360,7 @@
 		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
 	},
 	{
-		"key": "shift+oem_comma",
+		"key": "shift+,",
 		"command": "magit.reverting",
 		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
 	},
@@ -370,7 +370,7 @@
 		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
 	},
 	{
-		"key": "oem_comma",
+		"key": ",",
 		"command": "magit.reverse-at-point",
 		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
 	},
@@ -383,5 +383,15 @@
 		"key": "q",
 		"command": "-magit.quit",
 		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
+	},
+	{
+		"key": "oem_period",
+		"command": "editor.action.openLink",
+		"when": "editorTextFocus && resourceScheme == 'BetterSearch'"
+	},
+	{
+		"key": "enter",
+		"command": "-editor.action.openLink",
+		"when": "editorTextFocus && resourceScheme == 'BetterSearch'"
 	}
 ]
