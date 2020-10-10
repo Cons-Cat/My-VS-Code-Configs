@@ -298,11 +298,19 @@
 			"modaledit.cancelSelection"
 		],
 
-		// "]": "bracket-pair-colorizer-2.expandBracketSelection",
-		"]": "select-paragraph.selectParagraph",
+		"]": {
+			"condition": "__selecting",
+			"false": "select-paragraph.selectParagraph",
+			"true": "block-travel.selectDown"
+		},
+		
 		"=": "bracketeer.selectQuotesContent",
-		"*": "extension.selectPerfectLine",
 		"+": "bracketeer.selectBracketContent",
+		"*": {
+			"condition": "__selecting",
+			"false": "extension.selectPerfectLine",
+			"true": ["cursorDownSelect", "cursorLineEndSelect"]
+		},
 
 		")": {
 			"condition": "__selecting",
@@ -410,7 +418,7 @@
 		"o": {
 			"condition": "__char !='}'",
 			"true": "smartsemicolon.insert",
-			"false": "editor.action.insertLineAfter"
+			"false": "newLine.open"
 		},
 
 		"O": "join-lines-context-aware.join",
@@ -436,7 +444,7 @@
 			"0-9": 3,
 
 			/* ----------------- Repeatable Commands ---------------- */
-			"c,t,C,T,h,n,d,s,.,p,H,N,>,P,m,v,e,O,i": {
+			"c,t,C,T,h,n,d,s,.,p,H,N,>,P,m,v,e,O,i,*,+": {
 				"command": "modaledit.typeNormalKeys",
 				"args": "{ keys: __rcmd[0] }",
 				"repeat": "parseInt(__cmd)"
@@ -547,6 +555,8 @@
 				"d": "insertDateString.insertDate",
 				"i": "extension.textPastry.1toX",
 				"w": "insert-unicode.insertText",
+				"e": "bracketeer.removeBrackets",
+				"'": "editor.action.blockComment",
 
 				"I": "extension.prettyedit",
 				/* ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -574,25 +584,24 @@
 
 			"c": {
 				"a": "magit.status",
+				"e": "revealFileInOS",
 				"u": "seito-openfile.openFileFromText",
 				"i": "copyFilePath",
-				",": "extension.open",
-				"n": "workbench.action.files.newUntitledFile",
-				"N": "workbench.action.newWindow",
-				"o": "revealFileInOS",
 				"l": "bookmarks.toggle",
 				"c": "bookmarks.list",
 				"f": "workbench.action.openRecent",
 				"p": "workbench.action.reopenClosedEditor",
-				// ".": "workbench.action.files.openFile",
+				";": "workbench.view.extension.sln_explorer",
+				",": "extension.open",
 				".": "extension.dired.open",
 				">": "workbench.action.files.openFolder",
-				"s": "workbench.action.files.save",
-				"S": "workbench.action.files.saveAs",
-				"t": "todo-tree.showTreeView",
-				"h": "workbench.action.toggleSidebarVisibility",
-				"g": "workbench.action.focusPanel",
 				"d": "dashboard.open",
+				"h": "workbench.action.toggleSidebarVisibility",
+				"t": "todo-tree.showTreeView",
+				"n": "workbench.action.files.newUntitledFile",
+				"N": "workbench.action.newWindow",
+				"s": "workbench.action.files.save",
+				"o": "workbench.action.files.saveAs",
 				"b": "betterSearch.searchInFolder"
 			},
 
@@ -628,7 +637,7 @@
 				"s": "comment-divider.makeSubHeader",
 				"l": "comment-divider.insertSolidLine",
 				"t": "extension.insertComment", // Attempted TODO: insertion.
-				"g": "extension.magicComment", // Swapping comments and non-comments.
+				"o": "extension.magicComment", // Swapping comments and non-comments.
 				// "r": "rewrap.rewrapComment",
 				"r": "editor.foldAllBlockComments",
 				"m": "extension.commentBox",
