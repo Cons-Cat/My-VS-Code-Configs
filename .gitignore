@@ -7,3 +7,5 @@ sync/extensions/lastSyncextensions.json
 sync/keybindings/lastSynckeybindings.json
 sync/settings/lastSyncsettings.json
 sync/snippets/lastSyncsnippets.json
+
+.filterline.json

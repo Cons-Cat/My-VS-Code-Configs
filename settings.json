@@ -303,7 +303,7 @@
 			"false": "select-paragraph.selectParagraph",
 			"true": "block-travel.selectDown"
 		},
-		
+
 		"=": "bracketeer.selectQuotesContent",
 		"+": "bracketeer.selectBracketContent",
 		"*": {
@@ -322,7 +322,15 @@
 
 		"q": {
 			"condition": "__col == 0 || __char == ''",
-			"true": ["clipring.cutToRing", "modaledit.cancelSelection"],
+			"true": {
+				"condition": "__selecting",
+				"false": ["clipring.cutToRing", "modaledit.cancelSelection"],
+				"true": [
+					"clipring.copyToRing",
+					"deleteRight",
+					"modaledit.cancelSelection"
+				]
+			},
 			"false": {
 				"condition": "__selecting",
 				"true": [
@@ -492,9 +500,10 @@
 
 			")": {
 				"condition": "__selecting",
-				"true": "extension.selectSameText",
-				"false": "extension.subword-select"
+				"false": "extension.subword-select",
+				"true": "extension.backOffSelection"
 			},
+			"2": "extension.start",
 
 			"i": ["editor.action.deleteLines", "modaledit.cancelSelection"],
 			".": "deleteAllLeft",
@@ -503,7 +512,6 @@
 			"}": "smart.split.vertical",
 			"{": "workbench.action.joinTwoGroups",
 			"r": "editor.toggleFold",
-			// "F": "references-view.find",
 
 			"o": "editor.action.insertLineAfter",
 			"O": "editor.action.insertLineBefore",
@@ -1197,7 +1205,9 @@
 	"editor.formatOnSaveMode": "modifications",
 	"files.trimFinalNewlines": true,
 	"files.insertFinalNewline": true,
-	"editor.acceptSuggestionOnEnter": "off"
+	"editor.acceptSuggestionOnEnter": "off",
+	"prettier.vueIndentScriptAndStyle": true,
+	"center-editor-window.offset": -7
 
 	// "GoToAnything.prefix.Commands": "",
 	// "GoToAnything.prefix.Recent": "",
