@@ -118,608 +118,607 @@
 	"startInNormalMode": "true",
 	"dance.enabled": false,
 
-	// "modaledit.keybindings": {
-	// 	"u": "modaledit.enterInsert",
-	// 	"a": "workbench.action.showCommands",
-
-	// 	// Navigation
-	// 	"h": {
-	// 		"condition": "__selecting",
-	// 		"true": {
-	// 			"command": "tabsanity.cursorLeftSelect"
-	// 		},
-	// 		"false": "tabsanity.cursorLeft"
-	// 	},
-
-	// 	"n": {
-	// 		"condition": "__selecting",
-	// 		"true": "tabsanity.cursorRightSelect",
-	// 		"false": "tabsanity.cursorRight"
-	// 	},
-
-	// 	"H": {
-	// 		"condition": "__selecting",
-	// 		"true": "selectPartOfWord.selectLeft",
-	// 		"false": "selectPartOfWord.moveLeft"
-	// 	},
-
-	// 	"N": {
-	// 		"condition": "__selecting",
-	// 		"true": "selectPartOfWord.selectRight",
-	// 		"false": "selectPartOfWord.moveRight"
-	// 	},
-
-	// 	"t": {
-	// 		"condition": "__selecting",
-	// 		"true": {
-	// 			"condition": "__char == ''",
-	// 			"true": ["cursorDownSelect", "cursorLineEndSelect"],
-	// 			"false": "cursorDownSelect"
-	// 		},
-	// 		"false": "cursorDown"
-	// 	},
-
-	// 	"c": {
-	// 		"condition": "__selecting",
-	// 		"true": {
-	// 			"condition": "__char == ''",
-	// 			"true": ["cursorUpSelect", "cursorLineEndSelect"],
-	// 			"false": "cursorUpSelect"
-	// 		},
-	// 		"false": "cursorUp"
-	// 	},
-
-	// 	// "C": {
-	// 	// 	"condition": "__selecting",
-	// 	// 	"false": "block-travel.jumpUp",
-	// 	// 	"true": "block-travel.selectUp"
-	// 	// },
-
-	// 	// "T": {
-	// 	// 	"condition": "__selecting",
-	// 	// 	"false": "block-travel.jumpDown",
-	// 	// 	"true": "block-travel.selectDown"
-	// 	//},
-
-	// 	"m": {
-	// 		"condition": "__selecting",
-	// 		"false": "bracket-jumper.ascendLeft",
-	// 		"true": "bracket-jumper.selectAscendLeft"
-	// 	},
-
-	// 	"v": {
-	// 		"condition": "__selecting",
-	// 		"false": "bracket-jumper.ascendRight",
-	// 		"true": "bracket-jumper.selectAscendRight"
-	// 	},
-
-	// 	// Move by words.
-	// 	"r": {
-	// 		"condition": "__selecting",
-	// 		"false": {
-	// 			"command": "metaGo.cursorSpaceWordRight"
-	// 		},
-	// 		"true": {
-	// 			"command": "metaGo.cursorSpaceWordRightSelect"
-	// 		}
-	// 	},
-
-	// 	"g": {
-	// 		"condition": "__selecting",
-	// 		"false": {
-	// 			"command": "metaGo.cursorSpaceWordLeft"
-	// 		},
-	// 		"true": {
-	// 			"command": "metaGo.cursorSpaceWordLeftSelect"
-	// 		}
-	// 	},
-
-	// 	"R": {
-	// 		"condition": "__selecting",
-	// 		"false": {
-	// 			"command": "cursorWordStartRight"
-	// 		},
-	// 		"true": {
-	// 			"command": "cursorWordRightSelect"
-	// 		}
-	// 	},
-
-	// 	"G": {
-	// 		"condition": "__selecting",
-	// 		"false": {
-	// 			"command": "cursorWordStartLeft"
-	// 		},
-	// 		"true": {
-	// 			"command": "cursorWordLeftSelect"
-	// 		}
-	// 	},
-
-	// 	// Move by blocks.
-	// 	"s": {
-	// 		"condition": "__char == ''",
-	// 		"true": {
-	// 			"condition": "__selecting",
-	// 			"true": "block-travel.selectDown",
-	// 			"false": "block-travel.jumpDown"
-	// 		},
-	// 		"false": {
-	// 			"condition": "__selecting",
-	// 			"true": "cursorLineEndSelect",
-	// 			"false": "cursorLineEnd"
-	// 		}
-	// 	},
-
-	// 	"d": {
-	// 		"condition": "__col == 0",
-	// 		"true": {
-	// 			"condition": "__selecting",
-	// 			"true": "block-travel.selectUp",
-	// 			"false": "block-travel.jumpUp"
-	// 		},
-	// 		"false": {
-	// 			"condition": "__selecting",
-	// 			"true": "cursorLineStartSelect",
-	// 			"false": "cursorLineStart"
-	// 		}
-	// 	},
-
-	// 	"D": "smartBeginningOfLine",
-
-	// 	// Deletion
-	// 	".": {
-	// 		"condition": "__selecting",
-
-	// 		"true": "modaledit.previousMatch",
-	// 		"false": "deleteWordLeft"
-	// 	},
-
-	// 	">": ["selectPartOfWord.backspace", "modaledit.cancelSelection"],
-
-	// 	"p": {
-	// 		"condition": "__selecting",
-	// 		"true": "modaledit.nextMatch", // Needs work!
-	// 		"false": "deleteWordRight"
-	// 	},
-
-	// 	"P": ["selectPartOfWord.delete", "modaledit.cancelSelection"],
-
-	// 	// TODO: Shift modifier
-	// 	"e": ["extension.smartBackspace", "modaledit.cancelSelection"],
-
-	// 	"(": {
-	// 		"command": "deleteRight"
-	// 	},
-
-	// 	"i": "deletehere.delete",
-
-	// 	"I": [
-	// 		"select-paragraph.selectParagraph",
-	// 		"editor.action.deleteLines",
-	// 		"modaledit.cancelSelection"
-	// 	],
-
-	// 	"]": {
-	// 		"condition": "__selecting",
-	// 		"false": "select-paragraph.selectParagraph",
-	// 		"true": "block-travel.selectDown"
-	// 	},
-
-	// 	"=": "bracketeer.selectQuotesContent",
-	// 	"+": "bracketeer.selectBracketContent",
-	// 	"*": {
-	// 		"condition": "__selecting",
-	// 		"false": "extension.selectPerfectLine",
-	// 		"true": ["cursorDownSelect", "cursorLineEndSelect"]
-	// 	},
-
-	// 	")": {
-	// 		"condition": "__selecting",
-	// 		"true": "extension.selectSameText",
-	// 		"false": "extension.selectWord"
-	// 	},
-
-	// 	",": "extension.blockalign",
-
-	// 	"q": {
-	// 		"condition": "__col == 0 || __char == ''",
-	// 		"true": {
-	// 			"condition": "__selecting",
-	// 			"false": ["clipring.cutToRing", "modaledit.cancelSelection"],
-	// 			"true": [
-	// 				"clipring.copyToRing",
-	// 				"deleteRight",
-	// 				"modaledit.cancelSelection"
-	// 			]
-	// 		},
-	// 		"false": {
-	// 			"condition": "__selecting",
-	// 			"true": [
-	// 				"clipring.copyToRing",
-	// 				"deleteRight",
-	// 				"modaledit.cancelSelection"
-	// 			],
-	// 			"false": [
-	// 				{
-	// 					"command": "copy-word.cut"
-	// 				},
-	// 				{
-	// 					"command": "editor.action.cancelSelectionAnchor"
-	// 				},
-	// 				"modaledit.cancelSelection"
-	// 			]
-	// 		}
-	// 	},
-
-	// 	// Copy
-	// 	"j": [
-	// 		{
-	// 			"condition": "__col == 0 || __selecting || __char == ''",
-	// 			"true": {
-	// 				"command": "clipring.copyToRing"
-	// 			},
-	// 			"false": [
-	// 				{
-	// 					"command": "copy-word.copy"
-	// 				},
-	// 				{
-	// 					"command": "editor.action.cancelSelectionAnchor"
-	// 				}
-	// 			]
-	// 		},
-	// 		"modaledit.cancelSelection"
-	// 	],
-
-	// 	// Paste
-	// 	"k": [
-	// 		{
-	// 			"condition": "__col == 0",
-	// 			"true": "clipring.pasteRingItem",
-	// 			"false": [
-	// 				{
-	// 					"condition": "__selecting",
-	// 					"true": "clipring.pasteRingItem",
-	// 					"false": "extension.columnpaste"
-	// 				}
-	// 			]
-	// 		},
-	// 		{ "condition": "__selecting", "false": "modaledit.cancelSelection" }
-	// 	],
-
-	// 	"K": ["editor.action.clipboardPasteAction", "modaledit.cancelSelection"],
-
-	// 	// Finding
-	// 	"b": {
-	// 		"condition": "__selecting",
-	// 		"true": "selectMatchesOrAdjustSelection.selectMatchesInSelection",
-	// 		"false": "extension.fuzzy-search"
-	// 	},
-	// 	"B": "betterSearch.searchFull",
-
-	// 	// Windows
-	// 	"}": {
-	// 		// "command": "smart.split.horizontal"
-	// 		"command": "workbench.action.splitEditorRight"
-	// 	},
-	// 	"{": {
-	// 		// "command": "workbench.action.joinAllGroups"
-	// 		"command": "workbench.action.splitEditorDown"
-	// 	},
-
-	// 	"!": {
-	// 		"command": "workbench.action.previousEditor"
-	// 	},
-
-	// 	"#": {
-	// 		"command": "workbench.action.nextEditor"
-	// 	},
-
-	// 	// Misc
-	// 	"'": "editor.action.commentLine",
-	// 	"y": "modaledit.toggleSelection",
-	// 	"f": ["undo", "modaledit.cancelSelection"],
-	// 	"F": "redo",
-	// 	"w": "workbench.action.focusNextGroup",
-	// 	"W": "workbench.action.focusPreviousGroup",
-	// 	"_": "extension.toggleCase",
-	// 	"-": "extension.toggle",
-
-	// 	"o": {
-	// 		"condition": "__char !='}'",
-	// 		"true": "smartsemicolon.insert",
-	// 		"false": "newLine.open"
-	// 	},
-
-	// 	"O": "join-lines-context-aware.join",
-	// 	"z": {
-	// 		"condition": "__char == '{'||__char=='}'",
-	// 		"true": "editor.action.jumpToBracket",
-	// 		// Unfortunately, I can't seem to make this not select:
-	// 		"false": "extension.generic-goto"
-	// 	},
-
-	// 	// Formatting
-	// 	";": {
-	// 		"condition": "__selecting",
-	// 		"true": "editor.action.formatSelection",
-	// 		"false": ["editor.action.formatDocument", "markdowntable.format"]
-	// 	},
-
-	// 	":": "rylogic-textaligner.Align",
-
-	// 	"1-9": {
-	// 		"id": 3,
-	// 		"help": "Repeat / go to line", // TODO: Use more of these.
-	// 		"0-9": 3,
-
-	// 		/* ----------------- Repeatable Commands ---------------- */
-	// 		"c,t,C,T,h,n,d,s,.,p,H,N,>,P,m,v,e,O,i,*,+": {
-	// 			"command": "modaledit.typeNormalKeys",
-	// 			"args": "{ keys: __rcmd[0] }",
-	// 			"repeat": "parseInt(__cmd)"
-	// 		},
-
-	// 		"\t": {
-	// 			"command": "__selecting",
-	// 			"false": "tabout",
-	// 			"true": "indent-line.indentLine"
-	// 		},
-
-	// 		" ": {
-	// 			"i": {
-	// 				"command": "editor.action.deleteLines",
-	// 				"args": "{ keys: __rcmd[0] }",
-	// 				"repeat": "parseInt(__cmd)"
-	// 			},
-
-	// 			"o": {
-	// 				"command": "editor.action.insertLineAfter",
-	// 				"args": "{ keys: __rcmd[0] }",
-	// 				"repeat": "parseInt(__cmd)"
-	// 			},
-
-	// 			"O": {
-	// 				"command": "editor.action.insertLineBefore",
-	// 				"args": "{ keys: __rcmd[0] }",
-	// 				"repeat": "parseInt(__cmd)"
-	// 			}
-	// 		}
-	// 	},
-
-	// 	// LEADER COMMANDS
-	// 	" ": {
-	// 		"a": "editor.action.selectAll",
-
-	// 		"s": {
-	// 			"condition": "__selecting",
-	// 			"false": "workbench.action.files.save",
-	// 			"true": "exchangeSelectionStartAndEnd.exchange"
-	// 		},
-
-	// 		"h": "workbench.action.navigateBack",
-	// 		"n": "workbench.action.navigateForward",
-
-	// 		")": {
-	// 			"condition": "__selecting",
-	// 			"false": "extension.subword-select",
-	// 			"true": "extension.backOffSelection"
-	// 		},
-	// 		"2": "extension.start",
-
-	// 		"i": ["editor.action.deleteLines", "modaledit.cancelSelection"],
-	// 		".": "deleteAllLeft",
-	// 		"p": "deleteAllRight",
-	// 		" ": ["editor.action.showHover"],
-	// 		"}": "smart.split.vertical",
-	// 		"{": "workbench.action.joinTwoGroups",
-	// 		"r": "editor.toggleFold",
-	// 		// "F": "references-view.find",
-
-	// 		"o": "editor.action.insertLineAfter",
-	// 		"O": "editor.action.insertLineBefore",
-
-	// 		"!": {
-	// 			"command": "fileextswitch"
-	// 		},
-
-	// 		"#": {
-	// 			"command": "fileextswitch"
-	// 		},
-
-	// 		"d": {
-	// 			"condition": "__selecting",
-	// 			"false": "cursorTop",
-	// 			"true": "cursorTopSelect"
-	// 		},
-
-	// 		"b": {
-	// 			"condition": "__selecting",
-	// 			"false": "cursorBottom",
-	// 			"true": "cursorBottomSelect"
-	// 		},
-
-	// 		"B": "betterSearch.searchInFolder",
-
-	// 		"m": "cursorToolsAnchorLeave",
-	// 		"M": "cursorToolsAnchorActivate",
-	// 		"v": ["cursorToolsAnchorClean", "removeSecondaryCursors"],
-
-	// 		"g": {
-	// 			"w": "workbench.action.closeWindow",
-	// 			"r": "editor.foldAllMarkerRegions",
-	// 			"R": "editor.unfoldAllMarkerRegions",
-	// 			"f": "references-view.showCallHierarchy",
-	// 			// "s": "extension.insertSnipp",
-	// 			// "S": "extension.createSnipp",
-	// 			"g": "editor.action.quickFix"
-	// 		},
-
-	// 		"e": {
-	// 			"t": "extension.embraceParenthesis",
-	// 			"n": "extension.embraceSquareBrackets",
-	// 			"h": "extension.embraceCurlyBrackets",
-	// 			"g": "extension.embraceDoubleQuotes",
-	// 			"c": "extension.embraceSingleQuotes",
-	// 			"r": "region-marker.markNamedRegion",
-	// 			"R": "region-marker.markRegion",
-	// 			"d": "insertDateString.insertDate",
-	// 			"i": "extension.textPastry.1toX",
-	// 			"w": "insert-unicode.insertText",
-	// 			"e": "bracketeer.removeBrackets",
-	// 			"'": "editor.action.blockComment",
-
-	// 			"I": "extension.prettyedit",
-	// 			/* ^^^^^^^^^^^^^^^^^^^^^^^^
-	// 				 NUM RANGE:      first-number;last-number
-	// 				 LETTERS:        alpha;first-letter
-	// 				 RANDOM:         rand;min;max
-	// 			*/
-
-	// 			"l": "extension.textPastry.AtoX",
-	// 			"o": "editor.action.duplicateSelection",
-	// 			"u": "extension.evalReplace",
-	// 			"m": "extension.toggleHEX",
-
-	// 			// Math incrementing
-	// 			"p": "incrementor.incrementByOne",
-	// 			"P": "incrementor.decrementByOne",
-	// 			".": "incrementor.incrementByTen",
-	// 			">": "incrementor.decrementByTen",
-	// 			",": "incrementor.incrementByTenth",
-	// 			"<": "incrementor.decrementByTenth",
-
-	// 			// Sorting
-	// 			"s": "sortLines.sortLinesNatural"
-	// 		},
-
-	// 		"c": {
-	// 			"a": "magit.status",
-	// 			"e": "revealFileInOS",
-	// 			"u": "seito-openfile.openFileFromText",
-	// 			"i": "copyFilePath",
-	// 			"l": "bookmarks.toggle",
-	// 			"c": "bookmarks.list",
-	// 			"f": "workbench.action.openRecent",
-	// 			"p": "workbench.action.reopenClosedEditor",
-	// 			";": "workbench.view.extension.sln_explorer",
-	// 			",": "extension.open",
-	// 			".": "extension.dired.open",
-	// 			">": "workbench.action.files.openFolder",
-	// 			"d": "dashboard.open",
-	// 			"h": "workbench.action.toggleSidebarVisibility",
-	// 			"t": "todo-tree.showTreeView",
-	// 			"n": "workbench.action.files.newUntitledFile",
-	// 			"N": "workbench.action.newWindow",
-	// 			"s": "workbench.action.files.save",
-	// 			"o": "workbench.action.files.saveAs",
-	// 			"b": "betterSearch.searchInFolder"
-	// 		},
-
-	// 		"t": {
-	// 			"b": "workbench.action.closeActiveEditor",
-	// 			"w": "center-editor-window.center",
-
-	// 			"c": {
-	// 				"condition": "__selecting",
-	// 				"false": "betterPageUp",
-	// 				"true": "betterPageUpSelect"
-	// 			},
-
-	// 			"t": {
-	// 				"condition": "__selecting",
-	// 				"false": "betterPageDown",
-	// 				"true": "betterPageDownSelect"
-	// 			},
-
-	// 			"C": "extension.halfUp",
-	// 			"T": "extension.halfDown",
-
-	// 			"u": "extension.aceJump.line",
-	// 			"e": {
-	// 				"condition": "__selecting",
-	// 				"false": "extension.aceJump.multiChar",
-	// 				"true": "extension.aceJump.selection"
-	// 			}
-	// 		},
-
-	// 		"'": {
-	// 			"'": "editor.action.blockComment",
-	// 			"s": "comment-divider.makeSubHeader",
-	// 			"l": "comment-divider.insertSolidLine",
-	// 			"t": "extension.insertComment", // Attempted TODO: insertion.
-	// 			"o": "extension.magicComment", // Swapping comments and non-comments.
-	// 			// "r": "rewrap.rewrapComment",
-	// 			"r": "editor.foldAllBlockComments",
-	// 			"m": "extension.commentBox",
-	// 			"b": "banner-comments-plus.Apply",
-	// 			"B": "banner-comments-plus.ApplyFromList",
-	// 			// "p": "extension.table.formatCurrent",
-	// 			"h": "extension.duplicateThenCommentOut"
-	// 		},
-
-	// 		"k": {
-	// 			"n": "org.doDemote",
-	// 			"h": "org.doPromote",
-	// 			"H": "org.promoteSubtree",
-	// 			"N": "org.demoteSubtree",
-	// 			"t": "org.insertHeadingRespectContent",
-	// 			"w": "org.insertSubheading",
-	// 			"l": "org.timestamp",
-	// 			"c": "org.incrementContext",
-	// 			"g": "org.decrementContext"
-	// 		},
-
-	// 		"j": {
-	// 			"h": "org.bold",
-	// 			"t": "org.italic",
-	// 			"n": "org.underline",
-	// 			"s": "org.code",
-	// 			"g": "org.literal",
-	// 			"c": "org.verbose",
-	// 			"m": "org.clockin",
-	// 			"v": "org.clockout",
-	// 			"w": "org.timestamp"
-	// 		},
-
-	// 		"y": {
-	// 			// TODO: replace all markdowntable commands with text-tables.
-	// 			"e": {
-	// 				"e": "text-tables.createTable",
-	// 				"h": "markdowntable.insertLeft",
-	// 				"n": "markdowntable.insertRight"
-	// 			},
-
-	// 			"t": "text-tables.moveRowDown",
-	// 			"c": "text-tables.moveRowUp",
-	// 			"n": "markdowntable.nextCell",
-	// 			"h": "markdowntable.prevCell",
-	// 			"r": "text-tables.moveColRight",
-	// 			"g": "text-tables.moveColLeft",
-	// 			"-": "text-tables.gotoNextCell",
-	// 			"d": "text-tables.gotoPreviousCell",
-	// 			"i": ["text-tables.clearCell", "text-tables.formatUnderCursor"],
-	// 			"o": "text-tables.nextRow",
-
-	// 			"y": {
-	// 				"condition": "tableMode",
-	// 				"false": "text-tables.tableModeOn"
-	// 			}
-	// 		},
-
-	// 		"-": {
-	// 			// I cannot make this de-select afterwards.
-	// 			"u": "extension.changeCase.snake",
-	// 			"p": "extension.changeCase.constant",
-	// 			"e": "extension.changeCase.camel",
-	// 			".": "extension.changeCase.pascal",
-	// 			"o": "extension.changeCase.kebab",
-	// 			// "o": "extension.changeCase.kebab",
-	// 			"a": "extension.changeCase.lower",
-	// 			";": "extension.changecase.upper",
-	// 			"i": "extension.changeCase.commands",
-	// 			"y": "extension.changeCase.swap"
-	// 		}
-	// 	}
-	// },
+	"modaledit.keybindings": {
+		"u": "modaledit.enterInsert",
+		"a": "workbench.action.showCommands",
+
+		// Navigation
+		"h": {
+			"condition": "__selecting",
+			"true": {
+				"command": "tabsanity.cursorLeftSelect"
+			},
+			"false": "tabsanity.cursorLeft"
+		},
+
+		"n": {
+			"condition": "__selecting",
+			"true": "tabsanity.cursorRightSelect",
+			"false": "tabsanity.cursorRight"
+		},
+
+		"H": {
+			"condition": "__selecting",
+			"true": "selectPartOfWord.selectLeft",
+			"false": "selectPartOfWord.moveLeft"
+		},
+
+		"N": {
+			"condition": "__selecting",
+			"true": "selectPartOfWord.selectRight",
+			"false": "selectPartOfWord.moveRight"
+		},
+
+		"t": {
+			"condition": "__selecting",
+			"true": {
+				"condition": "__char == ''",
+				"true": ["cursorDownSelect", "cursorLineEndSelect"],
+				"false": "cursorDownSelect"
+			},
+			"false": "cursorDown"
+		},
+
+		"c": {
+			"condition": "__selecting",
+			"true": {
+				"condition": "__char == ''",
+				"true": ["cursorUpSelect", "cursorLineEndSelect"],
+				"false": "cursorUpSelect"
+			},
+			"false": "cursorUp"
+		},
+
+		// "C": {
+		// 	"condition": "__selecting",
+		// 	"false": "block-travel.jumpUp",
+		// 	"true": "block-travel.selectUp"
+		// },
+
+		// "T": {
+		// 	"condition": "__selecting",
+		// 	"false": "block-travel.jumpDown",
+		// 	"true": "block-travel.selectDown"
+		//},
+
+		"m": {
+			"condition": "__selecting",
+			"false": "bracket-jumper.ascendLeft",
+			"true": "bracket-jumper.selectAscendLeft"
+		},
+
+		"v": {
+			"condition": "__selecting",
+			"false": "bracket-jumper.ascendRight",
+			"true": "bracket-jumper.selectAscendRight"
+		},
+
+		// Move by words.
+		"r": {
+			"condition": "__selecting",
+			"false": {
+				"command": "metaGo.cursorSpaceWordRight"
+			},
+			"true": {
+				"command": "metaGo.cursorSpaceWordRightSelect"
+			}
+		},
+
+		"g": {
+			"condition": "__selecting",
+			"false": {
+				"command": "metaGo.cursorSpaceWordLeft"
+			},
+			"true": {
+				"command": "metaGo.cursorSpaceWordLeftSelect"
+			}
+		},
+
+		"R": {
+			"condition": "__selecting",
+			"false": {
+				"command": "cursorWordStartRight"
+			},
+			"true": {
+				"command": "cursorWordRightSelect"
+			}
+		},
+
+		"G": {
+			"condition": "__selecting",
+			"false": {
+				"command": "cursorWordStartLeft"
+			},
+			"true": {
+				"command": "cursorWordLeftSelect"
+			}
+		},
+
+		// Move by blocks.
+		"s": {
+			"condition": "__char == ''",
+			"true": {
+				"condition": "__selecting",
+				"true": "block-travel.selectDown",
+				"false": "block-travel.jumpDown"
+			},
+			"false": {
+				"condition": "__selecting",
+				"true": "cursorLineEndSelect",
+				"false": "cursorLineEnd"
+			}
+		},
+
+		"d": {
+			"condition": "__col == 0",
+			"true": {
+				"condition": "__selecting",
+				"true": "block-travel.selectUp",
+				"false": "block-travel.jumpUp"
+			},
+			"false": {
+				"condition": "__selecting",
+				"true": "cursorLineStartSelect",
+				"false": "cursorLineStart"
+			}
+		},
+
+		"D": "smartBeginningOfLine",
+
+		// Deletion
+		".": {
+			"condition": "__selecting",
+
+			"true": "modaledit.previousMatch",
+			"false": "deleteWordLeft"
+		},
+
+		">": ["selectPartOfWord.backspace", "modaledit.cancelSelection"],
+
+		"p": {
+			"condition": "__selecting",
+			"true": "modaledit.nextMatch", // Needs work!
+			"false": "deleteWordRight"
+		},
+
+		"P": ["selectPartOfWord.delete", "modaledit.cancelSelection"],
+
+		// TODO: Shift modifier
+		"e": ["extension.smartBackspace", "modaledit.cancelSelection"],
+
+		"(": {
+			"command": "deleteRight"
+		},
+
+		"i": "deletehere.delete",
+
+		"I": [
+			"select-paragraph.selectParagraph",
+			"editor.action.deleteLines",
+			"modaledit.cancelSelection"
+		],
+
+		"]": {
+			"condition": "__selecting",
+			"false": "select-paragraph.selectParagraph",
+			"true": "block-travel.selectDown"
+		},
+
+		"=": "bracketeer.selectQuotesContent",
+		"+": "bracketeer.selectBracketContent",
+		"*": {
+			"condition": "__selecting",
+			"false": "extension.selectPerfectLine",
+			"true": ["cursorDownSelect", "cursorLineEndSelect"]
+		},
+
+		")": {
+			"condition": "__selecting",
+			"true": "extension.selectSameText",
+			"false": "extension.selectWord"
+		},
+
+		",": "extension.blockalign",
+
+		"q": {
+			"condition": "__col == 0 || __char == ''",
+			"true": {
+				"condition": "__selecting",
+				"false": ["clipring.cutToRing", "modaledit.cancelSelection"],
+				"true": [
+					"clipring.copyToRing",
+					"deleteRight",
+					"modaledit.cancelSelection"
+				]
+			},
+			"false": {
+				"condition": "__selecting",
+				"true": [
+					"clipring.copyToRing",
+					"deleteRight",
+					"modaledit.cancelSelection"
+				],
+				"false": [
+					{
+						"command": "copy-word.cut"
+					},
+					{
+						"command": "editor.action.cancelSelectionAnchor"
+					},
+					"modaledit.cancelSelection"
+				]
+			}
+		},
+
+		// Copy
+		"j": [
+			{
+				"condition": "__col == 0 || __selecting || __char == ''",
+				"true": {
+					"command": "clipring.copyToRing"
+				},
+				"false": [
+					{
+						"command": "copy-word.copy"
+					},
+					{
+						"command": "editor.action.cancelSelectionAnchor"
+					}
+				]
+			},
+			"modaledit.cancelSelection"
+		],
+
+		// Paste
+		"k": [
+			{
+				"condition": "__col == 0",
+				"true": "clipring.pasteRingItem",
+				"false": [
+					{
+						"condition": "__selecting",
+						"true": "clipring.pasteRingItem",
+						"false": "extension.columnpaste"
+					}
+				]
+			},
+			{ "condition": "__selecting", "false": "modaledit.cancelSelection" }
+		],
+
+		"K": ["editor.action.clipboardPasteAction", "modaledit.cancelSelection"],
+
+		// Finding
+		"b": {
+			"condition": "__selecting",
+			"true": "selectMatchesOrAdjustSelection.selectMatchesInSelection",
+			"false": "extension.fuzzy-search"
+		},
+		"B": "betterSearch.searchFull",
+
+		// Windows
+		"}": {
+			// "command": "smart.split.horizontal"
+			"command": "workbench.action.splitEditorRight"
+		},
+		"{": {
+			// "command": "workbench.action.joinAllGroups"
+			"command": "workbench.action.splitEditorDown"
+		},
+
+		"!": {
+			"command": "workbench.action.previousEditor"
+		},
+
+		"#": {
+			"command": "workbench.action.nextEditor"
+		},
+
+		// Misc
+		"'": "editor.action.commentLine",
+		"y": "modaledit.toggleSelection",
+		"f": ["undo", "modaledit.cancelSelection"],
+		"F": "redo",
+		"w": "workbench.action.focusNextGroup",
+		"W": "workbench.action.focusPreviousGroup",
+		"_": "extension.toggleCase",
+		"-": "extension.toggle",
+
+		"o": {
+			"condition": "__char !='}'",
+			"true": "smartsemicolon.insert",
+			"false": "newLine.open"
+		},
+
+		"O": "join-lines-context-aware.join",
+		"z": {
+			"condition": "__char == '{'||__char=='}'",
+			"true": "editor.action.jumpToBracket",
+			// Unfortunately, I can't seem to make this not select:
+			"false": "extension.generic-goto"
+		},
+
+		// Formatting
+		";": {
+			"condition": "__selecting",
+			"true": "editor.action.formatSelection",
+			"false": ["editor.action.formatDocument", "markdowntable.format"]
+		},
+
+		":": "rylogic-textaligner.Align",
+
+		"1-9": {
+			"id": 3,
+			"help": "Repeat / go to line", // TODO: Use more of these.
+			"0-9": 3,
+
+			/* ----------------- Repeatable Commands ---------------- */
+			"c,t,C,T,h,n,d,s,.,p,H,N,>,P,m,v,e,O,i,*,+": {
+				"command": "modaledit.typeNormalKeys",
+				"args": "{ keys: __rcmd[0] }",
+				"repeat": "parseInt(__cmd)"
+			},
+
+			"\t": {
+				"command": "__selecting",
+				"false": "tabout",
+				"true": "indent-line.indentLine"
+			},
+
+			" ": {
+				"i": {
+					"command": "editor.action.deleteLines",
+					"args": "{ keys: __rcmd[0] }",
+					"repeat": "parseInt(__cmd)"
+				},
+
+				"o": {
+					"command": "editor.action.insertLineAfter",
+					"args": "{ keys: __rcmd[0] }",
+					"repeat": "parseInt(__cmd)"
+				},
+
+				"O": {
+					"command": "editor.action.insertLineBefore",
+					"args": "{ keys: __rcmd[0] }",
+					"repeat": "parseInt(__cmd)"
+				}
+			}
+		},
+
+		// LEADER COMMANDS
+		" ": {
+			"a": "editor.action.selectAll",
+
+			"s": {
+				"condition": "__selecting",
+				"false": "workbench.action.files.save",
+				"true": "exchangeSelectionStartAndEnd.exchange"
+			},
+
+			"h": "workbench.action.navigateBack",
+			"n": "workbench.action.navigateForward",
+
+			")": {
+				"condition": "__selecting",
+				"false": "extension.subword-select",
+				"true": "extension.backOffSelection"
+			},
+			"2": "extension.start",
+
+			"i": ["editor.action.deleteLines", "modaledit.cancelSelection"],
+			".": "deleteAllLeft",
+			"p": "deleteAllRight",
+			" ": ["editor.action.showHover"],
+			"}": "smart.split.vertical",
+			"{": "workbench.action.joinTwoGroups",
+			"r": "editor.toggleFold",
+
+			"o": "editor.action.insertLineAfter",
+			"O": "editor.action.insertLineBefore",
+
+			"!": {
+				"command": "fileextswitch"
+			},
+
+			"#": {
+				"command": "fileextswitch"
+			},
+
+			"d": {
+				"condition": "__selecting",
+				"false": "cursorTop",
+				"true": "cursorTopSelect"
+			},
+
+			"b": {
+				"condition": "__selecting",
+				"false": "cursorBottom",
+				"true": "cursorBottomSelect"
+			},
+
+			"B": "betterSearch.searchInFolder",
+
+			"m": "cursorToolsAnchorLeave",
+			"M": "cursorToolsAnchorActivate",
+			"v": ["cursorToolsAnchorClean", "removeSecondaryCursors"],
+
+			"g": {
+				"w": "workbench.action.closeWindow",
+				"r": "editor.foldAllMarkerRegions",
+				"R": "editor.unfoldAllMarkerRegions",
+				"f": "references-view.showCallHierarchy",
+				// "s": "extension.insertSnipp",
+				// "S": "extension.createSnipp",
+				"g": "editor.action.quickFix"
+			},
+
+			"e": {
+				"t": "extension.embraceParenthesis",
+				"n": "extension.embraceSquareBrackets",
+				"h": "extension.embraceCurlyBrackets",
+				"g": "extension.embraceDoubleQuotes",
+				"c": "extension.embraceSingleQuotes",
+				"r": "region-marker.markNamedRegion",
+				"R": "region-marker.markRegion",
+				"d": "insertDateString.insertDate",
+				"i": "extension.textPastry.1toX",
+				"w": "insert-unicode.insertText",
+				"e": "bracketeer.removeBrackets",
+				"'": "editor.action.blockComment",
+
+				"I": "extension.prettyedit",
+				/* ^^^^^^^^^^^^^^^^^^^^^^^^
+					 NUM RANGE:      first-number;last-number
+					 LETTERS:        alpha;first-letter
+					 RANDOM:         rand;min;max
+				*/
+
+				"l": "extension.textPastry.AtoX",
+				"o": "editor.action.duplicateSelection",
+				"u": "extension.evalReplace",
+				"m": "extension.toggleHEX",
+
+				// Math incrementing
+				"p": "incrementor.incrementByOne",
+				"P": "incrementor.decrementByOne",
+				".": "incrementor.incrementByTen",
+				">": "incrementor.decrementByTen",
+				",": "incrementor.incrementByTenth",
+				"<": "incrementor.decrementByTenth",
+
+				// Sorting
+				"s": "sortLines.sortLinesNatural"
+			},
+
+			"c": {
+				"a": "magit.status",
+				"e": "revealFileInOS",
+				"u": "seito-openfile.openFileFromText",
+				"i": "copyFilePath",
+				"l": "bookmarks.toggle",
+				"c": "bookmarks.list",
+				"f": "workbench.action.openRecent",
+				"p": "workbench.action.reopenClosedEditor",
+				";": "workbench.view.extension.sln_explorer",
+				",": "extension.open",
+				".": "extension.dired.open",
+				">": "workbench.action.files.openFolder",
+				"d": "dashboard.open",
+				"h": "workbench.action.toggleSidebarVisibility",
+				"t": "todo-tree.showTreeView",
+				"n": "workbench.action.files.newUntitledFile",
+				"N": "workbench.action.newWindow",
+				"s": "workbench.action.files.save",
+				"o": "workbench.action.files.saveAs",
+				"b": "betterSearch.searchInFolder"
+			},
+
+			"t": {
+				"b": "workbench.action.closeActiveEditor",
+				"w": "center-editor-window.center",
+
+				"c": {
+					"condition": "__selecting",
+					"false": "betterPageUp",
+					"true": "betterPageUpSelect"
+				},
+
+				"t": {
+					"condition": "__selecting",
+					"false": "betterPageDown",
+					"true": "betterPageDownSelect"
+				},
+
+				"C": "extension.halfUp",
+				"T": "extension.halfDown",
+
+				"u": "extension.aceJump.line",
+				"e": {
+					"condition": "__selecting",
+					"false": "extension.aceJump.multiChar",
+					"true": "extension.aceJump.selection"
+				}
+			},
+
+			"'": {
+				"'": "editor.action.blockComment",
+				"s": "comment-divider.makeSubHeader",
+				"l": "comment-divider.insertSolidLine",
+				"t": "extension.insertComment", // Attempted TODO: insertion.
+				"o": "extension.magicComment", // Swapping comments and non-comments.
+				// "r": "rewrap.rewrapComment",
+				"r": "editor.foldAllBlockComments",
+				"m": "extension.commentBox",
+				"b": "banner-comments-plus.Apply",
+				"B": "banner-comments-plus.ApplyFromList",
+				// "p": "extension.table.formatCurrent",
+				"h": "extension.duplicateThenCommentOut"
+			},
+
+			"k": {
+				"n": "org.doDemote",
+				"h": "org.doPromote",
+				"H": "org.promoteSubtree",
+				"N": "org.demoteSubtree",
+				"t": "org.insertHeadingRespectContent",
+				"w": "org.insertSubheading",
+				"l": "org.timestamp",
+				"c": "org.incrementContext",
+				"g": "org.decrementContext"
+			},
+
+			"j": {
+				"h": "org.bold",
+				"t": "org.italic",
+				"n": "org.underline",
+				"s": "org.code",
+				"g": "org.literal",
+				"c": "org.verbose",
+				"m": "org.clockin",
+				"v": "org.clockout",
+				"w": "org.timestamp"
+			},
+
+			"y": {
+				// TODO: replace all markdowntable commands with text-tables.
+				"e": {
+					"e": "text-tables.createTable",
+					"h": "markdowntable.insertLeft",
+					"n": "markdowntable.insertRight"
+				},
+
+				"t": "text-tables.moveRowDown",
+				"c": "text-tables.moveRowUp",
+				"n": "markdowntable.nextCell",
+				"h": "markdowntable.prevCell",
+				"r": "text-tables.moveColRight",
+				"g": "text-tables.moveColLeft",
+				"-": "text-tables.gotoNextCell",
+				"d": "text-tables.gotoPreviousCell",
+				"i": ["text-tables.clearCell", "text-tables.formatUnderCursor"],
+				"o": "text-tables.nextRow",
+
+				"y": {
+					"condition": "tableMode",
+					"false": "text-tables.tableModeOn"
+				}
+			},
+
+			"-": {
+				// I cannot make this de-select afterwards.
+				"u": "extension.changeCase.snake",
+				"p": "extension.changeCase.constant",
+				"e": "extension.changeCase.camel",
+				".": "extension.changeCase.pascal",
+				"o": "extension.changeCase.kebab",
+				// "o": "extension.changeCase.kebab",
+				"a": "extension.changeCase.lower",
+				";": "extension.changecase.upper",
+				"i": "extension.changeCase.commands",
+				"y": "extension.changeCase.swap"
+			}
+		}
+	},
 
 	"org.todoKeywords": ["TODO", "WIP", "DONE", "WAIT"],
 	"text-tables.clearCell": "org",
