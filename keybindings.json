@@ -13,6 +13,7 @@
 	},
 
 	// Navigation
+	// Single increment
 	{
 		"key": "n",
 		"command": "tabsanity.cursorRight",
@@ -33,9 +34,26 @@
 		"command": "cursorUp",
 		"when": "editorTextFocus && dance.mode == 'normal'"
 	},
+	// Line increment
 	{
-		"key": "1",
-		"command": "tabsanity.deleteRight",
+		"key": "s",
+		"command": "dance.goto.lineEnd",
+		"when": "editorTextFocus && dance.mode == 'normal'"
+	},
+	{
+		"key": "d",
+		"command": "dance.goto.lineStart",
+		"when": "editorTextFocus && dance.mode == 'normal'"
+	},
+	// Word
+	{
+		"key": "r",
+		"command": "cursorWordRight",
+		"when": "editorTextFocus && dance.mode == 'normal'"
+	}, 
+	{
+		"key": "g",
+		"command": "cursorWordLeft",
 		"when": "editorTextFocus && dance.mode == 'normal'"
 	},
 	
@@ -45,6 +63,11 @@
 	 {
 		"key": "e",
 		"command": "extension.smartBackspace",
+		"when": "editorTextFocus && dance.mode == 'normal'"
+	},
+	{
+		"key": "1",
+		"command": "tabsanity.deleteRight",
 		"when": "editorTextFocus && dance.mode == 'normal'"
 	},
 	// Delete Words
@@ -67,6 +90,18 @@
 		"command": "deleteWordPartRight",
 		"when": "editorTextFocus && dance.mode == 'normal'"
 	},
+	
+	// History
+	{
+		"key": "f",
+		"command": "dance.history.undo",
+		"when": "editorTextFocus && dance.mode == 'normal'"
+	},
+	{
+		"key": "shift+f",
+		"command": "dance.history.redo",
+		"when": "editorTextFocus && dance.mode == 'normal'"
+	}, 	
 
 	// Searching
 	{
