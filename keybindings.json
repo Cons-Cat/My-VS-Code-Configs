@@ -96,8 +96,23 @@
  	// Selection
  	
  	// Clipboard
+ 	{
+		"key": "k",
+		"command": "clipring.pasteRingItem",
+		"when": "editorTextFocus && dance.mode == 'normal' && editorLangId != 'magit'"
+ 	},
+ 	{
+		"key": "j",
+		"command": "clipring.copyToRing",
+		"when": "editorTextFocus && dance.mode == 'normal' && editorLangId != 'magit'"
+ 	},
 	
 	// Deletion
+	{
+		"key": "shift+enter",
+		"command": "deleteLeft",
+		"when": "editorTextFocus"
+	},
 	 {
 		"key": "e",
 		"command": "extension.smartBackspace",
@@ -113,41 +128,37 @@
 	{
 		"key": "oem_period",
 		"command": "deleteWordLeft",
-		"when": "editorTextFocus && dance.mode == 'normal'"
+		"when": "editorTextFocus && dance.mode == 'normal'&& editorLangId != 'magit'"
 	},
 	{
 		"key": "p",
 		"command": "deleteWordRight",
-		"when": "editorTextFocus && dance.mode == 'normal'"
-	},
+		"when": "editorTextFocus && dance.mode == 'normal' && editorLangId != 'magit'"
+},
 	{
 		"key": "shift+oem_period",
-		"command": "deleteWordPartLeft", "when": "editorTextFocus && dance.mode == 'normal'"
+		"command": "deleteWordPartLeft", 
+		"when": "editorTextFocus && dance.mode == 'normal' && editorLangId != 'magit'"
 	},
 	{
 		"key": "shift+p",
 		"command": "deleteWordPartRight",
-		"when": "editorTextFocus && dance.mode == 'normal'"
+		"when": "editorTextFocus && dance.mode == 'normal' && editorLangId != 'magit'"
 	},
 	
 	// History
 	{
 		"key": "f",
 		"command": "dance.history.undo",
-		"when": "editorTextFocus && dance.mode == 'normal'"
+		"when": "editorTextFocus && dance.mode == 'normal' && editorLangId != 'magit'"
 	},
 	{
 		"key": "shift+f",
 		"command": "dance.history.redo",
-		"when": "editorTextFocus && dance.mode == 'normal'"
-	}, 	
+		"when": "editorTextFocus && dance.mode == 'normal' && editorLangId != 'magit'"
+	},
 
 	// Searching
-	{
-		"key": "shift+enter",
-		"command": "deleteLeft",
-		"when": "editorTextFocus"
-	},
 	{
 		"key": "ctrl+t",
 		"command": "scrollLineDown",
