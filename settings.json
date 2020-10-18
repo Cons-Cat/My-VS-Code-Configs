@@ -116,8 +116,10 @@
 	"modaledit.selectCursorStyle": "block-outline",
 	"modaledit.searchCursorStyle": "underline",
 	"startInNormalMode": "true",
-	"dance.enabled": false,
-
+	"dance.enabled": true,
+	"dance.normalMode.lineHighlight": null,
+	"dance.normalMode.cursorStyle":"block",
+	
 	// "modaledit.keybindings": {
 	// 	"u": "modaledit.enterInsert",
 	// 	"a": "workbench.action.showCommands",
@@ -889,7 +891,7 @@
 	"toggleCase.case.capitalCase": false,
 	"enableTelemetry": true,
 	"editor.minimap.enabled": false,
-	"workbench.activityBar.visible": true,
+	"workbench.activityBar.visible": false,
 	"editor.cursorSurroundingLines": 5,
 	"editor.scrollBeyondLastLine": false,
 	"workbench.list.smoothScrolling": true,

@@ -11,16 +11,16 @@
 		"command": "dance.set.insert",
 		"when": "editorTextFocus && dance.mode == 'normal'"
 	},
-
+	
 	// Navigation
 	// Single increment
 	{
-		"key": "n",
+		"key": "r",
 		"command": "tabsanity.cursorRight",
 		"when": "editorTextFocus && dance.mode == 'normal'"
 	},
 	{
-		"key": "h",
+		"key": "g",
 		"command": "tabsanity.cursorLeft",
 		"when": "editorTextFocus && dance.mode == 'normal'"
 	},
@@ -34,30 +34,68 @@
 		"command": "cursorUp",
 		"when": "editorTextFocus && dance.mode == 'normal'"
 	},
-	// Line increment
+	
+	// Line increment 
 	{
-		"key": "s",
+		"key": "space d",
+		"command": "dance.goto.lineStart.nonBlank",
+		"when": "editorTextFocus && dance.mode == 'normal'"
+	},
+	{
+		"key": "space shift+d",
+		"command": "binaryJump.binaryLeftJump",
+		"when": "editorTextFocus && dance.mode == 'normal'"
+	},
+	
+	{
+		"key": "space s",
 		"command": "dance.goto.lineEnd",
 		"when": "editorTextFocus && dance.mode == 'normal'"
 	},
 	{
-		"key": "d",
-		"command": "dance.goto.lineStart",
+		"key": "space shift+s",
+		"command": "binaryJump.binaryRightJump",
 		"when": "editorTextFocus && dance.mode == 'normal'"
 	},
+	
+	// Paragraph
+	{
+		"key": "s",
+		"command": "block-travel.jumpDown",
+		"when": "editorTextFocus && dance.mode == 'normal'"
+	},
+	{
+		"key": "d",
+		"command": "block-travel.jumpUp",
+		"when": "editorTextFocus && dance.mode == 'normal'"
+	},
+
 	// Word
 	{
-		"key": "r",
+		"key": "h",
+		"command": "cursorWordLeft",
+		"when": "editorTextFocus && dance.mode == 'normal'"
+	},
+	{
+		"key": "shift+h",
+		"command": "cursorWordPartLeft",
+		"when": "editorTextFocus && dance.mode == 'normal'"
+	},
+	
+	{
+		"key": "n",
 		"command": "cursorWordRight",
 		"when": "editorTextFocus && dance.mode == 'normal'"
 	}, 
 	{
-		"key": "g",
-		"command": "cursorWordLeft",
+		"key": "shift+n",
+		"command": "cursorWordPartRight",
 		"when": "editorTextFocus && dance.mode == 'normal'"
-	},
+	}, 
 	
  	// Selection
+ 	
+ 	// Clipboard
 	
 	// Deletion
 	 {
@@ -70,6 +108,7 @@
 		"command": "tabsanity.deleteRight",
 		"when": "editorTextFocus && dance.mode == 'normal'"
 	},
+	
 	// Delete Words
 	{
 		"key": "oem_period",
