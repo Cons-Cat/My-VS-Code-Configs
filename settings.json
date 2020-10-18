@@ -123,7 +123,7 @@
 		"a": "workbench.action.showCommands",
 
 		// Navigation
-		"h": {
+		"g": {
 			"condition": "__selecting",
 			"true": {
 				"command": "tabsanity.cursorLeftSelect"
@@ -131,12 +131,34 @@
 			"false": "tabsanity.cursorLeft"
 		},
 
-		"n": {
+		"r": {
 			"condition": "__selecting",
 			"true": "tabsanity.cursorRightSelect",
 			"false": "tabsanity.cursorRight"
 		},
 
+		// Word
+		"n": {
+			"condition": "__selecting",
+			"false": {
+				"command": "cursorWordStartRight"
+			},
+			"true": {
+				"command": "cursorWordRightSelect"
+			}
+		},
+
+		"h": {
+			"condition": "__selecting",
+			"false": {
+				"command": "cursorWordStartLeft"
+			},
+			"true": {
+				"command": "cursorWordLeftSelect"
+			}
+		},
+
+		// Subword
 		"H": {
 			"condition": "__selecting",
 			"true": "selectPartOfWord.selectLeft",
@@ -169,18 +191,6 @@
 			"false": "cursorUp"
 		},
 
-		// "C": {
-		// 	"condition": "__selecting",
-		// 	"false": "block-travel.jumpUp",
-		// 	"true": "block-travel.selectUp"
-		// },
-
-		// "T": {
-		// 	"condition": "__selecting",
-		// 	"false": "block-travel.jumpDown",
-		// 	"true": "block-travel.selectDown"
-		//},
-
 		"m": {
 			"condition": "__selecting",
 			"false": "bracket-jumper.ascendLeft",
@@ -191,47 +201,6 @@
 			"condition": "__selecting",
 			"false": "bracket-jumper.ascendRight",
 			"true": "bracket-jumper.selectAscendRight"
-		},
-
-		// Move by words.
-		"r": {
-			"condition": "__selecting",
-			"false": {
-				"command": "metaGo.cursorSpaceWordRight"
-			},
-			"true": {
-				"command": "metaGo.cursorSpaceWordRightSelect"
-			}
-		},
-
-		"g": {
-			"condition": "__selecting",
-			"false": {
-				"command": "metaGo.cursorSpaceWordLeft"
-			},
-			"true": {
-				"command": "metaGo.cursorSpaceWordLeftSelect"
-			}
-		},
-
-		"R": {
-			"condition": "__selecting",
-			"false": {
-				"command": "cursorWordStartRight"
-			},
-			"true": {
-				"command": "cursorWordRightSelect"
-			}
-		},
-
-		"G": {
-			"condition": "__selecting",
-			"false": {
-				"command": "cursorWordStartLeft"
-			},
-			"true": {
-				"command": "cursorWordLeftSelect"
-			}
 		},
 
 		// Move by blocks.
